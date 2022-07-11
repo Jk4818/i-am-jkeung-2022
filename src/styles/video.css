@@ -1,0 +1,59 @@
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.filled-text {
+    background-image: url(https://media0.giphy.com/media/KVZWZQoS0yqfIiTAKq/200w.webp?cid=ecf05e4724ef4vtdploxkqu5xlkv86784uir099i0xqpqvgf&rid=200w.webp&ct=g);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Kaushan+Script&family=Lobster&family=Major+Mono+Display&family=Ranchers&display=swap');
+
+.change-text {
+  animation-name: fontChange;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fontChange {
+  0% {
+    font-family: 'Major Mono Display', monospace;
+  }
+  10% {
+    font-family: 'Kaushan Script', cursive;
+  }
+  15% {
+    font-family: 'Lobster', cursive;
+  }
+  30% {
+    font-family: 'Ranchers', cursive;
+  }
+  43% {
+    font-family: 'Bitter', serif;
+  }
+  49% {
+    font-family: 'Archivo', sans-serif;
+  }
+  60% {
+    font-family: 'Lobster', cursive;
+  }
+  80% {
+    font-family: 'Bitter', serif;
+  }
+  95% {
+    font-family: 'Archivo', sans-serif;
+  }
+  100% {
+    font-family: 'Ranchers', cursive;
+  }
+}

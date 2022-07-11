@@ -1,0 +1,22 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        'bg-light': '#EAE8E7',
+        'text-light': '#F9F9F9',
+        'main-black':'#302E2F',
+        'main-gray':'#8B8989',
+        'text-red':'#D67860',
+      },
+      fontFamily: {
+        archivo: ["archivo", "sans-serif"],
+        anton: ["anton", "sans-serif"],
+        limelight: ["limelight", "sans-serif"],
+        'atkinson-hyperlegible': ["atkinson-hyperlegible", "sans-serif"],
+      }
+    },
+  },
+  plugins: [],
+}
