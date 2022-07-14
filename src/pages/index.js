@@ -16,9 +16,9 @@ const IndexPage = () => {
 								animate={{ y: "0%", opacity: 1 }}
 								exit={{ y: "-100%", opacity: 0 }}
 								transition={{ duration: 0.5 }}
-								className="flex h-24 w-full items-center justify-center text-8xl font-archivo font-black ">
-							<h1 className="h-full text-main-black"> Snap &&nbsp;</h1>
-							<h1 className="h-full w-72 overflow-visible filled-text change-text"> Flicks</h1>
+								className="flex h-28 w-full items-center justify-center text-8xl font-archivo font-black overflow-visible">
+							<h1 className="ml-36 h-full text-main-black "> Snap &&nbsp;</h1>
+							<h1 className="h-full w-[28rem] overflow-clip filled-text change-text"> Flicks</h1>
 						</motion.div>
 
 						<motion.h2

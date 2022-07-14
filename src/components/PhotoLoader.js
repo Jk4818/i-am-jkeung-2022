@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 
-function PhotoLoader({ data }) {
+
+function PhotoLoader({ active, setActive }) {
 
   const variant = {
     show: {
@@ -11,7 +12,7 @@ function PhotoLoader({ data }) {
         duration: 0.5,
       },
     }
-  }
+  };
   const variantEnd = {
     show: {
       scale: 1.2,
@@ -20,10 +21,10 @@ function PhotoLoader({ data }) {
         ease: "anticipate"
       },
     }
-  }
+  };
 
   const list = {
-    hidden: { opacity: 0, transition: {duration: 1.5} },
+    hidden: { opacity: 0, transition: { duration: 1.5 } },
     show: {
       opacity: 1,
       transition: {
@@ -33,16 +34,15 @@ function PhotoLoader({ data }) {
         staggerDirection: -1,
       },
     }
-  }
+  };
 
-  const [active, setActive] = useState(true);
 
   return (
     <AnimatePresence>
       {active && (
-        <motion.div 
-        exit={{ opacity: 0, transition: {duration: 1.5}  }}
-        className='absolute w-screen h-screen overflow-hidden bg-bg-light z-50'>
+        <motion.div
+          exit={{ opacity: 0, transition: { duration: 1.5 } }}
+          className='absolute w-screen h-screen overflow-hidden bg-bg-light z-50'>
           <div className='w-full h-full flex flex-col items-center justify-center font-anton p-4'>
             <motion.h1
               initial={{ y: "-200%", opacity: 0 }}

@@ -14,7 +14,11 @@ module.exports = {
         archivo: ["archivo", "sans-serif"],
         anton: ["anton", "sans-serif"],
         limelight: ["limelight", "sans-serif"],
-        'atkinson-hyperlegible': ["atkinson-hyperlegible", "sans-serif"],
+        'atkinson-hyperlegible': ["Atkinson Hyperlegible", "sans-serif"],
+        'rock-salt': ["Rock Salt", "cursive"]
+      },
+      backgroundImage: {
+        'about-pattern': "/src/assets/images/about_background.png",
       }
     },
   },

@@ -2,7 +2,7 @@ video {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -14,12 +14,13 @@ video {
     -moz-background-clip: text;
     -webkit-background-clip: text;
     text-transform: uppercase;
-    margin: 10px 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Kaushan+Script&family=Lobster&family=Major+Mono+Display&family=Ranchers&display=swap');
 
 .change-text {
+  overflow: visible;
+  text-overflow: clip;
   animation-name: fontChange;
   animation-duration: 7s;
   animation-iteration-count: infinite;
@@ -34,9 +35,6 @@ video {
   }
   15% {
     font-family: 'Lobster', cursive;
-  }
-  30% {
-    font-family: 'Ranchers', cursive;
   }
   43% {
     font-family: 'Bitter', serif;

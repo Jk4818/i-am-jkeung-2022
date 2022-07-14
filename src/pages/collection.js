@@ -1,30 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 
 import Layout from '../components/Layout.js';
 import PhotoLoader from '../components/PhotoLoader.js';
 
 import Video from "../components/Video.js";
 import ShowReelVideo from "../assets/videos/showreel-2022.mp4";
+import PurpleVideo from "../assets/videos/purple.mp4";
 
 
 function Collection(props) {
+	const [active, setActive] = useState(true);
 	return (
-		<main>
-			<PhotoLoader />
-			<Layout>
-				<div className="w-screen h-screen flex justify-center items-center uppercase bg-bg-light overflow-hidden">
+		<motion.main 
+		initial={{ opacity: 0 }}
+		animate={{ opacity: 1 }}
+		exit={{opacity: 0 }}
+		className='overflow-x-hidden'>
+			<PhotoLoader active={active} setActive={setActive} />
+			{!active && (
+				<Layout>
+					<div className="w-screen flex flex-col justify-center items-center uppercase bg-bg-light ">
 
-					<div id="hero-container" className="w-full h-full">
-						<div className='relative w-full h-full pointer-events-none'>
-							<Video
-								videoSrc={ShowReelVideo}
-								videoTitle="Reel-22"
-							/>
+						<div id="hero-container" className="w-full h-screen">
+							<div className='relative w-full h-full pointer-events-none'>
+								<Video
+									videoSrc={ShowReelVideo}
+									videoTitle="Reel-22"
+								/>
+							</div>
+						</div>
+						<div id="hero-container" className="w-full h-screen">
+							<div className='relative w-full h-full pointer-events-none'>
+								<Video
+									videoSrc={PurpleVideo}
+									videoTitle="IJFLSPT"
+								/>
+							</div>
 						</div>
 					</div>
-				</div>
-			</Layout>
-		</main>
+				</Layout>
+			)}
+		</motion.main>
 	);
 }
 
