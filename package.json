@@ -20,6 +20,7 @@
     "@fontsource/atkinson-hyperlegible": "^4.5.7",
     "@fontsource/limelight": "^4.5.9",
     "@fontsource/rock-salt": "^4.5.7",
+    "@fontsource/rubik": "^4.5.10",
     "fontsource-anton": "^4.0.0",
     "framer-motion": "^6.3.16",
     "gatsby": "^4.17.2",

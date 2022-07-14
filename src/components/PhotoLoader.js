@@ -77,7 +77,7 @@ function PhotoLoader({ active, setActive }) {
                   <StaticImage placeholder='none' aspectRatio={4 / 3} layout='constrained' src="../assets/images/loader/DSCF5464.jpg" alt="peak-1" />
                 </motion.li>
                 <motion.li variants={variant} className='absolute bottom-0 left-0'>
-                  <StaticImage placeholder='none' backgroundColor='transparent' aspectRatio={4 / 3} layout='constrained' src="../assets/images/loader/DSCF5506-2.jpg" alt="peak-2" />
+                  <StaticImage placeholder='none' aspectRatio={4 / 3} layout='constrained' src="../assets/images/loader/DSCF5506.jpg" alt="peak-2" />
                 </motion.li>
               </motion.ul>
             </div>

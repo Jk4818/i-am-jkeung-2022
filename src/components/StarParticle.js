@@ -42,7 +42,7 @@ function StarParticle(props) {
           }
         },
         "size": {
-          "value": 1.75,
+          "value": 1.8,
           "random": true,
           "anim": {
             "enable": true,
@@ -55,12 +55,12 @@ function StarParticle(props) {
           "enable": false,
           "distance": 150,
           "color": "#ffffff",
-          "opacity": 0.4,
+          "opacity": 1,
           "width": 1
         },
         "move": {
           "enable": true,
-          "speed": 0.2,
+          "speed": 0.45,
           "direction": "none",
           "random": true,
           "straight": false,

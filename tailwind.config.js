@@ -15,7 +15,8 @@ module.exports = {
         anton: ["anton", "sans-serif"],
         limelight: ["limelight", "sans-serif"],
         'atkinson-hyperlegible': ["Atkinson Hyperlegible", "sans-serif"],
-        'rock-salt': ["Rock Salt", "cursive"]
+        'rock-salt': ["Rock Salt", "cursive"],
+        'rubik': ["rubik", "sans-serif"]
       },
       backgroundImage: {
         'about-pattern': "/src/assets/images/about_background.png",
