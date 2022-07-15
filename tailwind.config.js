@@ -20,6 +20,9 @@ module.exports = {
       },
       backgroundImage: {
         'about-pattern': "/src/assets/images/about_background.png",
+      },
+      animation: {
+        'bounce-slow': 'bounce 3s linear infinite',
       }
     },
   },
