@@ -3,7 +3,7 @@ module.exports = {
     title: `I Am JKeung 2022`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: [`gatsby-plugin-smoothscroll`,"gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
+  plugins: [`gatsby-plugin-smoothscroll`,"gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", `gatsby-plugin-preload-fonts`, {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/assets/images/logo_thicker.png"

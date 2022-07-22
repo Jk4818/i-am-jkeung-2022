@@ -23,8 +23,13 @@ module.exports = {
       },
       animation: {
         'bounce-slow': 'bounce 3s linear infinite',
-      }
+      },
+      neumorphismColor: {
+        'main': {
+          'black': '#302E2F',
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-neumorphism')],
 }
