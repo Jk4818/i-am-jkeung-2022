@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "gatsby";
+import { motion } from "framer-motion";
 
 import NavButton from "./NavButton.js";
 import Logo from "../assets/images/logo_fat.png";
