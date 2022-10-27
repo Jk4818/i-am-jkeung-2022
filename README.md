@@ -1,6 +1,6 @@
 # https://iamjkeung.studio/ ¬ Personal Portfolio Site
 
-![App Demo](https://firebasestorage.googleapis.com/v0/b/jkeung2022.appspot.com/o/personal_demo.gif?alt=media&token=bf1c0565-977c-4351-9c4c-38d4488bedb5)
+![Web Demo](https://firebasestorage.googleapis.com/v0/b/jkeung2022.appspot.com/o/personal_demo.gif?alt=media&token=25720427-b503-4fab-93fe-4e6904ff0835)
 
 Welcome to the github repo holding the development of my personal site. 
 This site showcases my films, reels, photography and mixing mastering services.
