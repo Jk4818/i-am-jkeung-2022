@@ -16,7 +16,8 @@ module.exports = {
         limelight: ["limelight", "sans-serif"],
         'atkinson-hyperlegible': ["Atkinson Hyperlegible", "sans-serif"],
         'rock-salt': ["Rock Salt", "cursive"],
-        'rubik': ["rubik", "sans-serif"]
+        'rubik': ["rubik", "sans-serif"],
+        'tinos': ["tinos", "serif"],
       },
       backgroundImage: {
         'about-pattern': "/src/assets/images/about_background.png",

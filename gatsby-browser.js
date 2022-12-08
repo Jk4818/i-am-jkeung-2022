@@ -6,6 +6,7 @@ import "@fontsource/limelight";
 import "@fontsource/atkinson-hyperlegible";
 import "@fontsource/rock-salt";
 import "@fontsource/rubik";
+import "@fontsource/tinos";
 import React from 'react';
 import {AnimatePresence} from 'framer-motion';
 
