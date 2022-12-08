@@ -9,7 +9,7 @@ import "../styles/video.css";
 
 const IndexPage = () => {
 
-	const comingSoon = false;
+	const comingSoon = true;
 	const [active, setActive] = useState(true);
 
 	return (
