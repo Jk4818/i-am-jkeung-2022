@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
+import GalleryImage from '../components/GalleryImage';
 
 
 function prints(props) {
@@ -19,6 +20,10 @@ function prints(props) {
         <section className="w-full h-screen flex items-center justify-center">
           <Gallery />
         </section>
+
+        <div className='h-screen w-96 bg-blue-400'>
+          <GalleryImage />
+        </div>
       </div>
     </Layout>
   );

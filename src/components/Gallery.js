@@ -4,20 +4,6 @@ import { StaticImage } from "gatsby-plugin-image";
 
 function Gallery(props) {
 
-
-  //function where image follows cursor on hover
-  const followCursor = (e) => {
-    const image = document.querySelector('.image');
-    let x = e.clientX * 100 / window.innerWidth + '%';
-    let y = e.clientY * 100 / window.innerHeight + '%';
-    console.log(x, y);
-    image.style.transformOrigin = x + ' ' + y;
-    image.style.transform = 'translate(-' + x + 'px, -' + y + 'px)';
-  }
-
-  // useEffect(() => {
-  //   window.addEventListener('mousemove', followCursor);
-  // }, [])
   
   
   return (
@@ -26,7 +12,7 @@ function Gallery(props) {
         <div className='self-end col-span-9 flex flex-col-reverse group '>
 
           <div className=' w-full'>
-            <div className='w-full '>
+            <div className='w-full'>
               <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/wast_water.png" alt="wast_water" />
             </div>
           </div>
