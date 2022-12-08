@@ -8,7 +8,7 @@ import Logo from "../assets/images/logo_fat.png";
 function Navbar(props) {
 
 
-  const [buttonState, setButtonState] = useState(false);
+  const [buttonState, setButtonState] = useState(true);
 
   return (
     <section className='fixed w-screen h-screen md:h-20  z-[40]'>
