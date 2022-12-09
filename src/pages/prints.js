@@ -3,9 +3,6 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
-import GalleryImage from '../components/GalleryImage';
-
-import ParkPhoto from '../assets/images/prints/park.png';
 
 function prints(props) {
   return (
@@ -21,7 +18,7 @@ function prints(props) {
         <section className="w-full h-max flex items-center justify-center">
           <Gallery />
         </section>
-        
+
       </div>
     </Layout>
   );

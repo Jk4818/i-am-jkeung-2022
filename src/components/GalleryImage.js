@@ -45,7 +45,7 @@ function GalleryImage({src, heading, subheading, reverse}) {
         </div>
       </div>
       
-      <header className='my-2'>
+      <header className='my-2  lg:text-lg lg:leading-5'>
         <h1 className='font-black italic'>{heading} —</h1>
         <p>{subheading}</p>
       </header>
