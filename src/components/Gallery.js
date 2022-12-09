@@ -16,7 +16,7 @@ function Gallery(props) {
 
   return (
     <div className='w-screen h-max mx-2 lg:mx-4'>
-      <div className='grid grid-cols-24 grid-rows-2 gap-2 lg:gap-4 text-xs font-tinos bg-red-400'>
+      <div className='grid grid-cols-24 grid-rows-2 gap-2 lg:gap-4 text-xs font-tinos'>
         <div className='self-end col-span-9 flex flex-col-reverse group '>
           <GalleryImage src={WastWater} heading="Wast Water" subheading="New York City - USA" reverse={true} />
         </div>
