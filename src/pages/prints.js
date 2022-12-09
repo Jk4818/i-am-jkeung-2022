@@ -45,14 +45,14 @@ function prints(props) {
             whileInView="visible"
             viewport={{ once: false, amount: 0.6 }}
             variants={variant}
-            className='w-3/4 text-center font-tinos'>
+            className='w-3/4  text-center font-tinos'>
 
             <GalleryImage src={PeakPhoto} heading="The Peak" subheading="Scafell Pike - Lake District, UK" reverse={false} />
 
           </motion.div>
         </section>
 
-        <section className="w-full h-screen items-center justify-center grid grid-cols-3 gap-10">
+        <section className="w-full h-screen px-10 items-center justify-center grid grid-cols-3 gap-10">
 
           <motion.div
             initial="hidden"
@@ -63,14 +63,14 @@ function prints(props) {
             <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/frontal_inside.png" alt="book_inside" />
           </motion.div>
 
-          <div className='h-1/2 font-inter'>
-            <h1 className='font-tinos font-bold'>Limited Edition Prints</h1>
+          <div className='h-1/2 font-inter flex flex-col gap-2'>
+            <h1 className='font-tinos text-lg font-bold'>Limited Edition Prints</h1>
             <p>My limited edition prints are available in edition sizes from 5-50 (depending on the size and image). These photographs are my favourite from my total portfolio of work. I only choose images that I feel will be complimented by the printing process and look amazing when framed.
             </p>
-            <h2>Archival Papers</h2>
-            <p>All images are printed on Hahnemühle Photo Rag®.
-              188 · gsm · 100% cotton · white</p>
-            <h2>Order / Delivery Process</h2>
+            <h2 className='mt-4 font-bold'>Archival Papers</h2>
+            <p>All images are printed on <span className='font-bold'>Hahnemühle Photo Rag®.</span> <br/>
+              <span className='italic'>188 · gsm · 100% cotton · white</span></p>
+            <h2 className='mt-4 font-bold'>Order / Delivery Process</h2>
             <p>
               Delivery in the UK takes 2-3 business days and the rest of the world 7-10 days. Please note that currently Covid is adding around 7 days onto these times.
 
