@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
 import GalleryImage from '../components/GalleryImage';
 
+import ParkPhoto from '../assets/images/prints/park.png';
 
 function prints(props) {
   return (
@@ -17,13 +18,10 @@ function prints(props) {
           </div>
         </section>
 
-        <section className="w-full h-screen flex items-center justify-center">
+        <section className="w-full h-max flex items-center justify-center">
           <Gallery />
         </section>
-
-        <div className='h-screen w-96 bg-blue-400'>
-          <GalleryImage />
-        </div>
+        
       </div>
     </Layout>
   );

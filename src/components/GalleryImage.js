@@ -1,22 +1,23 @@
 import React, { useEffect } from 'react';
 import { StaticImage } from "gatsby-plugin-image";
 
-function GalleryImage(props) {
+function GalleryImage({src, heading, subheading, reverse}) {
 
   // function that translates imageHover towards cursor when hovering over image
   useEffect(() => {
-    const imageHoverContainer = document.getElementById('image-hover-container');
-    const imageHover = document.getElementById('image-hover');
+    const imageHoverContainer = document.getElementById(heading + "-hover-container");
+    const imageHover = document.getElementById(heading + "-hover");
     imageHover.style.transition = 'transform 0.3s ease-out';
 
     function translateImage(e) {
       const { offsetWidth: width, offsetHeight: height } = imageHover;
       let { offsetX: x, offsetY: y } = e;
       
-      console.log(x, y);
       const xWalk = Math.round((x / width * 100) - 50) / 4;
       const yWalk = Math.round((y / height * 100) - 50) / 4;
+      
 
+      console.log(xWalk, yWalk);
       imageHover.style.transform = `scale(1.1) translate(${xWalk}px, ${yWalk}px`;
     }
 
@@ -36,17 +37,17 @@ function GalleryImage(props) {
 
   return (
 
-    <div id='image-hover-container' className='self-end col-span-9 flex flex-col-reverse group '>
+    <div id={heading + "-hover-container"} className={`w-full ${reverse && `flex flex-col-reverse`} group `}>
 
-      <div className=' w-96 overflow-hidden'>
-        <div id='image-hover' className='w-full'>
-          <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/wast_water.png" alt="wast_water" />
+      <div className='w-full overflow-hidden'>
+        <div id={heading + "-hover"} className='w-full'>
+          <img className='w-full' placeholder='none' layout='constrained' src={src} alt={heading} />
         </div>
       </div>
       
       <header className='my-2'>
-        <h1 className='font-black italic'>Central Park — </h1>
-        <p>New York City - USA</p>
+        <h1 className='font-black italic'>{heading} —</h1>
+        <p>{subheading}</p>
       </header>
     </div>
   );
