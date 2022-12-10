@@ -30,7 +30,7 @@ function prints(props) {
             whileInView="visible"
             viewport={{ once: false, amount: 0.6 }}
             variants={variant}
-            className='w-1/2 '>
+            className='w-full sm:w-1/2 max-w-[80rem]'>
             <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/frontal.png" alt="book_front" />
           </motion.div>
         </section>
