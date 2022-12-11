@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { StaticImage } from "gatsby-plugin-image";
 
-function GalleryImage({src, heading, subheading, reverse}) {
+function GalleryImage({ src, heading, subheading, reverse }) {
 
   // function that translates imageHover towards cursor when hovering over image
   useEffect(() => {
@@ -12,10 +12,10 @@ function GalleryImage({src, heading, subheading, reverse}) {
     function translateImage(e) {
       const { offsetWidth: width, offsetHeight: height } = imageHover;
       let { offsetX: x, offsetY: y } = e;
-      
+
       const xWalk = Math.round((x / width * 100) - 50) / 4;
       const yWalk = Math.round((y / height * 100) - 50) / 4;
-      
+
 
       console.log(xWalk, yWalk);
       imageHover.style.transform = `scale(1.1) translate(${xWalk}px, ${yWalk}px`;
@@ -37,18 +37,19 @@ function GalleryImage({src, heading, subheading, reverse}) {
 
   return (
 
-    <div id={heading + "-hover-container"} className={`w-full ${reverse && `flex flex-col-reverse`} group `}>
+    <div id={heading + "-hover-container"} className={`w-full ${!reverse && ` flex flex-col `} sm:flex-col-reverse group `}>
+
+      <header className='flex text-base sm:text-sm sm:block my-2  lg:text-lg lg:leading-5'>
+        <h1 className='font-black sm:italic'>{heading} — &nbsp;</h1>
+        <p>{subheading}</p>
+      </header>
 
       <div className='w-full overflow-hidden'>
         <div id={heading + "-hover"} className='w-full'>
           <img className='w-full' placeholder='none' layout='constrained' src={src} alt={heading} />
         </div>
       </div>
-      
-      <header className='my-2  lg:text-lg lg:leading-5'>
-        <h1 className='font-black italic'>{heading} —</h1>
-        <p>{subheading}</p>
-      </header>
+
     </div>
   );
 }

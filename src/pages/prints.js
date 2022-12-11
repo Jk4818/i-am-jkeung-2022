@@ -22,7 +22,7 @@ function prints(props) {
 
   return (
     <Layout>
-      <div className='w-screen h-full bg-white'>
+      <div className='w-screen h-full bg-white px-2 lg:px-4'>
 
         <section className="w-full h-screen flex items-center justify-center">
           <motion.div
@@ -45,7 +45,7 @@ function prints(props) {
             whileInView="visible"
             viewport={{ once: false, amount: 0.6 }}
             variants={variant}
-            className='w-3/4  text-center font-tinos'>
+            className='w-full sm:w-3/4  text-center font-tinos'>
 
             <GalleryImage src={PeakPhoto} heading="The Peak" subheading="Scafell Pike - Lake District, UK" reverse={false} />
 

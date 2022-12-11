@@ -12,18 +12,16 @@ import Building from '../assets/images/prints/building.png';
 
 function Gallery(props) {
 
-
-
   return (
-    <div className='w-screen h-max mx-2 lg:mx-4'>
-      <div className='grid grid-cols-1 sm:grid-cols-24 grid-rows-6 sm:grid-rows-2 gap-2 lg:gap-4 text-xs font-tinos'>
-        <div className='self-end sm:col-span-9 flex flex-col-reverse group '>
+    <div className='w-screen h-max'>
+      <div className='grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2 gap-6 lg:gap-4 text-xs font-tinos'>
+        <div className='sm:self-end sm:col-span-9 flex flex-col-reverse group '>
           <GalleryImage src={WastWater} heading="Wast Water" subheading="New York City - USA" reverse={true} />
         </div>
-        <div className='self-end sm:col-span-6 flex flex-col-reverse '>
+        <div className='sm:self-end sm:col-span-6 flex flex-col-reverse '>
           <GalleryImage src={Building} heading="Building" subheading="New York City - USA" reverse={true} />
         </div>
-        <div className='self-end sm:col-span-9 flex flex-col-reverse '>
+        <div className='sm:self-end sm:col-span-9 flex flex-col-reverse '>
           <GalleryImage src={Skyline} heading="NYC Skyline" subheading="New York City - USA" reverse={true} />
         </div>
         <div className='sm:col-span-7'>
