@@ -52,14 +52,14 @@ function prints(props) {
           </motion.div>
         </section>
 
-        <section className="w-full h-screen px-10 items-center justify-center grid grid-cols-3 gap-10">
+        <section className="w-full min-h-screen h-max px-10 items-center justify-center grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-10">
 
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, }}
             variants={variant}
-            className='w-full col-span-2'>
+            className='w-full row-span-2 md:col-span-2 md:row-span-0'>
             <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/frontal_inside.png" alt="book_inside" />
           </motion.div>
 
