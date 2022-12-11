@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 
 function Layout({ children }) {
     return (
-        <div>
+        <div className='z-[100]'>
             <Navbar />
             <div>
                 {children}

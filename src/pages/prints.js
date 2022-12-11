@@ -52,7 +52,7 @@ function prints(props) {
           </motion.div>
         </section>
 
-        <section className="w-full min-h-screen h-max px-10 items-center justify-center grid grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-10">
+        <section className="w-full min-h-screen h-max px-10 items-center justify-center grid grid-rows-1 md:grid-cols-3 gap-10">
 
           <motion.div
             initial="hidden"
@@ -63,7 +63,7 @@ function prints(props) {
             <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/frontal_inside.png" alt="book_inside" />
           </motion.div>
 
-          <div className='h-1/2 font-inter flex flex-col gap-2'>
+          <div className='h-max font-inter flex flex-col gap-2'>
             <h1 className='font-tinos text-lg font-bold'>Limited Edition Prints</h1>
             <p>My limited edition prints are available in edition sizes from 5-50 (depending on the size and image). These photographs are my favourite from my total portfolio of work. I only choose images that I feel will be complimented by the printing process and look amazing when framed.
             </p>
