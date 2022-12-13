@@ -22,7 +22,7 @@ function prints(props) {
 
   return (
     <Layout>
-      <div className='w-screen h-full bg-white px-2 lg:px-4'>
+      <div className='w-full h-full bg-white px-2 lg:px-4'>
 
         <section className="w-full h-screen flex items-center justify-center">
           <motion.div
