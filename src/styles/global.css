@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
     margin: 0;
     background-color: #302E2F;
 }
@@ -86,4 +87,31 @@ html, body {
         left: -1px;
     }
 
+    .logo-animate {
+        animation: color-animation 10s linear infinite;
+        --color-1: #3D8DAE;
+        --color-2: #DF8453;
+        --color-3: #E4A9A8;
+        transition:all 1s ease;
+    }
+
+
+    @keyframes color-animation {
+        0% {
+            color: var(--color-1)
+        }
+
+        33% {
+            color: var(--color-2)
+        }
+
+        66% {
+            color: var(--color-3)
+        }
+
+
+        100% {
+            color: var(--color-1)
+        }
+    }
 }

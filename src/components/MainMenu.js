@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
+import UseComponentVisible from './helpers/UseComponentVisible';
 
 import MenuButton from './MenuButton';
-import { FaArrowRight } from 'react-icons/fa';
 import MenuItem from './MenuItem';
 
 function MainMenu(props) {
+
+  const { ref, isComponentVisible, setIsComponentVisible } = UseComponentVisible(false);
 
   const sidebar = {
     open: (height = 1000) => ({
@@ -54,17 +56,17 @@ function MainMenu(props) {
     }
   };
 
-  const [menuState, setMenuState] = useState(false);
 
 
   return (
     <motion.div 
+    ref={ref}
     initial={false}
-    animate={menuState ? "open" : "closed"}
+    animate={isComponentVisible ? "open" : "closed"}
     className='relative w-full h-full'>
 
       <div className='relative z-50'>
-        <MenuButton menuState={menuState} setMenuState={setMenuState} />
+        <MenuButton menuState={isComponentVisible} setMenuState={setIsComponentVisible} />
       </div>
 
       <motion.div variants={sidebar}  className={`fixed top-0 right-0 md:top-6 md:right-8 w-60 h-80 z-10 p-4 flex flex-col gap-4 justify-center bg-main-gray-darker rounded-bl-xl md:rounded-xl font-archivo text-left text-text-light font-semibold overflow-hidden`}>
