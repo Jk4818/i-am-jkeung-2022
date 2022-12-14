@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
 
-import NavButton from "./NavButton.js";
+import MenuBurger from "./MenuBurger.js";
 import MainMenu from './MainMenu.js';
 
 function Navbar(props) {
@@ -15,7 +15,7 @@ function Navbar(props) {
     <section className='fixed w-screen h-screen md:h-20  z-[40]'>
       <div className='md:hidden absolute right-0 top-0 w-max h-max p-4 z-[40]'>
         <button onClick={() => setButtonState(!buttonState)}>
-          <NavButton state={buttonState} />
+          <MenuBurger state={buttonState} />
         </button>
       </div>
 
@@ -50,12 +50,12 @@ function Navbar(props) {
               </Link>
             </li>
           </ul>
+          <div>
+            <MainMenu />
+          </div>
         </div>
       )}
 
-      <div>
-        <MainMenu />
-      </div>
     </section>
   );
 }

@@ -1,16 +1,22 @@
 import React, {useState} from 'react';
-import NavButton from './NavButton';
+import MenuButton from './MenuButton';
 
 function MainMenu(props) {
 
+  
   const [menuState, setMenuState] = useState(false);
+
   
   return (
-    <div onClick={() => setMenuState(!menuState)} className={`w-max flex justify-center items-center gap-3 ${!menuState ? `bg-white/70` : `bg-main-gray-dark`} backdrop-blur-sm p-1 px-3 rounded-lg drop-shadow-lg font-medium font-archivo cursor-pointer transition-colors`}>
-      <h1 className={`${menuState ? `text-white` : `text-main-black`}`}>more</h1>
+    <div className='relative w-full h-full'>
+      <div className='relative z-50'>
+        <MenuButton menuState={menuState} setMenuState={setMenuState}/>
+      </div>
 
-      <div className='h-full'>
-        <NavButton state={menuState} /> 
+      <div className={`fixed top-6 right-8 w-60 h-96 z-10 bg-gray-200/70 rounded-lg transition-all ${!menuState && `hidden`}`}>
+        <ul>
+          <li>Home</li>
+        </ul>
       </div>
     </div>
   );
