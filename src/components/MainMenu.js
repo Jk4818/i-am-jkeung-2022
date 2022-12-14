@@ -6,10 +6,10 @@ function MainMenu(props) {
   const [menuState, setMenuState] = useState(false);
   
   return (
-    <div className={`w-max flex justify-center items-center gap-4 bg-white/70 backdrop-blur-sm p-4 rounded-lg drop-shadow-lg   text-main-black font-archivo font-semibold `}>
-      <h1>more</h1>
+    <div onClick={() => setMenuState(!menuState)} className={`w-max flex justify-center items-center gap-3 ${!menuState ? `bg-white/70` : `bg-main-gray-dark`} backdrop-blur-sm p-1 px-3 rounded-lg drop-shadow-lg font-medium font-archivo cursor-pointer transition-colors`}>
+      <h1 className={`${menuState ? `text-white` : `text-main-black`}`}>more</h1>
 
-      <div onClick={() => setMenuState(!menuState)} className=''>
+      <div className='h-full'>
         <NavButton state={menuState} /> 
       </div>
     </div>
