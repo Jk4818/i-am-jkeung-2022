@@ -1,11 +1,11 @@
 import React from 'react';
+import { useLocation } from '@reach/router';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 
 function Logo(props) {
 
-  const url = typeof window !== 'undefined' ? window.location.pathname : '';
-
+  const url = useLocation().pathname;
   const logoVariantsHoverIAM = {
     visible: {
       display: 'inline',
