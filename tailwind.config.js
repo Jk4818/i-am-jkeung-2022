@@ -9,6 +9,7 @@ module.exports = {
         'main-black':'#302E2F',
         'main-gray':'#8B8989',
         'main-gray-dark':'#444444',
+        'main-gray-darker':'#666666',
         'text-red':'#D67860',
       },
       fontFamily: {

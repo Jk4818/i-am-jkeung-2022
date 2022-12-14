@@ -1,24 +1,100 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+import { motion } from 'framer-motion';
+
 import MenuButton from './MenuButton';
+import { FaArrowRight } from 'react-icons/fa';
+import MenuItem from './MenuItem';
 
 function MainMenu(props) {
 
-  
+  const sidebar = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 200}px at 80% 9%)`,
+      transition: {
+        type: "spring",
+        stiffness: 20,
+        restDelta: 2
+      }
+    }),
+    closed: {
+      clipPath: "circle(0px at 80% 9%)",
+      transition: {
+        delay: 0.5,
+        type: "spring",
+        stiffness: 400,
+        damping: 40
+      }
+    }
+  };
+
+  const menuItemVariants = {
+    open: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    }
+  };
+
+  const itemVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 }
+      }
+    },
+    closed: {
+      y: 20,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 }
+      }
+    }
+  };
+
   const [menuState, setMenuState] = useState(false);
 
-  
+
   return (
-    <div className='relative w-full h-full'>
+    <motion.div 
+    initial={false}
+    animate={menuState ? "open" : "closed"}
+    className='relative w-full h-full'>
+
       <div className='relative z-50'>
-        <MenuButton menuState={menuState} setMenuState={setMenuState}/>
+        <MenuButton menuState={menuState} setMenuState={setMenuState} />
       </div>
 
-      <div className={`fixed top-6 right-8 w-60 h-96 z-10 bg-gray-200/70 rounded-lg transition-all ${!menuState && `hidden`}`}>
-        <ul>
-          <li>Home</li>
-        </ul>
-      </div>
-    </div>
+      <motion.div variants={sidebar}  className={`fixed top-6 right-8 w-60 h-80 z-10 p-4 flex flex-col gap-4 justify-center bg-main-gray-darker rounded-xl font-archivo text-left text-text-light font-semibold`}>
+
+        <motion.ul variants={menuItemVariants} className=' text-xl leading-loose tracking-wider '>
+          <MenuItem>Collection</MenuItem>
+          <MenuItem>Prints</MenuItem>
+          <MenuItem>Production</MenuItem>
+          <MenuItem>About</MenuItem>
+          <MenuItem>Contact</MenuItem>
+        </motion.ul>
+
+        <motion.ul variants={menuItemVariants}  className='grid grid-rows-2 grid-cols-2 gap-2 text-left text-xs tracking-wider'>
+          <motion.li variants={itemVariants}>
+            <Link to='/'> Tech Portfolio </Link>
+          </motion.li>
+          <motion.li variants={itemVariants} >
+            <Link to='/'> Github </Link>
+          </motion.li>
+          <motion.li variants={itemVariants} >
+            <Link to='/'> Youtube </Link>
+          </motion.li>
+          <motion.li variants={itemVariants} >
+            <Link to='/'> LinkedIn </Link>
+          </motion.li>
+        </motion.ul>
+
+      </motion.div>
+
+    </motion.div>
   );
 }
 
