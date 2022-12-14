@@ -1,15 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "gatsby";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import MenuBurger from "./MenuBurger.js";
 import MainMenu from './MainMenu.js';
+import Logo from './Logo.js';
 
 function Navbar(props) {
 
-  const url = typeof window !== 'undefined' ? window.location.pathname : '';
-
   const [buttonState, setButtonState] = useState(true);
+
+  const [logoShow, setLogoShow] = useState(true);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > 10) { // if scroll down hide the navbar
+        setLogoShow(false);
+      } else { // if scroll up show the navbar
+        setLogoShow(true);
+      }
+
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, []);
 
   return (
     <section className='fixed w-screen h-screen md:h-20  z-[40]'>
@@ -20,10 +43,16 @@ function Navbar(props) {
       </div>
 
       {buttonState && (
-        <div className='relative w-full h-full bg-main-black md:bg-transparent  p-12 gap-10 flex flex-col md:flex-row justify-center md:justify-between items-center text-center overflow-hidden'>
 
-          <div className='hidden md:block w-32 h-auto text-lg font-archivo font-semibold text-main-black'><Link to='/'>iamjkeung.studio</Link></div>
-          <ul className={`bg-white/70 backdrop-blur-sm p-2 rounded-lg drop-shadow-lg flex gap-20 md:gap-10 flex-col md:flex-row text-main-black font-archivo font-semibold text-2xl md:text-base`}>
+        <div className='relative w-full h-full bg-main-black md:bg-transparent  p-12 gap-10 flex flex-col md:flex-row justify-center items-center text-center overflow-hidden'>
+
+          <AnimatePresence>
+            {logoShow && (
+              <Logo />
+            )}
+          </AnimatePresence>
+
+          <ul className={`bg-white/70 backdrop-blur-sm p-2 px-6 rounded-lg drop-shadow-lg flex gap-20 md:gap-10 flex-col md:flex-row text-main-black font-archivo font-semibold text-2xl md:text-base`}>
 
             <li className='hover:scale-105 transition-all'>
               <Link
@@ -50,10 +79,12 @@ function Navbar(props) {
               </Link>
             </li>
           </ul>
-          <div>
+
+          <div className='absolute right-12'>
             <MainMenu />
           </div>
         </div>
+
       )}
 
     </section>
