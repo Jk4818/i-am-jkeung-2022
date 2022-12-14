@@ -35,6 +35,9 @@ module.exports = {
       gridTemplateColumns: {
         '24': 'repeat(24, minmax(0, 1fr))',
       },
+      boxShadow: {
+        'main': '0px 0px 20px 0px rgba(0,0,0,0.2);',
+      },
         
     },
   },

@@ -67,7 +67,7 @@ function MainMenu(props) {
         <MenuButton menuState={menuState} setMenuState={setMenuState} />
       </div>
 
-      <motion.div variants={sidebar}  className={`fixed top-6 right-8 w-60 h-80 z-10 p-4 flex flex-col gap-4 justify-center bg-main-gray-darker rounded-xl font-archivo text-left text-text-light font-semibold`}>
+      <motion.div variants={sidebar}  className={`fixed top-0 right-0 md:top-6 md:right-8 w-60 h-80 z-10 p-4 flex flex-col gap-4 justify-center bg-main-gray-darker rounded-bl-xl md:rounded-xl font-archivo text-left text-text-light font-semibold overflow-hidden`}>
 
         <motion.ul variants={menuItemVariants} className=' text-xl leading-loose tracking-wider '>
           <MenuItem>Collection</MenuItem>
@@ -78,16 +78,16 @@ function MainMenu(props) {
         </motion.ul>
 
         <motion.ul variants={menuItemVariants}  className='grid grid-rows-2 grid-cols-2 gap-2 text-left text-xs tracking-wider'>
-          <motion.li variants={itemVariants}>
+          <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors">
             <Link to='/'> Tech Portfolio </Link>
           </motion.li>
-          <motion.li variants={itemVariants} >
+          <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
             <Link to='/'> Github </Link>
           </motion.li>
-          <motion.li variants={itemVariants} >
+          <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
             <Link to='/'> Youtube </Link>
           </motion.li>
-          <motion.li variants={itemVariants} >
+          <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
             <Link to='/'> LinkedIn </Link>
           </motion.li>
         </motion.ul>
