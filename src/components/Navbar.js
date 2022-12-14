@@ -23,8 +23,8 @@ function Navbar(props) {
         <div className='relative w-full h-full bg-main-black md:bg-transparent  p-12 gap-10 flex flex-col md:flex-row justify-center md:justify-between items-center text-center overflow-hidden'>
 
           <div className='hidden md:block w-32 h-auto'><Link to='/'><img src={Logo} alt="Logo" /></Link></div>
-          <ul className={`flex gap-20 md:gap-10 flex-col md:flex-row ${url == '/prints' ? "text-main-black" : `text-text-light`} font-archivo font-semibold uppercase text-3xl md:text-base`}>
-            <li className='hover:scale-105 transition-all font-limelight'>
+          <ul className={`bg-main-gray p-2 rounded-lg shadow-lg flex gap-20 md:gap-10 flex-col md:flex-row ${url == '/prints' ? "text-main-black" : `text-text-light`} font-archivo font-semibold text-2xl md:text-base`}>
+            <li className='hover:scale-105 transition-all'>
               <Link
                 to="/production/"
                 activeStyle={{ color: "#D67860" }}
@@ -32,7 +32,7 @@ function Navbar(props) {
                 Production
               </Link>
             </li>
-            <li className='hover:scale-105 transition-all font-rock-salt'>
+            <li className='hover:scale-105 transition-all'>
               <Link
                 to="/collection/"
                 activeStyle={{ color: "#D67860" }}
