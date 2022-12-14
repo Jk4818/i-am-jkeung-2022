@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
 import GalleryImage from '../components/GalleryImage';
 import PeakPhoto from '../assets/images/prints/peak.png';
+import BuyButton from '../components/BuyButton';
 
 function prints(props) {
 
@@ -68,14 +69,17 @@ function prints(props) {
             <p>My limited edition prints are available in edition sizes from 5-50 (depending on the size and image). These photographs are my favourite from my total portfolio of work. I only choose images that I feel will be complimented by the printing process and look amazing when framed.
             </p>
             <h2 className='mt-4 font-bold'>Archival Papers</h2>
-            <p>All images are printed on <span className='font-bold'>Hahnemühle Photo Rag®.</span> <br/>
+            <p>All images are printed on <span className='font-bold'>Hahnemühle Photo Rag®.</span> <br />
               <span className='italic'>188 · gsm · 100% cotton · white</span></p>
             <h2 className='mt-4 font-bold'>Order / Delivery Process</h2>
             <p>
               Delivery in the UK takes 2-3 business days and the rest of the world 7-10 days. Please note that currently Covid is adding around 7 days onto these times.
 
-              All A3 prints are shipped in presentation boxes flat and A2 and A1 prints are shipped in tubes. I have had the tubes designed specifically to ship these sizes and they are much wider than usual tubes so that they don’t hold their curve.</p>
+              All A3 prints are shipped in presentation boxes flat and A2 and A1 prints are shipped in tubes. I have had the tubes designed specifically to ship these sizes and they are much wider than usual tubes so that they don’t hold their curve.
+            </p>
+            <BuyButton />
           </div>
+
         </section>
 
       </div>

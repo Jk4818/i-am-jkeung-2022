@@ -29,7 +29,7 @@ function MenuItem({ children }) {
         activeStyle={{ color: "#D67860" }}
         className='group flex items-center gap-2 capitalize'
       >
-        <span className=' text-sm opacity-0 md:group-hover:opacity-100 transition-all'>
+        <span className=' text-sm opacity-0 font-semibold md:group-hover:opacity-100 transition-all'>
           <FaArrowRight />
         </span>
         {children}

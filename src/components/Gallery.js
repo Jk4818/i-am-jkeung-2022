@@ -23,7 +23,7 @@ function Gallery(props) {
 
   return (
     <div className='w-screen h-max'>
-      <div className='grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2 gap-6 lg:gap-4 text-xs font-inter'>
+      <div className='grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2 gap-6 lg:gap-4 text-xs font-tinos'>
         <motion.div
           initial="hidden"
           whileInView="visible"
