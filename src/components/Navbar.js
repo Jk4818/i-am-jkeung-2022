@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { motion } from "framer-motion";
 
 import NavButton from "./NavButton.js";
-import Logo from "../assets/images/logo_fat.png";
+import MainMenu from './MainMenu.js';
 
 function Navbar(props) {
 
@@ -22,10 +22,10 @@ function Navbar(props) {
       {buttonState && (
         <div className='relative w-full h-full bg-main-black md:bg-transparent  p-12 gap-10 flex flex-col md:flex-row justify-center md:justify-between items-center text-center overflow-hidden'>
 
-          <div className='hidden md:block w-32 h-auto text-lg font-archivo font-semibold text-main-gray'><Link to='/'>iamjkeung.studio</Link></div>
-          <ul className={`bg-white p-2 rounded-lg drop-shadow-lg flex gap-20 md:gap-10 flex-col md:flex-row text-main-gray font-archivo font-semibold text-2xl md:text-base`}>
-            
-          <li className='hover:scale-105 transition-all'>
+          <div className='hidden md:block w-32 h-auto text-lg font-archivo font-semibold text-main-black'><Link to='/'>iamjkeung.studio</Link></div>
+          <ul className={`bg-white/70 backdrop-blur-sm p-2 rounded-lg drop-shadow-lg flex gap-20 md:gap-10 flex-col md:flex-row text-main-black font-archivo font-semibold text-2xl md:text-base`}>
+
+            <li className='hover:scale-105 transition-all'>
               <Link
                 to="/prints/"
                 activeStyle={{ color: "#D67860" }}
@@ -33,7 +33,7 @@ function Navbar(props) {
                 Prints
               </Link>
             </li>
-          <li className='hover:scale-105 transition-all'>
+            <li className='hover:scale-105 transition-all'>
               <Link
                 to="/collection/"
                 activeStyle={{ color: "#D67860" }}
@@ -49,25 +49,13 @@ function Navbar(props) {
                 Production
               </Link>
             </li>
-            <li className='hover:scale-105 transition-all '>
-              <Link
-                to="/about/"
-                activeStyle={{ color: "#D67860" }}
-              >
-                About
-              </Link>
-            </li>
-            <li className='hover:scale-105 transition-all '>
-              <Link
-                to="/contact/"
-                activeStyle={{ color: "#D67860" }}
-              >
-                Contact
-              </Link>
-            </li>
           </ul>
         </div>
       )}
+
+      <div>
+        <MainMenu />
+      </div>
     </section>
   );
 }
