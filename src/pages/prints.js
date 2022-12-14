@@ -53,7 +53,7 @@ function prints(props) {
           </motion.div>
         </section>
 
-        <section className="w-full min-h-screen h-max px-10 items-center justify-center grid grid-rows-1 md:grid-cols-3 gap-10">
+        <section className="w-full min-h-screen h-max py-10 sm:py-0 px-10 items-center justify-center grid grid-rows-1 md:grid-cols-3 gap-10">
 
           <motion.div
             initial="hidden"
