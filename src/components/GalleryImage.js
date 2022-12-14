@@ -15,9 +15,7 @@ function GalleryImage({ src, heading, subheading, reverse }) {
 
       const xWalk = Math.round((x / width * 100) - 50) / 4;
       const yWalk = Math.round((y / height * 100) - 50) / 4;
-
-
-      console.log(xWalk, yWalk);
+      
       imageHover.style.transform = `scale(1.1) translate(${xWalk}px, ${yWalk}px`;
     }
 

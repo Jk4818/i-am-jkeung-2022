@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { StaticImage } from "gatsby-plugin-image";
+import { motion } from 'framer-motion';
 import GalleryImage from './GalleryImage';
 
 
@@ -12,31 +13,69 @@ import Building from '../assets/images/prints/building.png';
 
 function Gallery(props) {
 
+  const variant = {
+    hidden: { opacity: 0, y: "20%" },
+    visible: {
+      y: 0,
+      opacity: 1,
+    }
+  };
+
   return (
     <div className='w-screen h-max'>
       <div className='grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2 gap-6 lg:gap-4 text-xs font-inter'>
-        <div className='sm:self-end sm:col-span-9 flex flex-col-reverse group '>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={variant}
+          className='sm:self-end sm:col-span-9 flex flex-col-reverse group '>
           <GalleryImage src={WastWater} heading="Wast Water" subheading="New York City - USA" reverse={true} />
-        </div>
-        <div className='sm:self-end sm:col-span-6 flex flex-col-reverse '>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={variant}
+          className='sm:self-end sm:col-span-6 flex flex-col-reverse '>
           <GalleryImage src={Building} heading="Building" subheading="New York City - USA" reverse={true} />
-        </div>
-        <div className='sm:self-end sm:col-span-9 flex flex-col-reverse '>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={variant}
+          className='sm:self-end sm:col-span-9 flex flex-col-reverse '>
           <GalleryImage src={Skyline} heading="NYC Skyline" subheading="New York City - USA" reverse={true} />
-        </div>
-        <div className='sm:col-span-7'>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={variant}
+          className='sm:col-span-7'>
           <GalleryImage src={PalmTree} heading="A Palm Tree" subheading="New York City - North Cyprus" reverse={false} />
-        </div>
+        </motion.div>
 
-        <div className='sm:col-span-9'>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={variant}
+          className='sm:col-span-9'>
           <GalleryImage src={ManhattanBridge} heading="Manhattan Bridge" subheading="New York City - USA" reverse={false} />
-        </div>
+        </motion.div>
 
-        <div className='sm:col-span-8'>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={variant}
+          className='sm:col-span-8'>
 
           <GalleryImage src={ParkPhoto} heading="Central Park" subheading="New York City - USA" reverse={false} />
 
-        </div>
+        </motion.div>
       </div>
     </div>
   );
