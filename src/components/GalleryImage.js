@@ -37,9 +37,9 @@ function GalleryImage({ src, heading, subheading, reverse }) {
 
     <div id={heading + "-hover-container"} className={`w-full ${!reverse && ` flex flex-col `} sm:flex-col-reverse group `}>
 
-      <header className='flex text-base sm:text-sm sm:block my-2  lg:text-lg lg:leading-5'>
-        <h1 className='font-black sm:italic'>{heading} — &nbsp;</h1>
-        <p>{subheading}</p>
+      <header className='flex text-base sm:text-sm sm:block my-2  lg:text-base lg:leading-5'>
+        <h1 className='font-black sm:italic'>{heading} — <span className='font-medium sm:normal-case'>{subheading}</span></h1>
+        
       </header>
 
       <div className='w-full overflow-hidden'>
