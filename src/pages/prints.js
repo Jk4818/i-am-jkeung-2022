@@ -23,7 +23,11 @@ function prints(props) {
 
   return (
     <Layout>
-      <div className='w-full h-full bg-white px-2 lg:px-4'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className='w-full h-full bg-white px-2 lg:px-4'>
 
         <section className="w-full h-screen flex items-center justify-center">
           <motion.div
@@ -82,7 +86,7 @@ function prints(props) {
 
         </section>
 
-      </div>
+      </motion.div>
     </Layout>
   );
 }

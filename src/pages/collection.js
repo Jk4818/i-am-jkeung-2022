@@ -10,16 +10,16 @@ import PurpleVideo from "../assets/videos/purple.mp4";
 
 
 function Collection(props) {
-	const [active, setActive] = useState(true);
+	const [active, setActive] = useState(false);
 	return (
-		<motion.main 
-		initial={{ opacity: 0 }}
-		animate={{ opacity: 1 }}
-		exit={{opacity: 0 }}
-		className='overflow-x-hidden'>
-			<PhotoLoader active={active} setActive={setActive} />
-			{!active && (
-				<Layout>
+		<Layout>
+			<motion.main
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				className='overflow-x-hidden'>
+				<PhotoLoader active={active} setActive={setActive} />
+				{!active && (
 					<div className="w-screen flex flex-col justify-center items-center uppercase bg-bg-light ">
 
 						<div id="hero-container" className="w-full h-screen">
@@ -39,9 +39,9 @@ function Collection(props) {
 							</div>
 						</div>
 					</div>
-				</Layout>
-			)}
-		</motion.main>
+				)}
+			</motion.main>
+		</Layout>
 	);
 }
 
