@@ -12,6 +12,6 @@ import {AnimatePresence} from 'framer-motion';
 
 
 
-export const wrapPageElement = ({element}) => (
+export function wrapPageElement({element}){
   <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
-);
+};

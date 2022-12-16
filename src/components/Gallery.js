@@ -27,7 +27,7 @@ function Gallery(props) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:self-end sm:col-span-9 flex flex-col-reverse group '>
           <GalleryImage src={WastWater} heading="Wast Water" subheading="New York City - USA" reverse={true} />
@@ -35,7 +35,7 @@ function Gallery(props) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:self-end sm:col-span-6 flex flex-col-reverse '>
           <GalleryImage src={Building} heading="Building" subheading="New York City - USA" reverse={true} />
@@ -43,7 +43,7 @@ function Gallery(props) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:self-end sm:col-span-9 flex flex-col-reverse '>
           <GalleryImage src={Skyline} heading="NYC Skyline" subheading="New York City - USA" reverse={true} />
@@ -51,7 +51,7 @@ function Gallery(props) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:col-span-7'>
           <GalleryImage src={PalmTree} heading="A Palm Tree" subheading="New York City - North Cyprus" reverse={false} />
@@ -60,7 +60,7 @@ function Gallery(props) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:col-span-9'>
           <GalleryImage src={ManhattanBridge} heading="Manhattan Bridge" subheading="New York City - USA" reverse={false} />
@@ -69,7 +69,7 @@ function Gallery(props) {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:col-span-8'>
 
