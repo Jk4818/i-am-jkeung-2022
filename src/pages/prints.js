@@ -33,7 +33,7 @@ function prints(props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.7}}
             variants={variant}
             className='w-full sm:w-1/2 max-w-[80rem]'>
             <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/frontal.png" alt="book_front" />
@@ -48,7 +48,7 @@ function prints(props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.7}}
             variants={variant}
             className='w-full sm:w-3/4  text-center font-tinos'>
 
