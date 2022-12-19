@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-function GalleryImage({ src, heading, subheading, reverse }) {
+function GalleryImage({ data, src, heading, subheading, alt, reverse }) {
+
+  const image = getImage(data);
 
   // function that translates imageHover towards cursor when hovering over image
   useEffect(() => {
@@ -15,7 +17,7 @@ function GalleryImage({ src, heading, subheading, reverse }) {
 
       const xWalk = Math.round((x / width * 100) - 50) / 4;
       const yWalk = Math.round((y / height * 100) - 50) / 4;
-      
+
       imageHover.style.transform = `scale(1.1) translate(${xWalk}px, ${yWalk}px`;
     }
 
@@ -23,6 +25,7 @@ function GalleryImage({ src, heading, subheading, reverse }) {
     imageHoverContainer.addEventListener('mouseleave', () => {
       imageHover.style.transform = `scale(1.0) translate(0px, 0px)`;
     });
+
 
     return () => {
       imageHoverContainer.removeEventListener('mousemove', translateImage);
@@ -39,12 +42,13 @@ function GalleryImage({ src, heading, subheading, reverse }) {
 
       <header className='flex text-base sm:text-sm sm:block my-2  lg:text-base lg:leading-5'>
         <h1 className='font-black sm:italic'>{heading} — <span className='font-medium sm:normal-case'>{subheading}</span></h1>
-        
+
       </header>
 
       <div className='w-full overflow-hidden'>
         <div id={heading + "-hover"} className='w-full'>
-          <img className='w-full' placeholder='none' layout='constrained' src={src} alt={heading} />
+          {/* <img className='w-full' placeholder='none' layout='constrained' src={src} alt={alt} /> */}
+          <GatsbyImage image={image} alt={alt} />
         </div>
       </div>
 
@@ -53,3 +57,20 @@ function GalleryImage({ src, heading, subheading, reverse }) {
 }
 
 export default GalleryImage;
+
+
+//gatsby query that gets all images from prints folder
+export const query = graphql`
+query {
+  file(relativePath: { eq: "prints/building.png" }) {
+    name
+     childImageSharp {
+      gatsbyImageData(
+        width: 200
+        placeholder: BLURRED
+        formats: [AUTO, WEBP, AVIF]
+      )
+    }
+  }
+}
+`

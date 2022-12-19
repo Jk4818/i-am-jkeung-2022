@@ -30,7 +30,7 @@ function Gallery(props) {
           viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:self-end sm:col-span-9 flex flex-col-reverse group '>
-          <GalleryImage src={WastWater} heading="Wast Water" subheading="New York City - USA" reverse={true} />
+          <GalleryImage src={WastWater} heading="Wast Water" subheading="New York City - USA" alt="wast_water.png" reverse={true} />
         </motion.div>
         <motion.div
           initial="hidden"
@@ -38,7 +38,7 @@ function Gallery(props) {
           viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:self-end sm:col-span-6 flex flex-col-reverse '>
-          <GalleryImage src={Building} heading="Building" subheading="New York City - USA" reverse={true} />
+          <GalleryImage src={Building} heading="Building" subheading="New York City - USA" alt="building.png" reverse={true} />
         </motion.div>
         <motion.div
           initial="hidden"
@@ -46,7 +46,7 @@ function Gallery(props) {
           viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:self-end sm:col-span-9 flex flex-col-reverse '>
-          <GalleryImage src={Skyline} heading="NYC Skyline" subheading="New York City - USA" reverse={true} />
+          <GalleryImage src={Skyline} heading="NYC Skyline" subheading="New York City - USA" alt="nyc_skyline.png" reverse={true} />
         </motion.div>
         <motion.div
           initial="hidden"
@@ -54,7 +54,7 @@ function Gallery(props) {
           viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:col-span-7'>
-          <GalleryImage src={PalmTree} heading="A Palm Tree" subheading="New York City - North Cyprus" reverse={false} />
+          <GalleryImage src={PalmTree} heading="A Palm Tree" subheading="New York City - North Cyprus" alt="palm_tree.png" reverse={false} />
         </motion.div>
 
         <motion.div
@@ -63,7 +63,7 @@ function Gallery(props) {
           viewport={{ once: true, amount: 0.6 }}
           variants={variant}
           className='sm:col-span-9'>
-          <GalleryImage src={ManhattanBridge} heading="Manhattan Bridge" subheading="New York City - USA" reverse={false} />
+          <GalleryImage src={ManhattanBridge} heading="Manhattan Bridge" subheading="New York City - USA" alt="manhattan_bridge.png" reverse={false} />
         </motion.div>
 
         <motion.div
@@ -73,7 +73,7 @@ function Gallery(props) {
           variants={variant}
           className='sm:col-span-8'>
 
-          <GalleryImage src={ParkPhoto} heading="Central Park" subheading="New York City - USA" reverse={false} />
+          <GalleryImage src={ParkPhoto} heading="Central Park" subheading="New York City - USA" alt="park.png" reverse={false} />
 
         </motion.div>
       </div>
@@ -82,3 +82,5 @@ function Gallery(props) {
 }
 
 export default Gallery;
+
+
