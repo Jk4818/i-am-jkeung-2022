@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 function GalleryImage({ data, src, heading, subheading, alt, reverse }) {
 
-  const image = getImage(data);
+  const image = getImage(src);
 
   // function that translates imageHover towards cursor when hovering over image
   useEffect(() => {
@@ -48,7 +48,7 @@ function GalleryImage({ data, src, heading, subheading, alt, reverse }) {
       <div className='w-full overflow-hidden'>
         <div id={heading + "-hover"} className='w-full'>
           {/* <img className='w-full' placeholder='none' layout='constrained' src={src} alt={alt} /> */}
-          {/* <GatsbyImage image={image} alt={alt} /> */}
+          <GatsbyImage image={image} alt={alt} />
         </div>
       </div>
 

@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
-import { StaticImage } from "gatsby-plugin-image";
 import { motion } from 'framer-motion';
 import GalleryImage from './GalleryImage';
 
 
-import ManhattanBridge from '../assets/images/prints/manhattan_bridge.png';
-import ParkPhoto from '../assets/images/prints/park.png';
-import PalmTree from '../assets/images/prints/palm_tree.png';
-import Skyline from '../assets/images/prints/nyc_skyline.png';
-import WastWater from '../assets/images/prints/wast_water.png';
-import Building from '../assets/images/prints/building.png';
+// import ManhattanBridge from '../assets/images/prints/manhattan_bridge.png';
+// import ParkPhoto from '../assets/images/prints/park.png';
+// import PalmTree from '../assets/images/prints/palm_tree.png';
+// import Skyline from '../assets/images/prints/nyc_skyline.png';
+// import WastWater from '../assets/images/prints/wast_water.png';
+// import Building from '../assets/images/prints/building.png';
 
-function Gallery({ data }) {
+function Gallery({ gallaryData }) {
 
   const variant = {
     hidden: { opacity: 0, y: "20%" },
@@ -21,20 +20,23 @@ function Gallery({ data }) {
     }
   };
 
+
+
   return (
     <div className='w-screen h-max'>
-      <div className='grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2 gap-6 lg:gap-4 text-xs font-tinos'>
+      <div className='grid grid-cols-1 sm:flex sm:flex-wrap gap-6 lg:gap-4 text-xs font-tinos'>
 
-        {data && data.images.edges.map((image, index) => {
-          console.log(index);
+        {gallaryData && gallaryData.images.edges.slice(0,6).map((image, index) => {
+          console.log(image);
           return (
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.6 }}
               variants={variant}
-              className='sm:col-span-9'>
-              <GalleryImage src={image.src} heading={image.heading} subheading={image.subheading} alt={image.alt} reverse={index % 3 === 0 ? true : false} />
+              key={index}
+              className={`${index % 6 < 3 && "sm:self-end flex flex-col-reverse"} sm:basis-1/4`}>
+              <GalleryImage src={image.node} heading={image.node.base} subheading={image.node.base} alt={image.node.base} reverse={index % 6 < 3 ? true : false} />
             </motion.div>
           )
         })}
@@ -97,33 +99,3 @@ function Gallery({ data }) {
 }
 
 export default Gallery;
-
-
-//gatbsy query for all images in prints folder
-export const galleryQuery = graphql`
-  query {
-    images: allFile(
-      filter: { relativeDirectory: {eq: "prints"}}
-    ) {
-      edges {
-        node {
-          id
-          base
-          childImageSharp {
-            gatsbyImageData(
-              placeholder: BLURRED
-              height: 400
-              formats: AUTO
-              width: 600
-              quality: 70
-              transformOptions: {grayscale: true}
-            )
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    }
-  }
-`;

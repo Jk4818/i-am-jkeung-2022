@@ -1,11 +1,12 @@
 import React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
+import {graphql} from 'gatsby';
 import { motion } from "framer-motion";
 
 import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
 import GalleryImage from '../components/GalleryImage';
-import PeakPhoto from '../assets/images/prints/peak.png';
+import PeakPhoto from '../assets/images/prints/gallery/peak.png';
 import BuyButton from '../components/BuyButton';
 
 function prints(props) {
@@ -20,6 +21,7 @@ function prints(props) {
       },
     }
   };
+
 
   return (
     <Layout>
@@ -41,7 +43,7 @@ function prints(props) {
         </section>
 
         <section className="w-full h-max flex items-center justify-center">
-          <Gallery />
+          <Gallery gallaryData={props.data}/>
         </section>
 
         <section className="w-full h-screen flex items-center justify-center">
@@ -92,3 +94,30 @@ function prints(props) {
 }
 
 export default prints;
+
+//gatbsy query for all images in prints folder
+export const printQuery = graphql`
+  query {
+    images: allFile(
+      filter: { relativeDirectory: {eq: "prints/gallery"}}
+    ) {
+      edges {
+        node {
+          id
+          base
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              height: 400
+              formats: AUTO
+              width: 400
+              layout: FULL_WIDTH
+              quality: 70
+            )
+          }
+        }
+      }
+    }
+  }
+  
+`;
