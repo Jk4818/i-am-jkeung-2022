@@ -48,7 +48,7 @@ function GalleryImage({ data, src, heading, subheading, alt, reverse }) {
       <div className='w-full overflow-hidden'>
         <div id={heading + "-hover"} className='w-full'>
           {/* <img className='w-full' placeholder='none' layout='constrained' src={src} alt={alt} /> */}
-          <GatsbyImage image={image} alt={alt} />
+          {/* <GatsbyImage image={image} alt={alt} /> */}
         </div>
       </div>
 
@@ -57,20 +57,3 @@ function GalleryImage({ data, src, heading, subheading, alt, reverse }) {
 }
 
 export default GalleryImage;
-
-
-//gatsby query that gets all images from prints folder
-export const query = graphql`
-query {
-  file(relativePath: { eq: "prints/building.png" }) {
-    name
-     childImageSharp {
-      gatsbyImageData(
-        width: 200
-        placeholder: BLURRED
-        formats: [AUTO, WEBP, AVIF]
-      )
-    }
-  }
-}
-`

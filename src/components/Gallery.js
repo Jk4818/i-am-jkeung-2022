@@ -11,7 +11,7 @@ import Skyline from '../assets/images/prints/nyc_skyline.png';
 import WastWater from '../assets/images/prints/wast_water.png';
 import Building from '../assets/images/prints/building.png';
 
-function Gallery(props) {
+function Gallery({ data }) {
 
   const variant = {
     hidden: { opacity: 0, y: "20%" },
@@ -24,7 +24,22 @@ function Gallery(props) {
   return (
     <div className='w-screen h-max'>
       <div className='grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2 gap-6 lg:gap-4 text-xs font-tinos'>
-        <motion.div
+
+        {data && data.images.edges.map((image, index) => {
+          console.log(index);
+          return (
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+              variants={variant}
+              className='sm:col-span-9'>
+              <GalleryImage src={image.src} heading={image.heading} subheading={image.subheading} alt={image.alt} reverse={index % 3 === 0 ? true : false} />
+            </motion.div>
+          )
+        })}
+
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.6 }}
@@ -75,7 +90,7 @@ function Gallery(props) {
 
           <GalleryImage src={ParkPhoto} heading="Central Park" subheading="New York City - USA" alt="park.png" reverse={false} />
 
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
@@ -84,3 +99,31 @@ function Gallery(props) {
 export default Gallery;
 
 
+//gatbsy query for all images in prints folder
+export const galleryQuery = graphql`
+  query {
+    images: allFile(
+      filter: { relativeDirectory: {eq: "prints"}}
+    ) {
+      edges {
+        node {
+          id
+          base
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              height: 400
+              formats: AUTO
+              width: 600
+              quality: 70
+              transformOptions: {grayscale: true}
+            )
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+  }
+`;

@@ -12,7 +12,7 @@ export default function UseComponentVisible(initialIsVisible) {
 
     useEffect(() => {
         document.addEventListener('click', handleClickOutside, true);
-        console.log('useEffect');
+        // console.log('useEffect');
         return () => {
             document.removeEventListener('click', handleClickOutside, true);
         };
