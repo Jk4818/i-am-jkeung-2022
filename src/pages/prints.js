@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
 import GalleryImage from '../components/GalleryImage';
-import PeakPhoto from '../assets/images/prints/gallery/peak.png';
+import PeakPhoto from '../assets/images/prints/peak.png';
 import BuyButton from '../components/BuyButton';
 
 function prints(props) {
@@ -99,6 +99,7 @@ export default prints;
 export const printQuery = graphql`
   query {
     images: allFile(
+      sort: {fields: base, order: ASC}
       filter: { relativeDirectory: {eq: "prints/gallery"}}
     ) {
       edges {

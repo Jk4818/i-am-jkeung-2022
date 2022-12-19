@@ -20,11 +20,20 @@ function Gallery({ gallaryData }) {
     }
   };
 
+  const columnSpan =[ 
+    'sm:col-span-9',
+    'sm:col-span-6',
+    'sm:col-span-9',
+    'sm:col-span-7',
+    'sm:col-span-9',
+    'sm:col-span-8',
+  ]
 
 
   return (
     <div className='w-screen h-max'>
-      <div className='grid grid-cols-1 sm:flex sm:flex-wrap gap-6 lg:gap-4 text-xs font-tinos'>
+      { 
+        <div className='grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2  gap-6 lg:gap-4 text-xs font-tinos'>
 
         {gallaryData && gallaryData.images.edges.slice(0,6).map((image, index) => {
           console.log(image);
@@ -35,65 +44,13 @@ function Gallery({ gallaryData }) {
               viewport={{ once: true, amount: 0.6 }}
               variants={variant}
               key={index}
-              className={`${index % 6 < 3 && "sm:self-end flex flex-col-reverse"} sm:basis-1/4`}>
+              className={`${columnSpan[index]} ${index % 6 < 3 && "sm:self-end flex flex-col-reverse"}`}>
               <GalleryImage src={image.node} heading={image.node.base} subheading={image.node.base} alt={image.node.base} reverse={index % 6 < 3 ? true : false} />
             </motion.div>
           )
         })}
-
-        {/* <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
-          variants={variant}
-          className='sm:self-end sm:col-span-9 flex flex-col-reverse group '>
-          <GalleryImage src={WastWater} heading="Wast Water" subheading="New York City - USA" alt="wast_water.png" reverse={true} />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
-          variants={variant}
-          className='sm:self-end sm:col-span-6 flex flex-col-reverse '>
-          <GalleryImage src={Building} heading="Building" subheading="New York City - USA" alt="building.png" reverse={true} />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
-          variants={variant}
-          className='sm:self-end sm:col-span-9 flex flex-col-reverse '>
-          <GalleryImage src={Skyline} heading="NYC Skyline" subheading="New York City - USA" alt="nyc_skyline.png" reverse={true} />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
-          variants={variant}
-          className='sm:col-span-7'>
-          <GalleryImage src={PalmTree} heading="A Palm Tree" subheading="New York City - North Cyprus" alt="palm_tree.png" reverse={false} />
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
-          variants={variant}
-          className='sm:col-span-9'>
-          <GalleryImage src={ManhattanBridge} heading="Manhattan Bridge" subheading="New York City - USA" alt="manhattan_bridge.png" reverse={false} />
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.6 }}
-          variants={variant}
-          className='sm:col-span-8'>
-
-          <GalleryImage src={ParkPhoto} heading="Central Park" subheading="New York City - USA" alt="park.png" reverse={false} />
-
-        </motion.div> */}
       </div>
+      }
     </div>
   );
 }
