@@ -6,11 +6,23 @@ import GalleryImage from './GalleryImage';
 function Gallery({ gallaryData }) {
 
   const variant = {
-    hidden: { opacity: 0, y: "20%" },
+    hidden: {
+      opacity: 0, y: "20%",
+      transition: {
+        staggerChildren: 0.5,
+        duration: 0.75,
+        ease: "easeInOut",
+      },
+    },
     visible: {
       y: 0,
       opacity: 1,
-    }
+      transition: {
+        staggerChildren: 0.5,
+        duration: 0.75,
+        ease: "easeInOut",
+      },
+    },
   };
 
   const columnSpan = [

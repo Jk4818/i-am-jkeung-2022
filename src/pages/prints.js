@@ -99,7 +99,6 @@ export default prints;
 export const printQuery = graphql`
   query {
     images: allFile(
-      sort: {fields: base, order: ASC}
       filter: { relativeDirectory: {eq: "prints/gallery"}}
     ) {
       edges {
