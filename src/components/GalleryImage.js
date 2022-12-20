@@ -47,8 +47,7 @@ function GalleryImage({ data, src, heading, subheading, alt, reverse }) {
 
       <div className='w-full overflow-hidden'>
         <div id={heading + "-hover"} className='w-full'>
-          {/* <img className='w-full' placeholder='none' layout='constrained' src={src} alt={alt} /> */}
-          <GatsbyImage image={image} alt={alt} />
+          {src && <GatsbyImage image={image} alt={alt} />}
         </div>
       </div>
 
