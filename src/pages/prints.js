@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import { motion } from "framer-motion";
 
 import Layout from '../components/Layout';
@@ -35,7 +35,7 @@ function prints(props) {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.7}}
+            viewport={{ once: true, amount: 0.7 }}
             variants={variant}
             className='w-full sm:w-1/2 max-w-[80rem]'>
             <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/frontal.png" alt="book_front" />
@@ -43,18 +43,22 @@ function prints(props) {
         </section>
 
         <section className="w-full h-max flex items-center justify-center">
-          <Gallery gallaryData={props.data}/>
+          <Gallery gallaryData={props.data} />
         </section>
 
         <section className="w-full h-screen flex items-center justify-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.7}}
+            viewport={{ once: true, amount: 0.7 }}
             variants={variant}
             className='w-full sm:w-3/4  text-center font-tinos'>
 
-            <GalleryImage src={PeakPhoto} heading="The Peak" subheading="Scafell Pike - Lake District, UK" reverse={false} />
+            <StaticImage placeholder='none' layout='constrained' src="../assets/images/prints/peak.png" alt="peak" />
+            <header className='flex text-base sm:text-sm sm:block my-2  lg:text-base lg:leading-5'>
+              <h1 className='font-black sm:italic'>The Peak — <span className='font-medium sm:normal-case'>Scafell Pike, Lake District, UK</span></h1>
+
+            </header>
 
           </motion.div>
         </section>
