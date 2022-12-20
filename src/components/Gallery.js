@@ -64,7 +64,7 @@ function Gallery({ gallaryData }) {
     <div className='w-screen h-max'>
       {galleryData && galleryData.map((gallery, galleryIndex) => {
         return (
-          <div key={galleryIndex} className='grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2  gap-6 lg:gap-4 text-xs font-tinos'>
+          <div key={galleryIndex} className='w-full h-screen grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2  gap-6 lg:gap-4 text-xs font-tinos'>
 
             {gallery.map((image, index) => {
               console.log(image);

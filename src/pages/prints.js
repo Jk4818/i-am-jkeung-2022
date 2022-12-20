@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 
 import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
-import GalleryImage from '../components/GalleryImage';
-import PeakPhoto from '../assets/images/prints/peak.png';
 import BuyButton from '../components/BuyButton';
 
 function prints(props) {
@@ -87,7 +85,9 @@ function prints(props) {
 
               All A3 prints are shipped in presentation boxes flat and A2 and A1 prints are shipped in tubes. I have had the tubes designed specifically to ship these sizes and they are much wider than usual tubes so that they don’t hold their curve.
             </p>
-            <BuyButton />
+            <div className='mt-4'>
+              <BuyButton />
+            </div>
           </div>
 
         </section>
@@ -112,9 +112,7 @@ export const printQuery = graphql`
           childImageSharp {
             gatsbyImageData(
               placeholder: BLURRED
-              height: 400
               formats: AUTO
-              width: 400
               layout: FULL_WIDTH
               quality: 70
             )
