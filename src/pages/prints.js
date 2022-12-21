@@ -74,7 +74,7 @@ function prints(props) {
 
           <div className='h-max font-inter flex flex-col gap-2'>
             <h1 className='font-tinos text-lg font-bold'>Limited Edition Prints</h1>
-            <p>My limited edition prints are available in edition sizes from 5-50 (depending on the size and image). These photographs are my favourite from my total portfolio of work. I only choose images that I feel will be complimented by the printing process and look amazing when framed.
+            <p>Limited edition prints are available in edition sizes from 5-50 (depending on the size and image). These photographs are my favourite from my total portfolio of work. I only choose images that I feel will be complimented by the printing process and look amazing when framed.
             </p>
             <h2 className='mt-4 font-bold'>Archival Papers</h2>
             <p>All images are printed on <span className='font-bold'>Hahnemühle Photo Rag®.</span> <br />
