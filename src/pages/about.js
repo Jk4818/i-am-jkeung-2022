@@ -34,7 +34,7 @@ function About(props) {
         animate={{ y: "0%", opacity: 1, transition: { delay: 1.2}}}
         exit={{ y: "100%",  opacity: 0 }}
         className='mt-10 font-archivo uppercase text-center md:text-start text-md md:text-xl '>
-          Jason keung is a british photographer, filmmaker, mixing and mastering engineer based in london, uk. <br /><br />
+          Jason keung is a british photographer, filmmaker, mixing and mastering engineer based in London, UK. <br /><br />
 
           Enim, cursus mollis adipiscing amet, a massa. Tempus integer tempus aliquam venenatis imperdiet nibh venenatis tellus. Volutpat aliquam nec mi vel malesuada aenean aliquam, ac mi. Sit aliquet lectus egestas sollicitudin pellentesque magna ornare lorem posuere. Nunc lacus eu quis fringilla rhoncus malesuada. Sit sed massa aenean donec natoque netus. Porttitor purus aenean at facilisi purus non sit rhoncus. Amet nisl elementum lorem.
         </motion.div>
