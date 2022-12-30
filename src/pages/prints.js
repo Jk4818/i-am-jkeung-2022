@@ -27,9 +27,9 @@ function prints(props) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className='w-full h-full bg-white px-2 lg:px-4 '>
+        className=' w-full h-full bg-white px-2 lg:px-4 '>
 
-        <section className="w-full h-screen flex items-center justify-center">
+        <section className="snap-start w-full h-screen flex items-center justify-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -44,7 +44,7 @@ function prints(props) {
           <Gallery gallaryData={props.data} />
         </section>
 
-        <section className="w-full h-screen flex items-center justify-center">
+        <section className="snap-start w-full h-screen flex items-center justify-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -61,7 +61,7 @@ function prints(props) {
           </motion.div>
         </section>
 
-        <section className="w-full min-h-screen h-max py-10 sm:py-0 px-10 items-center justify-center grid grid-rows-1 md:grid-cols-3 gap-10">
+        <section className="snap-start w-full min-h-screen h-max py-10 sm:py-0 px-10 items-center justify-center grid grid-rows-1 md:grid-cols-3 gap-10">
 
           <motion.div
             initial="hidden"

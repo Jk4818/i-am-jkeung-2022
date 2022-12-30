@@ -6,6 +6,8 @@ html,
 body {
     margin: 0;
     background-color: #302E2F;
+    scroll-snap-type: y ;
+    scroll-behavior: smooth;
 }
 
 @layer components {
