@@ -20,9 +20,9 @@ function Collection(props) {
 				className='overflow-x-hidden'>
 				<PhotoLoader active={active} setActive={setActive} />
 				{!active && (
-					<div className="w-screen flex flex-col justify-center items-center uppercase bg-bg-light ">
+					<div className="w-screen h-full flex flex-col justify-center items-center uppercase bg-bg-light ">
 
-						<div id="hero-container" className="w-full h-screen">
+						<div id="hero-container" className="snarp-start w-full h-screen">
 							<div className='relative w-full h-full pointer-events-none'>
 								<Video
 									videoSrc={ShowReelVideo}
@@ -30,7 +30,7 @@ function Collection(props) {
 								/>
 							</div>
 						</div>
-						<div id="hero-container" className="w-full h-screen">
+						<div id="hero-container" className="snap-start w-full h h-screen">
 							<div className='relative w-full h-full pointer-events-none'>
 								<Video
 									videoSrc={PurpleVideo}
