@@ -34,7 +34,7 @@ function Latest(props) {
 
   return (
     <div className='w-screen h-screen overflow-none flex justify-center items-center'>
-      <div><Logo /></div>
+      <div className='absolute h-20 p-12 top-2 md:top-0 left-2 md:left-0'><Logo /></div>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1 } }} className='font-archivo text-white w-96 h-1/2 flex flex-col items-center'>
 
         <div className='w-1/2 aspect-square'>
