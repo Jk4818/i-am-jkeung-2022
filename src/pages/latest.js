@@ -46,6 +46,9 @@ function Latest(props) {
         <motion.ul initial="closed" animate="open" variants={menuItemVariants} className='w-3/4 h-max mt-10 text-center flex flex-col justify-center items-center gap-4'>
           <a className='w-full' href="https://open.spotify.com/track/66gyJPSEInZg08XMOKEQ50?si=c3230d157a6941db" target="_blank"><motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Spotify</motion.li>
           </a>
+          <a className='w-full' href="https://music.apple.com/gb/album/run-to-you/1665279968?i=1665279969" target="_blank">
+            <motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Apple Music</motion.li>
+          </a>
           <a className='w-full' href="https://youtu.be/zV6E3BeooKk" target="_blank">
             <motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Youtube</motion.li>
           </a>
