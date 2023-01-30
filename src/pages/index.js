@@ -61,7 +61,7 @@ const IndexPage = () => {
 					<PhotoLoader active={active} setActive={setActive} />
 					<div className="w-screen h-screen flex flex-col gap-6 justify-center items-center  bg-bg-main">
 						{/* <Logo /> */}
-						<div className='text-xl md:text-3xl lg:text-9xl font-black tracking-[1rem] text-white text-center uppercase'>
+						<div className='text-xl md:text-3xl lg:text-7xl font-black tracking-[1rem] text-white text-center uppercase'>
 							<Typewriter
 							options={{
 								autoStart: true,
