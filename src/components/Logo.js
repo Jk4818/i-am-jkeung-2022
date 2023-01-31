@@ -57,7 +57,7 @@ function Logo(props) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       whileHover={"visible"}
-      className={`absolute left-2 top-2 md:top-auto md:left-12 w-36 h-7 text-lg font-archivo font-semibold ${url.includes("prints") ? "text-main-gray-dark" : "text-text-light"} transition-colors  text-left `}>
+      className={`absolute left-2 top-2 md:top-auto md:left-12 w-36 h-7 text-lg font-archivo font-semibold ${(url.includes("prints") ) ? "text-main-gray-dark" : "text-text-light"} transition-colors  text-left `}>
 
       <Link to='/'>
         <motion.span initial={{ opacity: 0, y:-20 }} variants={logoVariantsHoverIAM} className="absolute left-0 top-0" >iam</motion.span>
