@@ -11,7 +11,7 @@ import LogoAuto from '../components/LogoAuto.js';
 const IndexPage = () => {
 
 	const comingSoon = true;
-	const [active, setActive] = useState(false);
+	const [active, setActive] = useState(true);
 
 	return (
 		<main>

@@ -16,7 +16,7 @@ function LogoAuto(props) {
             y: 0,
             opacity: 1,
             transition: {
-                delay:4,
+                delay:8,
                 duration: 0.5
             },
         }
@@ -31,7 +31,7 @@ function LogoAuto(props) {
             y: 0,
             opacity: 1,
             transition: {
-                delay:4.25,
+                delay:8.25,
                 duration: 0.5
             },
         }
@@ -48,7 +48,7 @@ function LogoAuto(props) {
             opacity: 1,
             x: -140,
             transition: {
-                delay:3,
+                delay:7,
                 duration: 1
             },
         }
@@ -63,7 +63,7 @@ function LogoAuto(props) {
             x: 118,
             opacity: 1,
             transition: {
-                delay:3,
+                delay:7,
                 duration: 1
             },
         }
@@ -79,7 +79,7 @@ function LogoAuto(props) {
             x: 280,
             opacity: 1,
             transition: {
-                delay:3,
+                delay:7,
                 duration: 1
             },
         }
