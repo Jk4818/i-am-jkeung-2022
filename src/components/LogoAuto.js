@@ -6,68 +6,56 @@ function LogoAuto(props) {
 
     const url = useLocation().pathname;
 
+    const logoVariantsHoverIAM = {
+        hidden: {
+            y: -20,
+            opacity: 0,
+        },
+        visible: {
+            display: 'inline',
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay:4,
+                duration: 0.5
+            },
+        }
+    };
+    const logoVariantsHoverEUNG = {
+        hidden: {
+            y: -20,
+            opacity: 0
+        },
+        visible: {
+            display: 'inline',
+            y: 0,
+            opacity: 1,
+            transition: {
+                delay:4.25,
+                duration: 0.5
+            },
+        }
+    };
+
+
+
+
     const logoVariants = {
         hidden: {
-            // opacity: 0,
-            x:0
+            x: 0
         },
         visible: {
             opacity: 1,
             x: -140,
             transition: {
-                delay: 0.4,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                repeatDelay: 3,
-                duration: 0.5
+                delay:3,
+                duration: 1
             },
         }
     };
-    const logoVariantsHoverIAM = {
-        hidden: { 
-            y:-20,
-            opacity: 0,
-            transition: {
-                delay: 0.5,
-            }  
-        },
-        visible: {
-            display: 'inline',
-            y: 0,
-            opacity: 1,
-            transition: {
-                repeat: Infinity,
-                repeatType: 'reverse',
-                repeatDelay: 3,
-                duration: 0.5
-            }
-        }
-    };
-    const logoVariantsHoverEUNG = {
-        hidden: { 
-            y:-20,
-            opacity: 0,
-            transition: {
-                delay: 0,
-            } 
-        },
-        visible: {
-            display: 'inline',
-            y: 0,
-            opacity: 1,
-            transition: {
-                delay: 0.1,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                repeatDelay: 3,
-                duration: 0.5
-            }
-        }
-    };
-
     const logoVariantsJK = {
-        hidden: { 
-            x:0,
+        hidden: {
+            x: 0,
             opacity: 1,
         },
         visible: {
@@ -75,18 +63,15 @@ function LogoAuto(props) {
             x: 118,
             opacity: 1,
             transition: {
-                delay:0.4,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                repeatDelay: 3,
-                duration: 0.5
-            }
+                delay:3,
+                duration: 1
+            },
         }
     };
 
     const logoVariantsSTUD = {
-        hidden: { 
-            x:0,
+        hidden: {
+            x: 0,
             opacity: 1,
         },
         visible: {
@@ -94,12 +79,9 @@ function LogoAuto(props) {
             x: 280,
             opacity: 1,
             transition: {
-                delay:0.4,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                repeatDelay: 3,
-                duration: 0.5
-            }
+                delay:3,
+                duration: 1
+            },
         }
     };
 
