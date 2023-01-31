@@ -11,7 +11,7 @@ import LogoAuto from '../components/LogoAuto.js';
 const IndexPage = () => {
 
 	const comingSoon = true;
-	const [active, setActive] = useState(true);
+	const [active, setActive] = useState(false);
 
 	return (
 		<main>
@@ -59,9 +59,11 @@ const IndexPage = () => {
 					className="overflow-hidden">
 
 					<PhotoLoader active={active} setActive={setActive} />
-					<div className="w-screen h-screen flex flex-col gap-6 justify-center items-center  bg-bg-light">
-						<LogoAuto />
-						<div className='text-xl md:text-3xl lg:text-7xl font-black tracking-[1rem] text-main-gray-darker text-center uppercase'>
+					<div className="w-screen h-screen flex flex-col md:gap-6 justify-center items-center  bg-bg-light">
+						<div className='transform scale-50 md:scale-100'>
+							<LogoAuto />
+						</div>
+						<div className='text-sm md:text-3xl lg:text-7xl font-black lg:tracking-[1rem] text-main-gray-darker text-center uppercase'>
 							<Typewriter
 							options={{
 								autoStart: true,
@@ -70,13 +72,13 @@ const IndexPage = () => {
 							onInit={(typewriter) => {
 								typewriter.typeString('Sit tight')
 									.start()
-									.pauseFor(7000)
+									.pauseFor(4000)
 									.deleteAll()
 									.typeString('...')
-									.pauseFor(5000)
+									.pauseFor(3000)
 									.deleteAll()
 									.typeString("It's Coming.")
-									.pauseFor(10000)
+									.pauseFor(6000)
 							}} />
 						</div>
 					</div>
