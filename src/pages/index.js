@@ -63,7 +63,7 @@ const IndexPage = () => {
 						<div className='transform scale-50 md:scale-100'>
 							<LogoAuto />
 						</div>
-						<div className='text-sm md:text-3xl lg:text-7xl font-black lg:tracking-[1rem] text-main-gray-darker text-center uppercase'>
+						<div className='text-sm md:text-lg font-black  text-main-gray-darker text-center uppercase'>
 							<Typewriter
 							options={{
 								autoStart: true,
