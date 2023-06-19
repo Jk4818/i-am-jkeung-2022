@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         'bg-light': '#EAE8E7',
+        'prod-dark': '#141414',
         'text-light': '#F9F9F9',
         'main-black':'#302E2F',
         'main-gray':'#8B8989',
@@ -37,8 +38,10 @@ module.exports = {
       },
       boxShadow: {
         'main': '0px 0px 20px 0px rgba(0,0,0,0.2);',
-      }
-        
+      },
+      blur: {
+        '4xl': '130px',
+      },
     },
   },
   plugins: [require('tailwindcss-neumorphism')],

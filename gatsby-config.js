@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `I Am JKeung 2022`,
+    title: `I Am JKeung 2023`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [`gatsby-plugin-smoothscroll`,"gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", `gatsby-plugin-preload-fonts`, {
@@ -18,10 +18,24 @@ module.exports = {
   },{
     resolve: 'gatsby-source-filesystem',
     options: {
+      "name": "audio",
+      "path": `${__dirname}/src/assets/audio/`
+    },
+    __key: "audio"
+  },{
+    resolve: 'gatsby-source-filesystem',
+    options: {
       "name": "tracks",
       "path": `${__dirname}/src/tracks/`
     },
     __key: "track"
+  },{
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "pricing",
+      "path": `${__dirname}/src/pricing/`
+    },
+    __key: "pricing"
   }, {
     resolve: 'gatsby-source-filesystem',
     options: {
