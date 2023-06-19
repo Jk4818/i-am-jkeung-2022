@@ -38,7 +38,7 @@ function Latest(props) {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1 } }} className='font-archivo text-white w-96 h-1/2 flex flex-col items-center'>
 
         <div className='w-1/2 aspect-square'>
-          <StaticImage className='rounded-full' placeholder='none' layout='constrained' src="../assets/images/tracks/run-to-your-cover.jpg" alt="cover" />
+          <StaticImage className='rounded-full' placeholder='none' layout='constrained' src="../assets/images/tracks/run_to_you_cover.jpg" alt="cover" />
         </div>
 
         <h1 className='mt-4 text-center'>Run To You <br /> feat. Layla Mehmet, George Chen</h1>

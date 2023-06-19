@@ -2,9 +2,7 @@ import React, { useRef, useState, useCallback } from 'react';
 import { WaveForm, WaveSurfer } from 'wavesurfer-react';
 
 import { BsPlayCircle, BsPauseCircle } from 'react-icons/bs';
-import audioTrack from "../assets/audio/over_the_mile.wav";
-
-function AudioWaveform({title, composer}) {
+function AudioWaveform({title, composer, audioTrack}) {
     
     const [isPlaying, setIsPlaying] = useState(false);
     
@@ -56,7 +54,7 @@ function AudioWaveform({title, composer}) {
     );
 
     return (
-        <div className='w-full h-max my-10'>
+        <div className='w-full h-full my-10'>
             <div className='my-10 flex items-center gap-4 text-white'>
                 <button onClick={play} className='text-5xl hover:text-main-gray transition-all'>
                     {isPlaying ?
@@ -69,7 +67,7 @@ function AudioWaveform({title, composer}) {
             </div>
 
             <WaveSurfer onMount={handleWSMount}>
-                <WaveForm id='waveform' cursorWidth={3} barWidth={3} barGap={2} barRadius={3} />
+                <WaveForm id='waveform' responsive={true} cursorWidth={3} barWidth={3} barGap={2} barRadius={3} />
             </WaveSurfer>
         </div>
     );
