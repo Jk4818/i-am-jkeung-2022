@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 
 import audioTrack1 from "../../assets/audio/over_the_mile.wav";
 import ThreeWayToggle from '../../components/ThreeWayToggle';
+import RevealTextAnimation from '../../components/RevealTextAnimation';
 
 
 function MixMastering({ data }) {
@@ -49,9 +50,13 @@ function MixMastering({ data }) {
 
                 <div className='flex flex-wrap text-white items-center xl:h-screen'>
                     <div className='w-full lg:w-1/2 font-archivo font-semibold'>
-                        <h1 className='mb-10 text-4xl'>Mixing & Mastering</h1>
-                        <p className='mb-32 text-2xl'>Specialising in a cappella, orchestral, and rock, my expertise extends across a wide range of styles. I am committed to delivering top-notch results by providing meticulous attention to detail, ensuring your artistic vision is achieved without compromising any technical requirements.
-                        </p>
+                        <RevealTextAnimation width="w-fit">
+                            <h1 className='text-4xl'>Mixing & Mastering</h1>
+                        </RevealTextAnimation>
+                        <RevealTextAnimation width="w-fit">
+                            <p className='mt-10 mb-32 text-2xl'>Specialising in a cappella, orchestral, and rock, my expertise extends across a wide range of styles. I am committed to delivering top-notch results by providing meticulous attention to detail, ensuring your artistic vision is achieved without compromising any technical requirements.
+                            </p>
+                        </RevealTextAnimation>
 
                         <h3 className='font-semibold logo-animate'>Join me as I compose my way through the captivating realm of film.
                         </h3>
@@ -84,9 +89,11 @@ function MixMastering({ data }) {
 
                 </div>
 
-                <div className=''>
-                    <AudioWaveform title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1}/>
-                </div>
+                <RevealTextAnimation width="w-full">
+                    <div className=''>
+                        <AudioWaveform title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1}/>
+                    </div>
+                </RevealTextAnimation>
 
                 <div className='w-full py-20'>
                     <div className='w-full flex items-center justify-between'>

@@ -34,7 +34,7 @@ function PricingCard({ color, title, description, price, features, btnText }) {
             {btnText ? 
             (<button className='mt-auto rounded-full bg-prod-dark py-3 px-6 text-lg text-white'>{btnText}</button>)
                 :
-            (<div className='mt-auto rounded-full bg-main-gray py-3 px-6 text-lg text-white text-center'>Out Of Stock</div>)
+            (<div className='mt-auto rounded-full bg-main-gray py-3 px-6 text-lg text-white text-center'>Contact For More Info</div>)
             }
 
         </div>
