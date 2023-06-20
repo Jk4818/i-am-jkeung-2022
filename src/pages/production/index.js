@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
-import NoiseBackground from '../components/NoiseBackground';
-import ProductionHeroTitle from '../components/ProductionHeroTitle';
-import Layout from '../components/Layout';
+import NoiseBackground from '../../components/NoiseBackground';
+import ProductionHeroTitle from '../../components/ProductionHeroTitle';
+import Layout from '../../components/Layout';
+import { Link } from 'gatsby';
 
 function Production(props) {
 
@@ -56,26 +57,29 @@ function Production(props) {
                             <div className='relative w-full h-full flex items-center justify-center z-10'>
 
 
-                                <div className='w-max h-max py-10 flex m-auto scale-50 sm:scale-100'>
+                                <div className='w-max h-max py-10 flex m-auto scale-50 sm:scale-100 active:scale-95 transition-transform'>
                                     <input type="checkbox" name="checkbox" id="toggle" checked={isChecked} onChange={checkHandler} />
-                                    <label for="toggle" className={`switch border-4 border-white after:bg-white`}></label>
+                                    <label for="toggle" className={`cursor-pointer switch border-4 border-white after:bg-white hover:border-gray-200 hover:after:bg-gray-200`}></label>
                                 </div>
 
                                 {isChecked &&
                                     <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }} className={`absolute top-0 bottom-60 sm:bottom-[28rem] m-auto left-0 xl:left-[24rem] right-0 w-max h-max transition-transform`}>
-                                        <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold'>Film <br />Composer</h1>
+                                    initial={{ y: "100%", opacity: 0 }}
+                                    animate={{ y: "0%", opacity: 1}}
+                                    exit={{ y: "100%", opacity: 0, transition: { duration: 4.5 } }} 
+                                    key={"composer"}
+                                    className={`absolute top-0 bottom-60 sm:bottom-[28rem] m-auto left-0 xl:left-[29rem] right-0 w-max h-max`}>
+                                        <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Film <br />Composer</h1>
                                     </motion.div>
                                 }
                                 {!isChecked &&
                                     <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        className={`absolute top-60 sm:top-96 bottom-0 m-auto left-0 right-0 xl:right-[30rem] w-max h-max  transition-transform`}>
-                                        <h1 className=' text-center xl:text-right text-3xl sm:text-8xl md:text-[7rem] font-archivo font-bold'>Mix Mastering<br />Engineer</h1>
+                                    initial={{ y: "100%", opacity: 0 }}
+                                    animate={{ y: "0%", opacity: 1}}
+                                    exit={{ y: "100%", opacity: 0 }} 
+                                    key={"mixmastering"}
+                                        className={`absolute top-60 sm:top-96 bottom-0 m-auto left-0 right-0 xl:right-[35rem] w-max h-max`}>
+                                        <Link to='/production/mixmastering'><h1 className=' text-center xl:text-right text-3xl sm:text-8xl md:text-[7rem] font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Mix Mastering<br />Engineer</h1></Link>
                                     </motion.div>
                                 }
                             </div>
