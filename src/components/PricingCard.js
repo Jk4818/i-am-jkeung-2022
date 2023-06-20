@@ -23,7 +23,7 @@ function PricingCard({ color, title, description, price, features, btnText }) {
                 {features.map((feature, index) => (
                     <li className='flex items-center gap-2' key={index}>
 
-                        <div><BsFillCheckCircleFill/></div>
+                        <div><BsFillCheckCircleFill /></div>
 
                         {feature}
 
@@ -31,8 +31,12 @@ function PricingCard({ color, title, description, price, features, btnText }) {
                 ))}
             </ul>
 
-            <button className='mt-auto rounded-full bg-prod-dark py-3 px-6 text-lg text-white'>{btnText}</button>
-            
+            {btnText ? 
+            (<button className='mt-auto rounded-full bg-prod-dark py-3 px-6 text-lg text-white'>{btnText}</button>)
+                :
+            (<div className='mt-auto rounded-full bg-main-gray py-3 px-6 text-lg text-white text-center'>Out Of Stock</div>)
+            }
+
         </div>
     );
 }

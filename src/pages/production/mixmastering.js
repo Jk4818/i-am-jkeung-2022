@@ -53,7 +53,7 @@ function MixMastering({ data }) {
                         <p className='mb-32 text-2xl'>Specialising in a cappella, orchestral, and rock, my expertise extends across a wide range of styles. I am committed to delivering top-notch results by providing meticulous attention to detail, ensuring your artistic vision is achieved without compromising any technical requirements.
                         </p>
 
-                        <h3 className='font-semibold'>Join me as I compose my way through the captivating realm of film.
+                        <h3 className='font-semibold logo-animate'>Join me as I compose my way through the captivating realm of film.
                         </h3>
                     </div>
 

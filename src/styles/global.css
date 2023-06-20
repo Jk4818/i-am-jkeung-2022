@@ -121,10 +121,9 @@ body {
         display: inline-block;
         width: 8rem;
         height: 4rem;
-        border: #EFEFEF 4px solid;
-        background-color: #29292980;
+        background-color: #aeaeae55;
         border-radius: 2rem;
-        transition: all 0.3s linear;
+        transition: all 0.2s linear;
     }
 
     .switch::after {
@@ -135,9 +134,8 @@ body {
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
-        background-color: #FFFFFF;
         filter: drop-shadow(0px 0px 6px rgba(239, 239, 239, 1));
-        transition: all 0.3s linear;
+        transition: all 0.2s linear;
     }
 
     input[type="checkbox"]:checked + .switch:after {
@@ -153,7 +151,13 @@ body {
     }
 
     .composer-background {
-        background-image: url("../assets/images/composer_image.png");
+        background-image: url("../assets/images/composer_background.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-blend-mode: screen;
+    }
+    .mixing-background {
+        background-image: url("../assets/images/mixing_background.png");
         background-repeat: no-repeat;
         background-size: 100%;
         background-blend-mode: screen;

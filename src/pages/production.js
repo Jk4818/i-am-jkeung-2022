@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
+
 import NoiseBackground from '../components/NoiseBackground';
 import ProductionHeroTitle from '../components/ProductionHeroTitle';
 import Layout from '../components/Layout';
 
-function production(props) {
+function Production(props) {
+
+    const [isChecked, setIsChecked] = useState(false);
+    const checkHandler = () => {
+        setIsChecked(!isChecked);
+    };
+
     return (
         <Layout>
-            <div className='bg-prod-dark w-screen h-full'>
+            <div className='bg-prod-dark w-full h-full'>
                 <section className='relative w-full h-screen'>
                     <div className=' flex items-center justify-center text-center w-full h-full'>
                         <ul className='z-20'>
@@ -14,7 +22,7 @@ function production(props) {
                                 <ProductionHeroTitle />
                             </li>
                             <li className='mt-4'>
-                                <h2 className='text-white text-md font-archivo font-semibold uppercase tracking-widest'>born through Classical, learnt through cinema</h2>
+                                <h2 className='text-white  text-md font-archivo font-semibold uppercase tracking-widest'>born through Classical, learnt through cinema</h2>
                             </li>
                         </ul>
                     </div>
@@ -39,33 +47,61 @@ function production(props) {
                     </NoiseBackground>
                 </section>
 
+                <AnimatePresence>
 
-                <section className='relative w-full h-screen  text-white bg-prod-dark composer-background bg-bottom xl:bg-center'>
-                    <div className='w-full h-full py-20 flex flex-col items-center justify-around z-10'>
-                        <h3 className='h-max font-inter font-bold text-sm'>You Need</h3>
+                    <section className={`relative w-full h-screen  text-white bg-prod-dark overflow-hidden`}>
+                        <div className='w-full h-full py-20 flex flex-col items-center justify-around z-10'>
+                            <h3 className='sm:mt-10 h-max font-inter font-bold text-sm z-10'>You Need</h3>
 
-                        <div className='grid grid-rows-9 grid-cols-5 items-center justify-around'>
+                            <div className='relative w-full h-full flex items-center justify-center z-10'>
 
-                            <div className='w-full h-max row-start-1 col-start-1 xl:col-start-3 col-span-5 xl:col-span-3 row-span-3'>
-                                <h1 className='xl:ml-16 text-center xl:text-left text-7xl md:text-9xl font-archivo font-bold'>Film <br />Composer</h1>
+
+                                <div className='w-max h-max py-10 flex m-auto scale-50 sm:scale-100'>
+                                    <input type="checkbox" name="checkbox" id="toggle" checked={isChecked} onChange={checkHandler} />
+                                    <label for="toggle" className={`switch border-4 border-white after:bg-white`}></label>
+                                </div>
+
+                                {isChecked &&
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }} className={`absolute top-0 bottom-60 sm:bottom-[28rem] m-auto left-0 xl:left-[24rem] right-0 w-max h-max transition-transform`}>
+                                        <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold'>Film <br />Composer</h1>
+                                    </motion.div>
+                                }
+                                {!isChecked &&
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        className={`absolute top-60 sm:top-96 bottom-0 m-auto left-0 right-0 xl:right-[30rem] w-max h-max  transition-transform`}>
+                                        <h1 className=' text-center xl:text-right text-3xl sm:text-8xl md:text-[7rem] font-archivo font-bold'>Mix Mastering<br />Engineer</h1>
+                                    </motion.div>
+                                }
                             </div>
-
-                            <div className='w-max h-max py-10 row-start-4 col-start-2 md:col-start-3 col-span-3 md:col-span-1 md:row-span-3 flex m-auto'>
-                                <input type="checkbox" name="checkbox" id="toggle" />
-                                <label for="toggle" class="switch"></label>
-                            </div>
-
-                            <div className='w-full h-max col-start-1 row-start-7 col-span-5 xl:col-span-3 row-span-3'>
-                                <h1 className='xl:mr-20 text-center xl:text-right text-7xl md:text-9xl font-archivo font-bold'>Mix Mastering<br />Engineer</h1>
-                            </div>
-
                         </div>
-                    </div>
 
-                </section>
+                        {isChecked ?
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                key={1}
+                                className='w-11/12 h-full absolute top-0 bottom-10 left-0 right-0 m-auto composer-background bg-bottom xl:bg-center  bg-prod-dark' />
+                            :
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                key={2}
+                                className='w-11/12 h-full  absolute top-10 bottom-0 left-0 right-0 m-auto mixing-background bg-top lg:bg-center  bg-prod-dark transition-[translate]' />
+                        }
+
+                    </section>
+                </AnimatePresence>
             </div>
         </Layout>
     );
 }
 
-export default production;
+export default Production;
