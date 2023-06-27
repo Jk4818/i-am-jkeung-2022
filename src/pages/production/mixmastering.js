@@ -58,8 +58,10 @@ function MixMastering({ data }) {
                             </p>
                         </RevealTextAnimation>
 
-                        <h3 className='font-semibold logo-animate'>Join me as I compose my way through the captivating realm of film.
-                        </h3>
+                        <RevealTextAnimation>
+                            <h3 className='font-semibold logo-animate'>Join me as I compose my way through the captivating realm of film.
+                            </h3>
+                        </RevealTextAnimation>
                     </div>
 
                     <div className='w-full lg:w-1/2 h-[40rem] lg:h-full flex items-center justify-center'>
@@ -91,7 +93,7 @@ function MixMastering({ data }) {
 
                 <RevealTextAnimation width="w-full">
                     <div className=''>
-                        <AudioWaveform title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1}/>
+                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1}/>
                     </div>
                 </RevealTextAnimation>
 
@@ -101,15 +103,17 @@ function MixMastering({ data }) {
                     </div>
                     <div className='mt-20 w-full h-full flex flex-wrap gap-6 justify-around'>
                         {priceList.map((item, index) => (
-                            <PricingCard
-                                key={index}
-                                color={item.frontmatter.color}
-                                title={item.frontmatter.title}
-                                description={item.excerpt}
-                                price={item.frontmatter.price}
-                                features={item.frontmatter.features}
-                                btnText={item.frontmatter.btnText}
-                            />
+                            <div className='basis-1/4'>
+                                <PricingCard
+                                    key={index}
+                                    color={item.frontmatter.color}
+                                    title={item.frontmatter.title}
+                                    description={item.excerpt}
+                                    price={item.frontmatter.price}
+                                    features={item.frontmatter.features}
+                                    btnText={item.frontmatter.btnText}
+                                />
+                            </div>
                         ))}
                     </div>
 
@@ -125,7 +129,9 @@ export default MixMastering;
 
 export const pageQuery = graphql`
 query {
-    pricing: allMarkdownRemark(filter: {frontmatter: {pricing: {eq: true}}}) {
+    pricing: allMarkdownRemark(
+      filter: {frontmatter: {pricing: {eq: true}, category: {in: ["mixing", "mixmaster", "master"]}}}
+    ) {
       priceList: nodes {
         id
         frontmatter {

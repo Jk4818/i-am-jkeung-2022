@@ -2,7 +2,7 @@ import React, { useRef, useState, useCallback } from 'react';
 import { WaveForm, WaveSurfer } from 'wavesurfer-react';
 
 import { BsPlayCircle, BsPauseCircle } from 'react-icons/bs';
-function AudioWaveform({title, composer, audioTrack}) {
+function AudioWaveform({id, title, composer, audioTrack}) {
     
     const [isPlaying, setIsPlaying] = useState(false);
     
@@ -31,6 +31,7 @@ function AudioWaveform({title, composer, audioTrack}) {
                 wavesurferRef.current.on("ready", () => {
                     console.log("WaveSurfer is ready");
                 });
+                wavesurferRef.current.setVolume(0.5);
 
                 wavesurferRef.current.on("play", () => {
                     setIsPlaying(true);
@@ -41,9 +42,9 @@ function AudioWaveform({title, composer, audioTrack}) {
                     console.log("WaveSurfer is paused");
                 });
 
-                wavesurferRef.current.on("loading", (data) => {
-                    console.log("loading --> ", data);
-                });
+                // wavesurferRef.current.on("loading", (data) => {
+                //     console.log("loading --> ", data);
+                // });
 
                 if (window) {
                     window.surferidze = wavesurferRef.current;
@@ -54,9 +55,9 @@ function AudioWaveform({title, composer, audioTrack}) {
     );
 
     return (
-        <div className='w-full h-full my-10'>
-            <div className='my-10 flex items-center gap-4 text-white'>
-                <button onClick={play} className='text-5xl hover:text-main-gray transition-all'>
+        <div className='w-full h-full my-10 grid grid-rows-2'>
+            <div className='row-start-1 my-10 flex items-center gap-4 text-white'>
+                <button onClick={play} className='text-5xl hover:text-main-gray transition-all border-2 p-1 border-transparent focus:border-cyan-200 rounded-lg'>
                     {isPlaying ?
                         <BsPauseCircle />
                         :
@@ -66,9 +67,11 @@ function AudioWaveform({title, composer, audioTrack}) {
                 <h1 className='font-inter font-semibold'>{title} — {composer}</h1>
             </div>
 
-            <WaveSurfer onMount={handleWSMount}>
-                <WaveForm id='waveform' responsive={true} cursorWidth={3} barWidth={3} barGap={2} barRadius={3} />
-            </WaveSurfer>
+            <div className='row-start-2 h-full'>
+                <WaveSurfer onMount={handleWSMount}>
+                    <WaveForm id={id} responsive={true} cursorWidth={3} barWidth={3} barGap={2} barRadius={3}/>
+                </WaveSurfer>
+            </div>
         </div>
     );
 }

@@ -5,6 +5,7 @@ import NoiseBackground from '../../components/NoiseBackground';
 import ProductionHeroTitle from '../../components/ProductionHeroTitle';
 import Layout from '../../components/Layout';
 import { Link } from 'gatsby';
+import RevealTextAnimation from '../../components/RevealTextAnimation';
 
 function Production(props) {
 
@@ -23,7 +24,9 @@ function Production(props) {
                                 <ProductionHeroTitle />
                             </li>
                             <li className='mt-4'>
-                                <h2 className='text-white  text-md font-archivo font-semibold uppercase tracking-widest'>born through Classical, learnt through cinema</h2>
+                                <RevealTextAnimation>
+                                    <h2 className='text-white  text-md font-archivo font-semibold uppercase tracking-widest'>born through Classical, learnt through cinema</h2>
+                                </RevealTextAnimation>
                             </li>
                         </ul>
                     </div>
@@ -73,7 +76,11 @@ function Production(props) {
                                         exit={{ y: "100%", opacity: 0, transition: { duration: 4.5 } }}
                                         key={"composer"}
                                         className={`absolute top-0 bottom-60 sm:bottom-[28rem] m-auto left-0 xl:left-[29rem] right-0 w-max h-max`}>
-                                        <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Film <br />Composer</h1>
+                                        <Link to='/production/composing'>
+                                            <RevealTextAnimation>
+                                                <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Film <br />Composer</h1>
+                                            </RevealTextAnimation>
+                                        </Link>
                                     </motion.div>
                                 }
                                 {!isChecked &&
@@ -83,7 +90,11 @@ function Production(props) {
                                         exit={{ y: "100%", opacity: 0 }}
                                         key={"mixmastering"}
                                         className={`absolute top-60 sm:top-96 bottom-0 m-auto left-0 right-0 xl:right-[35rem] w-max h-max`}>
-                                        <Link to='/production/mixmastering'><h1 className=' text-center xl:text-right text-3xl sm:text-8xl md:text-[7rem] font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Mix Mastering<br />Engineer</h1></Link>
+                                        <Link to='/production/mixmastering'>
+                                            <RevealTextAnimation>
+                                                <h1 className=' text-center xl:text-right text-3xl sm:text-8xl md:text-[7rem] font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Mix Mastering<br />Engineer</h1>
+                                            </RevealTextAnimation>
+                                        </Link>
                                     </motion.div>
                                 }
                             </div>
@@ -102,7 +113,7 @@ function Production(props) {
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 key={2}
-                                className='w-11/12 h-full  absolute top-10 bottom-0 left-0 right-0 m-auto mixing-background bg-top xl:bg-center  bg-prod-dark transition-[translate]' />
+                                className='w-11/12 h-full  absolute top-40 bottom-0 left-0 right-0 m-auto mixing-background bg-top xl:bg-center  bg-prod-dark transition-[translate]' />
                         }
 
                     </section>
