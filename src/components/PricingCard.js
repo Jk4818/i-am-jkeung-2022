@@ -1,11 +1,15 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import RevealTextAnimation from './RevealTextAnimation';
 
 function PricingCard({ color, title, description, price, features, btnText }) {
     return (
-        <div
+        <motion.div
             style={{ backgroundColor: color }}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
             className='flex min-h-[428px] w-[23rem] flex-col rounded-3xl p-8 text-prod-dark font-archivo'
         >
             <RevealTextAnimation>
@@ -43,7 +47,7 @@ function PricingCard({ color, title, description, price, features, btnText }) {
             (<div className='mt-auto rounded-full bg-gray-400 py-3 px-6 text-lg text-white text-center'>Contact For More Info</div>)
             }
 
-        </div>
+        </motion.div>
     );
 }
 

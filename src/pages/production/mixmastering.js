@@ -101,6 +101,7 @@ function MixMastering({ data }) {
                     <div className='w-full flex items-center justify-between'>
                         <h3>Independant Packages</h3>
                     </div>
+                    <div className='mt-10 w-full flex justify-center'><ThreeWayToggle /></div>
                     <div className='mt-20 w-full h-full flex flex-wrap gap-6 justify-around'>
                         {priceList.map((item, index) => (
                             <div className='basis-1/4'>
@@ -117,7 +118,6 @@ function MixMastering({ data }) {
                         ))}
                     </div>
 
-                    <div><ThreeWayToggle /></div>
                 </div>
             </div>
         </Layout>
