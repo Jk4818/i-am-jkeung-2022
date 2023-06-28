@@ -24,9 +24,9 @@ function PricingCard({ color, title, description, price, features, btnText }) {
                 </div>
             </RevealTextAnimation>
             <RevealTextAnimation>
-                <p className='mb-5'>{description}</p>
+                <p className='mb-5 font-semibold'>{description}</p>
             </RevealTextAnimation>
-            <ul className='mb-10 flex flex-col gap-y-2 font-semibold'>
+            <ul className='mb-10 flex flex-col gap-y-2 font-bold'>
                 {features.map((feature, index) => (
                     <RevealTextAnimation>
                         <li className='flex items-center gap-2' key={index}>
