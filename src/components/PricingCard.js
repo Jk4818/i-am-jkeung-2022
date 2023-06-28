@@ -38,9 +38,9 @@ function PricingCard({ color, title, description, price, features, btnText }) {
             </ul>
 
             {btnText ? 
-            (<button className='mt-auto rounded-full bg-prod-dark py-3 px-6 text-lg text-white'>{btnText}</button>)
+            (<button className='mt-auto rounded-full bg-prod-dark hover:bg-gray-700 transition-colors py-3 px-6 text-lg text-white'>{btnText}</button>)
                 :
-            (<div className='mt-auto rounded-full bg-main-gray py-3 px-6 text-lg text-white text-center'>Contact For More Info</div>)
+            (<div className='mt-auto rounded-full bg-gray-400 py-3 px-6 text-lg text-white text-center'>Contact For More Info</div>)
             }
 
         </div>

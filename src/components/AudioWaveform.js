@@ -2,7 +2,7 @@ import React, { useRef, useState, useCallback } from 'react';
 import { WaveForm, WaveSurfer } from 'wavesurfer-react';
 
 import { BsPlayCircle, BsPauseCircle } from 'react-icons/bs';
-function AudioWaveform({id, title, composer, audioTrack}) {
+function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
     
     const [isPlaying, setIsPlaying] = useState(false);
     
@@ -31,7 +31,7 @@ function AudioWaveform({id, title, composer, audioTrack}) {
                 wavesurferRef.current.on("ready", () => {
                     console.log("WaveSurfer is ready");
                 });
-                wavesurferRef.current.setVolume(0.5);
+                wavesurferRef.current.setVolume(0.1);
 
                 wavesurferRef.current.on("play", () => {
                     setIsPlaying(true);
@@ -69,7 +69,7 @@ function AudioWaveform({id, title, composer, audioTrack}) {
 
             <div className='row-start-2 h-full'>
                 <WaveSurfer onMount={handleWSMount}>
-                    <WaveForm id={id} responsive={true} cursorWidth={3} barWidth={3} barGap={2} barRadius={3}/>
+                    <WaveForm id={id} responsive={true} progressColor={progressColor ? progressColor : "#595959"} cursorWidth={3} barWidth={3} barGap={2} barRadius={3}/>
                 </WaveSurfer>
             </div>
         </div>

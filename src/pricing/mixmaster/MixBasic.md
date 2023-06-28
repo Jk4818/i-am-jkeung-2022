@@ -1,6 +1,6 @@
 ---
 title: "Essential"
-price: "50"
+price: "150"
 features: [
   'Mixing of up to 5 tracks', 
   'Balancing levels, EQ, and basic processing', 
@@ -12,4 +12,4 @@ pricing: true
 category: "mixing"
 ---
 
-For short films, student projects, or small-scale productions.
+Suitable for demos, small projects, or single releases.

@@ -95,12 +95,12 @@ function Composing({ data }) {
                 <div className=''>
                     <RevealTextAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1}/>
+                            <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#CDB4DB"/>
                         </div>
                     </RevealTextAnimation>
                     <RevealTextAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung" audioTrack={audioTrack2}/>
+                            <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung" audioTrack={audioTrack2} progressColor="#BDE0FE"/>
                         </div>
                     </RevealTextAnimation>
                 </div>

@@ -93,7 +93,7 @@ function MixMastering({ data }) {
 
                 <RevealTextAnimation width="w-full">
                     <div className=''>
-                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1}/>
+                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0"/>
                     </div>
                 </RevealTextAnimation>
 

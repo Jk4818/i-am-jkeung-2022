@@ -7,7 +7,7 @@ features: [
   '1 round of revisions for adjustments'
   ]
 btnText: ""
-color: "#8DD0B0"
+color: "#fbf8cc"
 pricing: true
 category: "master"
 ---
