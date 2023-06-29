@@ -9,11 +9,11 @@ import { motion } from 'framer-motion';
 
 import audioTrack1 from "../../assets/audio/over_the_mile.wav";
 import audioTrack2 from "../../assets/audio/water_of_life.wav";
-import ThreeWayToggle from '../../components/ThreeWayToggle';
-import RevealTextAnimation from '../../components/RevealTextAnimation';
+import RevealAnimation from '../../components/RevealAnimation';
 
 
 function Composing({ data }) {
+
 
     const { priceList } = data.pricing;
 
@@ -51,18 +51,18 @@ function Composing({ data }) {
 
                 <div className='flex flex-wrap text-white items-center xl:h-screen'>
                     <div className='w-full lg:w-1/2 font-archivo font-semibold'>
-                        <RevealTextAnimation width="w-fit">
+                        <RevealAnimation width="w-fit">
                             <h1 className='text-4xl'>Composing & Soundtracks</h1>
-                        </RevealTextAnimation>
-                        <RevealTextAnimation width="w-fit xl:pr-10">
+                        </RevealAnimation>
+                        <RevealAnimation width="w-fit xl:pr-10">
                             <p className='mt-10 mb-32 text-xl 2xl:text-2xl'>With years of experience on the composing chair, I can help score the best tracks required for your projects. From emotive soundscapes to orchestral grandeur, I possess the versatility to score for film, TV, games, and adverts. Whether it's capturing the essence of a heartfelt drama or creating an adrenaline-fuelled adventure, I am able to score for any style, ensuring your project receives the perfect musical accompaniment.
                             </p>
-                        </RevealTextAnimation>
+                        </RevealAnimation>
 
-                        <RevealTextAnimation>
+                        <RevealAnimation>
                             <h3 className='font-semibold logo-animate'>Join me as I compose my way through the captivating realm of film.
                             </h3>
-                        </RevealTextAnimation>
+                        </RevealAnimation>
                     </div>
 
                     <div className='w-full lg:w-1/2 h-[40rem] lg:h-full flex items-center justify-center'>
@@ -93,16 +93,16 @@ function Composing({ data }) {
                 </div>
 
                 <div className=''>
-                    <RevealTextAnimation width="w-full">
+                    <RevealAnimation width="w-full">
                         <div className=''>
                             <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#CDB4DB"/>
                         </div>
-                    </RevealTextAnimation>
-                    <RevealTextAnimation width="w-full">
+                    </RevealAnimation>
+                    <RevealAnimation width="w-full">
                         <div className=''>
                             <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung" audioTrack={audioTrack2} progressColor="#BDE0FE"/>
                         </div>
-                    </RevealTextAnimation>
+                    </RevealAnimation>
                 </div>
 
                 <div className='w-full py-20'>
@@ -122,8 +122,6 @@ function Composing({ data }) {
                             />
                         ))}
                     </div>
-
-                    <div><ThreeWayToggle /></div>
                 </div>
             </div>
         </Layout>

@@ -5,7 +5,7 @@ import NoiseBackground from '../../components/NoiseBackground';
 import ProductionHeroTitle from '../../components/ProductionHeroTitle';
 import Layout from '../../components/Layout';
 import { Link } from 'gatsby';
-import RevealTextAnimation from '../../components/RevealTextAnimation';
+import RevealAnimation from '../../components/RevealAnimation';
 
 function Production(props) {
 
@@ -24,9 +24,9 @@ function Production(props) {
                                 <ProductionHeroTitle />
                             </li>
                             <li className='mt-4'>
-                                <RevealTextAnimation>
+                                <RevealAnimation>
                                     <h2 className='text-white  text-md font-archivo font-semibold uppercase tracking-widest'>born through Classical, learnt through cinema</h2>
-                                </RevealTextAnimation>
+                                </RevealAnimation>
                             </li>
                         </ul>
                     </div>
@@ -77,9 +77,9 @@ function Production(props) {
                                         key={"composer"}
                                         className={`absolute top-0 bottom-60 sm:bottom-[28rem] m-auto left-0 xl:left-[29rem] right-0 w-max h-max`}>
                                         <Link to='/production/composing'>
-                                            <RevealTextAnimation>
+                                            <RevealAnimation>
                                                 <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Film <br />Composer</h1>
-                                            </RevealTextAnimation>
+                                            </RevealAnimation>
                                         </Link>
                                     </motion.div>
                                 }
@@ -91,9 +91,9 @@ function Production(props) {
                                         key={"mixmastering"}
                                         className={`absolute top-60 sm:top-96 bottom-0 m-auto left-0 right-0 xl:right-[35rem] w-max h-max`}>
                                         <Link to='/production/mixmastering'>
-                                            <RevealTextAnimation>
+                                            <RevealAnimation>
                                                 <h1 className=' text-center xl:text-right text-3xl sm:text-8xl md:text-[7rem] font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Mix Mastering<br />Engineer</h1>
-                                            </RevealTextAnimation>
+                                            </RevealAnimation>
                                         </Link>
                                     </motion.div>
                                 }

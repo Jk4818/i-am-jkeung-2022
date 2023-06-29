@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../../components/Layout';
 import PricingCard from '../../components/PricingCard';
 import { graphql } from 'gatsby';
 import AudioWaveform from '../../components/AudioWaveform';
 import { StaticImage } from 'gatsby-plugin-image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 import audioTrack1 from "../../assets/audio/over_the_mile.wav";
 import ThreeWayToggle from '../../components/ThreeWayToggle';
-import RevealTextAnimation from '../../components/RevealTextAnimation';
+import RevealAnimation from '../../components/RevealAnimation';
 
 
 function MixMastering({ data }) {
+    const mixPricing = data.mixingPrices.priceList;
+    const masterPricing = data.masterPrices.priceList;
+    const combinedPricing = data.combinedPrices.priceList;
 
-    const { priceList } = data.pricing;
+    const tabs = [
+        { label: "Mixing", value: mixPricing },
+        { label: "Mastering", value: masterPricing },
+        { label: "Combined", value: combinedPricing }
+    ];
+    const [selectedTab, setSelectedTab] = useState(tabs[0]);
+    const handlePackageTypeChange = (tab) => {
+        setSelectedTab(tab);
+    }
+
+    useEffect(() => {
+        console.log(selectedTab);
+
+    }, [selectedTab])
+
+
 
     const mixVariant = {
         visible: {
@@ -23,11 +41,11 @@ function MixMastering({ data }) {
                 duration: 0.75,
             },
         },
-        hidden: { opacity: 0, y:20, rotate: 2 },
+        hidden: { opacity: 0, y: 20, rotate: 2 },
     }
     const mixVariant1 = {
         visible: {
-            opacity: 1,x:-54, y: -31, rotate: -3,
+            opacity: 1, x: -54, y: -31, rotate: -3,
             transition: {
                 duration: 0.75,
             },
@@ -36,7 +54,7 @@ function MixMastering({ data }) {
     }
     const mixVariant2 = {
         visible: {
-            opacity: 1,x:-104, y: -78, rotate: -10,
+            opacity: 1, x: -104, y: -78, rotate: -10,
             transition: {
                 duration: 0.75,
             },
@@ -50,18 +68,18 @@ function MixMastering({ data }) {
 
                 <div className='flex flex-wrap text-white items-center xl:h-screen'>
                     <div className='w-full lg:w-1/2 font-archivo font-semibold'>
-                        <RevealTextAnimation width="w-fit">
+                        <RevealAnimation width="w-fit">
                             <h1 className='text-4xl'>Mixing & Mastering</h1>
-                        </RevealTextAnimation>
-                        <RevealTextAnimation width="w-fit">
+                        </RevealAnimation>
+                        <RevealAnimation width="w-fit">
                             <p className='mt-10 mb-32 text-2xl'>Specialising in a cappella, orchestral, and rock, my expertise extends across a wide range of styles. I am committed to delivering top-notch results by providing meticulous attention to detail, ensuring your artistic vision is achieved without compromising any technical requirements.
                             </p>
-                        </RevealTextAnimation>
+                        </RevealAnimation>
 
-                        <RevealTextAnimation>
-                            <h3 className='font-semibold logo-animate'>Join me as I compose my way through the captivating realm of film.
+                        <RevealAnimation>
+                            <h3 className='font-semibold logo-animate'>Let's create impeccable soundscapes, where every note finds its perfect place.
                             </h3>
-                        </RevealTextAnimation>
+                        </RevealAnimation>
                     </div>
 
                     <div className='w-full lg:w-1/2 h-[40rem] lg:h-full flex items-center justify-center'>
@@ -69,17 +87,17 @@ function MixMastering({ data }) {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: false, amount: 0.1 }}
-                            transition={{  staggerChildren: 0.35 }}
+                            transition={{ staggerChildren: 0.35 }}
                             className='relative w-3/4 lg:w-10/12 aspect-square'>
                             <motion.div
                                 variants={mixVariant2}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/run_to_you_cover.jpg"  alt="run_to_you_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/run_to_you_cover.jpg" alt="run_to_you_cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant1}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/vision_cover.png"   alt="vision_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/vision_cover.png" alt="vision_cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant}
@@ -91,31 +109,43 @@ function MixMastering({ data }) {
 
                 </div>
 
-                <RevealTextAnimation width="w-full">
+                <RevealAnimation width="w-full">
                     <div className=''>
-                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0"/>
+                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0" />
                     </div>
-                </RevealTextAnimation>
+                </RevealAnimation>
 
                 <div className='w-full py-20'>
+
                     <div className='w-full flex items-center justify-between'>
                         <h3>Independant Packages</h3>
                     </div>
-                    <div className='mt-10 w-full flex justify-center'><ThreeWayToggle /></div>
+
+                    <div className='mt-10 w-full flex justify-center'>
+                        <ThreeWayToggle tabs={tabs} selectedTab={selectedTab} handleTabChange={handlePackageTypeChange} />
+                    </div>
+
                     <div className='mt-20 w-full h-full flex flex-wrap gap-6 justify-around'>
-                        {priceList.map((item, index) => (
-                            <div className='basis-1/4'>
-                                <PricingCard
-                                    key={index}
-                                    color={item.frontmatter.color}
-                                    title={item.frontmatter.title}
-                                    description={item.excerpt}
-                                    price={item.frontmatter.price}
-                                    features={item.frontmatter.features}
-                                    btnText={item.frontmatter.btnText}
-                                />
-                            </div>
-                        ))}
+                        <AnimatePresence exitBeforeEnter>
+                            {selectedTab.value.map((item, i) => (
+                                <motion.div 
+                                key={item.id}
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 50}}
+                                transition={{duration: 0.3, delay: i * 0.2 }}
+                                className='basis-1/4'>
+                                    <PricingCard
+                                        color={item.frontmatter.color}
+                                        title={item.frontmatter.title}
+                                        description={item.excerpt}
+                                        price={item.frontmatter.price}
+                                        features={item.frontmatter.features}
+                                        btnText={item.frontmatter.btnText}
+                                    />
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
                     </div>
 
                 </div>
@@ -129,8 +159,8 @@ export default MixMastering;
 
 export const pageQuery = graphql`
 query {
-    pricing: allMarkdownRemark(
-      filter: {frontmatter: {pricing: {eq: true}, category: {in: ["mixing", "mixmaster", "master"]}}}
+    mixingPrices: allMarkdownRemark(
+      filter: {frontmatter: {pricing: {eq: true}, category: {eq: "mixing"}}}
     ) {
       priceList: nodes {
         id
@@ -140,6 +170,39 @@ query {
           features
           btnText
           color
+          category
+        }
+        excerpt
+      }
+    }
+    masterPrices: allMarkdownRemark(
+      filter: {frontmatter: {pricing: {eq: true}, category: {eq: "master"}}}
+    ) {
+      priceList: nodes {
+        id
+        frontmatter {
+          title
+          price
+          features
+          btnText
+          color
+          category
+        }
+        excerpt
+      }
+    }
+    combinedPrices: allMarkdownRemark(
+      filter: {frontmatter: {pricing: {eq: true}, category: {eq: "mixmaster"}}}
+    ) {
+      priceList: nodes {
+        id
+        frontmatter {
+          title
+          price
+          features
+          btnText
+          color
+          category
         }
         excerpt
       }

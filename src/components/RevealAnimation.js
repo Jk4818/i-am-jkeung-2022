@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
-function RevealTextAnimation({children, width}) {
+function RevealAnimation({children, width}) {
 
   const ref = useRef(null);
   const isInView = useInView(ref, {once: true});
@@ -31,4 +31,4 @@ function RevealTextAnimation({children, width}) {
   );
 }
 
-export default RevealTextAnimation;
+export default RevealAnimation;

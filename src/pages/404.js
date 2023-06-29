@@ -1,40 +1,29 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import RevealAnimation from "../components/RevealAnimation"
 
 
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
 const NotFoundPage = () => {
+
+
   return (
-    <main className="w-screen h-screen bg-white font-archivo">
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
+    <main className="w-screen h-screen bg-white font-archivo font-semibold flex flex-col gap-20 justify-center items-center text-center">
+      <title>oops</title>
+
+      <RevealAnimation>
+        <h1 className="text-8xl text-[#A961D5] drop-shadow-lg ">o<span className="-mx-4 text-7xl">🍩</span>ps</h1>
+      </RevealAnimation>
+      <RevealAnimation>
+        <p className="text-5xl text-main-gray-darker leading-tight">
+          You've reached my secret page.
+          <br />
+          ...
+          <br />
+          Don't worry, have a donut and <br />
+          head <span className="text-[#A961D5]">
+            <Link to="/">back</Link>.</span>
+        </p>
+      </RevealAnimation>
     </main>
   )
 }

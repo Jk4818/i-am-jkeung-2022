@@ -2,21 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { BsFillCheckCircleFill } from 'react-icons/bs';
-import RevealTextAnimation from './RevealTextAnimation';
+import RevealAnimation from './RevealAnimation';
 
 function PricingCard({ color, title, description, price, features, btnText }) {
     return (
-        <motion.div
+        <div
             style={{ backgroundColor: color }}
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
             className='flex min-h-[428px] w-[23rem] flex-col rounded-3xl p-8 text-prod-dark font-archivo'
         >
-            <RevealTextAnimation>
+            <RevealAnimation>
                 <h2 className='mb-5 text-xl font-bold'>{title}</h2>
-            </RevealTextAnimation>
+            </RevealAnimation>
 
-            <RevealTextAnimation>
+            <RevealAnimation>
                 <div className='mb-5 flex items-end text-6xl font-bold'>
                     {price ? (
                         <>
@@ -26,28 +24,30 @@ function PricingCard({ color, title, description, price, features, btnText }) {
                         'Free'
                     )}
                 </div>
-            </RevealTextAnimation>
-            <RevealTextAnimation>
+            </RevealAnimation>
+            <RevealAnimation>
                 <p className='mb-5 font-semibold'>{description}</p>
-            </RevealTextAnimation>
+            </RevealAnimation>
             <ul className='mb-10 flex flex-col gap-y-2 font-bold'>
                 {features.map((feature, index) => (
-                    <RevealTextAnimation>
+                    <RevealAnimation>
                         <li className='flex items-center gap-2' key={index}>
                             <div><BsFillCheckCircleFill /></div>
                             {feature}
                         </li>
-                    </RevealTextAnimation>
+                    </RevealAnimation>
                 ))}
             </ul>
 
-            {btnText ? 
-            (<button className='mt-auto rounded-full bg-prod-dark hover:bg-gray-700 transition-colors py-3 px-6 text-lg text-white'>{btnText}</button>)
-                :
-            (<div className='mt-auto rounded-full bg-gray-400 py-3 px-6 text-lg text-white text-center'>Contact For More Info</div>)
-            }
+            <RevealAnimation>
+                {btnText ?
+                (<button className='mt-auto rounded-full bg-prod-dark hover:bg-gray-700 transition-colors py-3 px-6 text-lg text-white'>{btnText}</button>)
+                    :
+                (<div className='mt-auto rounded-full bg-gray-400 py-3 px-6 text-lg text-white text-center'>Contact For More Info</div>)
+                }
+            </RevealAnimation>
 
-        </motion.div>
+        </div>
     );
 }
 
