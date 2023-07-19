@@ -14,7 +14,8 @@ import RevealAnimation from '../../components/RevealAnimation';
 
 function MixMastering({ data }) {
 
-    const isBrowser = typeof window !== "undefined"
+    //state for checking if wondow is defined
+    const [isWindowDefined, setIsWindowDefined] = useState(false);
 
 
     const mixPricing = data.mixingPrices.priceList;
@@ -33,7 +34,11 @@ function MixMastering({ data }) {
 
     useEffect(() => {
         console.log(selectedTab);
+        if (typeof window !== 'undefined') {
+            setIsWindowDefined(true);
+            console.log("window defined");
 
+        }
     }, [selectedTab])
 
 
@@ -113,7 +118,7 @@ function MixMastering({ data }) {
 
                 </div>
 
-                {isBrowser && <RevealAnimation width="w-full">
+                {isWindowDefined && <RevealAnimation width="w-full">
                     <div className=''>
                         <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0" />
                     </div>
