@@ -11,7 +11,6 @@ sourceLink: [
     {url: "https://youtu.be/5NVjycIFRjQ", alt: "Youtube Music"},
 ]
 image: ../assets/images/tracks/IJFLSPT.jpg
-featuredImgUrl: https://i.scdn.co/image/ab6761610000e5ebdddafcaa74a96541779b78ad
 featuredImgAlt: Jason Keung
 ---
 

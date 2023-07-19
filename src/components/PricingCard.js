@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import RevealAnimation from './RevealAnimation';
@@ -39,9 +38,9 @@ function PricingCard({ color, title, description, price, features, btnText }) {
                 ))}
             </ul>
 
-            <RevealAnimation>
+            <RevealAnimation width="w-full">
                 {btnText ?
-                (<button className='mt-auto rounded-full bg-prod-dark hover:bg-gray-700 transition-colors py-3 px-6 text-lg text-white'>{btnText}</button>)
+                (<button className='w-full mt-auto rounded-full bg-prod-dark hover:bg-gray-700 transition-colors py-3 px-6 text-lg text-white'>{btnText}</button>)
                     :
                 (<div className='mt-auto rounded-full bg-gray-400 py-3 px-6 text-lg text-white text-center'>Contact For More Info</div>)
                 }

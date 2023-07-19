@@ -39,9 +39,9 @@ function ReleaseCard({ song, index }) {
         <div className='w-2/3 h-full p-4 flex flex-col justify-between'>
           <h1 className='text-2xl md:text-4xl'>{song.node.frontmatter.title}</h1>
           <div className='flex items-center gap-4'>
-            <div className='w-6 aspect-square'>
+            {/* <div className='w-6 aspect-square'>
               <GatsbyImage className='rounded-full' image={getImage(song.node.featuredImg.childImageSharp.gatsbyImageData)} alt={song.node.frontmatter.featuredImgAlt} />
-            </div>
+            </div> */}
             <h3 className='text-lg'>{song.node.frontmatter.artist}</h3>
           </div>
         </div>

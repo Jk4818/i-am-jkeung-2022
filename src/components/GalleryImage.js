@@ -34,7 +34,7 @@ function GalleryImage({ data, src, heading, subheading, alt, reverse }) {
 
       });
     }
-  }, []);
+  }, [heading]);
 
   return (
 

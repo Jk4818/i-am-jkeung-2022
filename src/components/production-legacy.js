@@ -66,12 +66,6 @@ function ProductionLegacy(props) {
                 }
               }
               html
-              
-              featuredImg {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, height: 100, aspectRatio: 1)
-                }
-              }
             }
           }
         }

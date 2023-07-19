@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 import UseComponentVisible from './helpers/UseComponentVisible';

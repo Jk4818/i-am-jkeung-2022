@@ -20,9 +20,11 @@ function Production(props) {
                 <section className='relative w-full h-screen'>
                     <div className=' flex items-center justify-center text-center w-full h-full'>
                         <ul className='z-20'>
-                            <li>
+                            <motion.li
+                                initial={{ y: "100%", opacity: 0 }}
+                                animate={{ y: "0%", opacity: 1 }}>
                                 <ProductionHeroTitle />
-                            </li>
+                            </motion.li>
                             <li className='mt-4'>
                                 <RevealAnimation>
                                     <h2 className='text-white  text-md font-archivo font-semibold uppercase tracking-widest'>born through Classical, learnt through cinema</h2>

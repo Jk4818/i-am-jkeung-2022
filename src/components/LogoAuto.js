@@ -1,10 +1,8 @@
 import React from 'react';
-import { useLocation } from '@reach/router';
 import { motion } from 'framer-motion';
 
 function LogoAuto(props) {
 
-    const url = useLocation().pathname;
 
     const logoVariantsHoverIAM = {
         hidden: {

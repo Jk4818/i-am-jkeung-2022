@@ -4,7 +4,7 @@ import PricingCard from '../../components/PricingCard';
 import { graphql } from 'gatsby';
 import AudioWaveform from '../../components/AudioWaveform';
 import { StaticImage } from 'gatsby-plugin-image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 import audioTrack1 from "../../assets/audio/over_the_mile.wav";
@@ -24,11 +24,11 @@ function Composing({ data }) {
                 duration: 0.75,
             },
         },
-        hidden: { opacity: 0, y:20, rotate: 2 },
+        hidden: { opacity: 0, y: 20, rotate: 2 },
     }
     const mixVariant1 = {
         visible: {
-            opacity: 1,x:-54, y: -31, rotate: -3,
+            opacity: 1, x: -54, y: -31, rotate: -3,
             transition: {
                 duration: 0.75,
             },
@@ -37,7 +37,7 @@ function Composing({ data }) {
     }
     const mixVariant2 = {
         visible: {
-            opacity: 1,x:-104, y: -78, rotate: -10,
+            opacity: 1, x: -104, y: -78, rotate: -10,
             transition: {
                 duration: 0.75,
             },
@@ -70,17 +70,17 @@ function Composing({ data }) {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: false, amount: 0.1 }}
-                            transition={{  staggerChildren: 0.35 }}
+                            transition={{ staggerChildren: 0.35 }}
                             className='relative w-3/4 lg:w-10/12 aspect-square'>
                             <motion.div
                                 variants={mixVariant2}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/run_to_you_cover.jpg"  alt="run_to_you_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/run_to_you_cover.jpg" alt="run_to_you_cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant1}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/vision_cover.png"   alt="vision_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/vision_cover.png" alt="vision_cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant}
@@ -92,35 +92,47 @@ function Composing({ data }) {
 
                 </div>
 
-                <div className=''>
+                {typeof window !== 'undefined' && <div className=''>
                     <RevealAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#CDB4DB"/>
+                            <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#CDB4DB" />
                         </div>
                     </RevealAnimation>
                     <RevealAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung" audioTrack={audioTrack2} progressColor="#BDE0FE"/>
+                            <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung" audioTrack={audioTrack2} progressColor="#BDE0FE" />
                         </div>
                     </RevealAnimation>
                 </div>
+                }
 
                 <div className='w-full py-20'>
-                    <div className='w-full flex items-center justify-between'>
-                        <h3>Independant Packages</h3>
-                    </div>
+                    <RevealAnimation>
+                        <div className='w-full flex items-center justify-between'>
+                            <h3>Independant Packages</h3>
+                        </div>
+                    </RevealAnimation>
                     <div className='mt-20 w-full h-full flex flex-wrap gap-6 justify-around'>
-                        {priceList.map((item, index) => (
-                            <PricingCard
-                                key={index}
-                                color={item.frontmatter.color}
-                                title={item.frontmatter.title}
-                                description={item.excerpt}
-                                price={item.frontmatter.price}
-                                features={item.frontmatter.features}
-                                btnText={item.frontmatter.btnText}
-                            />
-                        ))}
+                        <AnimatePresence exitBeforeEnter>
+                            {priceList.map((item, i) => (
+                                <motion.div
+                                    key={item.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 20 }}
+                                    transition={{ duration: 0.3, delay: i * 0.2 }}
+                                    className=' basis-1/4'>
+                                    <PricingCard
+                                        color={item.frontmatter.color}
+                                        title={item.frontmatter.title}
+                                        description={item.excerpt}
+                                        price={item.frontmatter.price}
+                                        features={item.frontmatter.features}
+                                        btnText={item.frontmatter.btnText}
+                                    />
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
                     </div>
                 </div>
             </div>
@@ -133,7 +145,9 @@ export default Composing;
 
 export const pageQuery = graphql`
 query {
-    pricing: allMarkdownRemark(filter: {frontmatter: {pricing: {eq: true} category: {eq: "composing"}}}) {
+    pricing: allMarkdownRemark(
+        sort: { fields: [frontmatter___price], order: ASC}
+        filter: {frontmatter: {pricing: {eq: true} category: {eq: "composing"}}}) {
       priceList: nodes {
         id
         frontmatter {

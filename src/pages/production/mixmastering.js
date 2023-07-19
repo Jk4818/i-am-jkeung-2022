@@ -97,44 +97,49 @@ function MixMastering({ data }) {
                             <motion.div
                                 variants={mixVariant1}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/vision_cover.png" alt="vision_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/vision_cover.png" alt="Vision Cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/over_the_mile_cover.png" alt="over_the_mile_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/acatalepsy.jpeg" alt="over_the_mile_cover" />
                             </motion.div>
                         </motion.div>
                     </div>
 
                 </div>
 
-                <RevealAnimation width="w-full">
-                    <div className=''>
-                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0" />
-                    </div>
-                </RevealAnimation>
+                {typeof window !== 'undefined' &&
+                    <RevealAnimation width="w-full">
+                        <div className=''><AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0" />
+                        </div>
+                    </RevealAnimation>
+                }
 
                 <div className='w-full py-20'>
 
-                    <div className='w-full flex items-center justify-between'>
-                        <h3>Independant Packages</h3>
-                    </div>
+                    <RevealAnimation>
+                        <div className='w-full flex items-center justify-between'>
+                            <h3>Independant Packages</h3>
+                        </div>
+                    </RevealAnimation>
 
-                    <div className='mt-10 w-full flex justify-center'>
-                        <ThreeWayToggle tabs={tabs} selectedTab={selectedTab} handleTabChange={handlePackageTypeChange} />
-                    </div>
+                    <RevealAnimation>
+                        <div className='mt-10 w-full flex justify-center'>
+                            <ThreeWayToggle tabs={tabs} selectedTab={selectedTab} handleTabChange={handlePackageTypeChange} />
+                        </div>
+                    </RevealAnimation>
 
                     <div className='mt-20 w-full h-full flex flex-wrap gap-6 justify-around'>
                         <AnimatePresence exitBeforeEnter>
                             {selectedTab.value.map((item, i) => (
-                                <motion.div 
-                                key={item.id}
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 50}}
-                                transition={{duration: 0.3, delay: i * 0.2 }}
-                                className='basis-1/4'>
+                                <motion.div
+                                    key={item.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 20 }}
+                                    transition={{ duration: 0.3, delay: i * 0.2 }}
+                                    className='basis-1/4'>
                                     <PricingCard
                                         color={item.frontmatter.color}
                                         title={item.frontmatter.title}
@@ -160,6 +165,7 @@ export default MixMastering;
 export const pageQuery = graphql`
 query {
     mixingPrices: allMarkdownRemark(
+        sort: { fields: [frontmatter___price], order: ASC}
       filter: {frontmatter: {pricing: {eq: true}, category: {eq: "mixing"}}}
     ) {
       priceList: nodes {
@@ -176,6 +182,7 @@ query {
       }
     }
     masterPrices: allMarkdownRemark(
+        sort: { fields: [frontmatter___price], order: ASC}
       filter: {frontmatter: {pricing: {eq: true}, category: {eq: "master"}}}
     ) {
       priceList: nodes {
@@ -192,6 +199,7 @@ query {
       }
     }
     combinedPrices: allMarkdownRemark(
+        sort: { fields: [frontmatter___price], order: ASC}
       filter: {frontmatter: {pricing: {eq: true}, category: {eq: "mixmaster"}}}
     ) {
       priceList: nodes {
