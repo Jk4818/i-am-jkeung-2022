@@ -39,7 +39,7 @@ function MixMastering({ data }) {
             console.log("window defined");
 
         }
-    }, [selectedTab])
+    }, [selectedTab, isWindowDefined])
 
 
 

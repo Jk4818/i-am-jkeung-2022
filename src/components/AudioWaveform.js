@@ -1,11 +1,13 @@
-import React, { useRef, useState, useCallback } from 'react';
+import React, { useRef, useState, useCallback, useEffect } from 'react';
 import { WaveForm, WaveSurfer } from 'wavesurfer-react';
 
 import { BsPlayCircle, BsPauseCircle } from 'react-icons/bs';
+
+import tempTrack from "../assets/audio/water_of_life.wav";
+
 function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
     
     const [isPlaying, setIsPlaying] = useState(false);
-
 
     const wavesurferRef = useRef();
     const play = useCallback(() => {
@@ -22,7 +24,6 @@ function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
             wavesurferRef.current = waveSurfer;
 
             if (wavesurferRef.current) {
-                wavesurferRef.current.load(audioTrack);
 
                 wavesurferRef.current.on("ready", () => {
                     console.log("WaveSurfer is ready");
@@ -49,6 +50,16 @@ function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
         },
         []
     );
+
+    //useffect where audioTrack exists set it as waveaudiotrack
+    useEffect(() => {
+        if (audioTrack) {
+            wavesurferRef.current.load(audioTrack);
+        }
+        else {
+            wavesurferRef.current.load(tempTrack);
+        }
+    }, [audioTrack, handleWSMount]);
 
     return (
         <div className='w-full h-full my-10 grid grid-rows-2'>
