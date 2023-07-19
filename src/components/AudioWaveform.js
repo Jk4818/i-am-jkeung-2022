@@ -5,13 +5,9 @@ import { BsPlayCircle, BsPauseCircle } from 'react-icons/bs';
 function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
     
     const [isPlaying, setIsPlaying] = useState(false);
-    
-    const audioElement = new Audio(audioTrack);
-    audioElement.controls = true;
 
 
     const wavesurferRef = useRef();
-
     const play = useCallback(() => {
         wavesurferRef.current.playPause();
 
@@ -26,7 +22,7 @@ function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
             wavesurferRef.current = waveSurfer;
 
             if (wavesurferRef.current) {
-                wavesurferRef.current.load(audioElement);
+                wavesurferRef.current.load(audioTrack);
 
                 wavesurferRef.current.on("ready", () => {
                     console.log("WaveSurfer is ready");

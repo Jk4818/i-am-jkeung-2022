@@ -13,6 +13,10 @@ import RevealAnimation from '../../components/RevealAnimation';
 
 
 function MixMastering({ data }) {
+
+    const isBrowser = typeof window !== "undefined"
+
+
     const mixPricing = data.mixingPrices.priceList;
     const masterPricing = data.masterPrices.priceList;
     const combinedPricing = data.combinedPrices.priceList;
@@ -109,12 +113,11 @@ function MixMastering({ data }) {
 
                 </div>
 
-                {typeof window !== 'undefined' &&
-                    <RevealAnimation width="w-full">
-                        <div className=''><AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0" />
-                        </div>
-                    </RevealAnimation>
-                }
+                {isBrowser && <RevealAnimation width="w-full">
+                    <div className=''>
+                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0" />
+                    </div>
+                </RevealAnimation>}
 
                 <div className='w-full py-20'>
 
