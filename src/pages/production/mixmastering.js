@@ -36,7 +36,6 @@ function MixMastering({ data }) {
         console.log(selectedTab);
         if (typeof window !== 'undefined') {
             setIsWindowDefined(true);
-            console.log("window defined");
 
         }
     }, [selectedTab, isWindowDefined])
@@ -120,7 +119,7 @@ function MixMastering({ data }) {
 
                 {isWindowDefined && <RevealAnimation width="w-full">
                     <div className=''>
-                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#f7edf0" />
+                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" progressColor="#f7edf0" />
                     </div>
                 </RevealAnimation>}
 
