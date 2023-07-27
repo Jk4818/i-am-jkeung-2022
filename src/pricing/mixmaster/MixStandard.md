@@ -7,7 +7,7 @@ features: [
   'Advanced balancing, EQ, dynamics, and effects.', 
  '2 rounds of revisions for fine-tuning'
  ]
-btnText: "Get Started"
+btnText: ""
 color: "#CDB4DB"
 pricing: true
 category: "mixing"

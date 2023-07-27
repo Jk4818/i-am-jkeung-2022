@@ -6,7 +6,7 @@ features: ['Mixing of up to 10 tracks',
 'Full processing chain', 
 '2 rounds of revisions for fine-tuning'
 ]
-btnText: "Get Started"
+btnText: ""
 color: "#BDE0FE"
 pricing: true
 category: "mixing"
