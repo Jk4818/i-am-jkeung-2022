@@ -26,7 +26,7 @@ function Collection(props) {
 							<div className='relative w-full h-full pointer-events-none'>
 								<Video
 									videoSrc={ShowReelVideo}
-									videoTitle="Reel-22"
+									videoTitle="Reel-23"
 								/>
 							</div>
 						</div>

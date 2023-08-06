@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import HumaniseText from './helpers/HumaniseText';
 import GalleryImage from './GalleryImage';
 
 
@@ -76,7 +77,7 @@ function Gallery({ gallaryData }) {
                   variants={variant}
                   key={index}
                   className={`${columnSpan[galleryIndex][index]} ${index % 6 < 3 && "sm:self-end flex flex-col-reverse"}`}>
-                  <GalleryImage src={image} heading={image.base} subheading={image.base} alt={image.base} reverse={index % 6 < 3 ? true : false} />
+                  <GalleryImage src={image} heading={HumaniseText(image.base)} subheading={image.base} alt={image.base} reverse={index % 6 < 3 ? true : false} />
                 </motion.div>
               )
             })}

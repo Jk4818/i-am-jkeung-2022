@@ -7,7 +7,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
-import audioTrack1 from "../../assets/audio/over_the_mile.wav";
 import ThreeWayToggle from '../../components/ThreeWayToggle';
 import RevealAnimation from '../../components/RevealAnimation';
 
