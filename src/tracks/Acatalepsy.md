@@ -6,7 +6,7 @@ date: "2020-01-18"
 featured: true
 tags: ["EDM", "Contemporary", "LoFi"]
 sourceLink: [{url: "https://open.spotify.com/track/2NVsPjj9jY3GAI2KvGLpbf?si=2f54ce96f7e74a04", alt: "Spotify"},{url: "https://music.apple.com/us/album/ill-meet-you-at-the-end-of-the-galaxy/1548313613?i=1548313614", alt: "Apple Music"}]
-image: ../assets/images/tracks/acatalepsy.jpeg
+image: ../assets/images/tracks/acatalepsy.jpg
 featuredImgAlt: Jason Keung
 ---
 

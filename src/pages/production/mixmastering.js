@@ -14,9 +14,6 @@ import RevealAnimation from '../../components/RevealAnimation';
 
 function MixMastering({ data }) {
 
-    //state for checking if wondow is defined
-    const [isWindowDefined, setIsWindowDefined] = useState(false);
-
 
     const mixPricing = data.mixingPrices.priceList;
     const masterPricing = data.masterPrices.priceList;
@@ -34,11 +31,7 @@ function MixMastering({ data }) {
 
     useEffect(() => {
         console.log(selectedTab);
-        if (typeof window !== 'undefined') {
-            setIsWindowDefined(true);
-
-        }
-    }, [selectedTab, isWindowDefined])
+    }, [selectedTab])
 
 
 
@@ -100,24 +93,24 @@ function MixMastering({ data }) {
                             <motion.div
                                 variants={mixVariant2}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/run_to_you_cover.jpg" alt="run_to_you_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/run_to_you_cover.jpg" alt="run_to_you_cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant1}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/vision_cover.png" alt="Vision Cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/over_the_mile_cover.jpg" alt="Vision Cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../assets/images/tracks/acatalepsy.jpeg" alt="over_the_mile_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/IJFLSPT.jpg" alt="over_the_mile_cover" />
                             </motion.div>
                         </motion.div>
                     </div>
 
                 </div>
 
-                {isWindowDefined && <RevealAnimation width="w-full">
+                {typeof window !== 'undefined' &&  <RevealAnimation width="w-full">
                     <div className=''>
                         <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" progressColor="#f7edf0" />
                     </div>

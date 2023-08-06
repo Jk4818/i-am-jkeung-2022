@@ -68,7 +68,7 @@ function Production(props) {
 
                                 <div className='w-max h-max py-10 flex m-auto scale-50 sm:scale-100 active:scale-95 transition-transform'>
                                     <input type="checkbox" name="checkbox" id="toggle" checked={isChecked} onChange={checkHandler} />
-                                    <label for="toggle" className={`cursor-pointer switch border-4 border-white after:bg-white hover:border-gray-200 hover:after:bg-gray-200`}></label>
+                                    <label htmlFor="toggle" className={`cursor-pointer switch border-4 border-white after:bg-white hover:border-gray-200 hover:after:bg-gray-200`}><div className='hidden'>toggle</div></label>
                                 </div>
 
                                 {isChecked &&
