@@ -1,8 +1,8 @@
-import React, { useRef, useState, useCallback, useEffect } from 'react';
+import React from 'react';
 import Layout from '../../components/Layout';
 import PricingCard from '../../components/PricingCard';
 import { graphql } from 'gatsby';
-// import AudioWaveform from '../../components/AudioWaveform';
+import AudioWaveform from '../../components/AudioWaveform';
 import { StaticImage } from 'gatsby-plugin-image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -11,102 +11,9 @@ import audioTrack1 from "../../assets/audio/georg.mp3";
 import audioTrack2 from "../../assets/audio/seven.mp3";
 import RevealAnimation from '../../components/RevealAnimation';
 
-import { WaveForm, WaveSurfer } from 'wavesurfer-react';
-
-import { BsPlayCircle, BsPauseCircle } from 'react-icons/bs';
-
-
 
 
 function Composing({ data }) {
-
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [isPlaying1, setIsPlaying1] = useState(false);
-
-    const wavesurferRef = useRef();
-    const wavesurferRef1 = useRef();
-    const play = useCallback(() => {
-        wavesurferRef.current.playPause();
-
-    }, []);
-    const play1 = useCallback(() => {
-        wavesurferRef1.current.playPause();
-
-    }, []);
-
-    const handleWSMount = useCallback(
-        (waveSurfer) => {
-            if (waveSurfer.markers) {
-                waveSurfer.clearMarkers();
-            }
-
-            wavesurferRef.current = waveSurfer;
-            wavesurferRef.current.load(audioTrack1);
-
-            if (wavesurferRef.current) {
-
-                wavesurferRef.current.on("ready", () => {
-                    console.log("WaveSurfer is ready");
-                });
-                wavesurferRef.current.setVolume(0.1);
-
-                wavesurferRef.current.on("play", () => {
-                    setIsPlaying(true);
-                    console.log("WaveSurfer is playing");
-                });
-                wavesurferRef.current.on("pause", () => {
-                    setIsPlaying(false);
-                    console.log("WaveSurfer is paused");
-                });
-
-                wavesurferRef.current.on("loading", (data) => {
-                    console.log("loading --> ", data);
-                });
-
-                if (window) {
-                    window.surferidze = wavesurferRef.current;
-                }
-            }
-        },
-        []
-    );
-
-    const handleWSMount1 = useCallback(
-        (waveSurfer) => {
-            if (waveSurfer.markers) {
-                waveSurfer.clearMarkers();
-            }
-
-            wavesurferRef1.current = waveSurfer;
-            wavesurferRef1.current.load(audioTrack2);
-
-            if (wavesurferRef1.current) {
-
-                wavesurferRef1.current.on("ready", () => {
-                    console.log("WaveSurfer is ready");
-                });
-                wavesurferRef1.current.setVolume(0.1);
-
-                wavesurferRef1.current.on("play", () => {
-                    setIsPlaying1(true);
-                    console.log("WaveSurfer is playing");
-                });
-                wavesurferRef1.current.on("pause", () => {
-                    setIsPlaying1(false);
-                    console.log("WaveSurfer is paused");
-                });
-
-                wavesurferRef1.current.on("loading", (data) => {
-                    console.log("loading --> ", data);
-                });
-
-                if (window) {
-                    window.surferidze = wavesurferRef1.current;
-                }
-            }
-        },
-        []
-    );
 
 
     const { priceList } = data.pricing;
@@ -188,49 +95,13 @@ function Composing({ data }) {
 
                 {typeof window !== 'undefined' && <div className=''>
                     <RevealAnimation width="w-full">
-                        {/* <div className=''>
+                        <div className=''>
                             <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#CDB4DB" />
-                        </div> */}
-
-                        <div className='w-full h-full my-10 grid grid-rows-2'>
-                            <div className='row-start-1 my-10 flex items-center gap-4 text-white'>
-                                <button onClick={play1} className='text-5xl hover:text-main-gray transition-all border-2 p-1 border-transparent focus:border-cyan-200 rounded-lg'>
-                                    {isPlaying1 ?
-                                        <BsPauseCircle />
-                                        :
-                                        <BsPlayCircle />
-                                    }
-                                </button>
-                                <h1 className='font-inter font-semibold'>Water Of Life</h1>
-                            </div>
-                            <div className='row-start-2 h-full'>
-                                <WaveSurfer onMount={handleWSMount1}>
-                                    <WaveForm id={"over_ther_mile"} responsive={true} progressColor={"#CDB4DB"} cursorWidth={3} barWidth={3} barGap={2} barRadius={3} />
-                                </WaveSurfer>
-                            </div>
                         </div>
                     </RevealAnimation>
                     <RevealAnimation width="w-full">
-                        {/* <div className=''>
+                        <div className=''>
                             <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung" audioTrack={audioTrack2}  progressColor="#BDE0FE" />
-                        </div> */}
-
-                        <div className='w-full h-full my-10 grid grid-rows-2'>
-                            <div className='row-start-1 my-10 flex items-center gap-4 text-white'>
-                                <button onClick={play} className='text-5xl hover:text-main-gray transition-all border-2 p-1 border-transparent focus:border-cyan-200 rounded-lg'>
-                                    {isPlaying ?
-                                        <BsPauseCircle />
-                                        :
-                                        <BsPlayCircle />
-                                    }
-                                </button>
-                                <h1 className='font-inter font-semibold'>Water Of Life</h1>
-                            </div>
-                            <div className='row-start-2 h-full'>
-                                <WaveSurfer onMount={handleWSMount}>
-                                    <WaveForm id={"water_of_life"} responsive={true} progressColor={"#BDE0FE"} cursorWidth={3} barWidth={3} barGap={2} barRadius={3} />
-                                </WaveSurfer>
-                            </div>
                         </div>
                     </RevealAnimation>
                 </div>
