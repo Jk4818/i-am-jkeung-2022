@@ -100,7 +100,7 @@ function Composing({ data }) {
                     </RevealAnimation>
                     <RevealAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung" audioTrack={audioTrack2} progressColor="#BDE0FE" />
+                            <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung"  progressColor="#BDE0FE" />
                         </div>
                     </RevealAnimation>
                 </div>
