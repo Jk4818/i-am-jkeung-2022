@@ -76,11 +76,12 @@ function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
                 <h1 className='font-inter font-semibold'>{title} — {composer}</h1>
             </div>
 
-            <div className='row-start-2 h-full'>
+            { audioTrack &&
+                <div className='row-start-2 h-full'>
                 <WaveSurfer onMount={handleWSMount}>
                     <WaveForm id={id} responsive={true} progressColor={progressColor ? progressColor : "#595959"} cursorWidth={3} barWidth={3} barGap={2} barRadius={3}/>
                 </WaveSurfer>
-            </div>
+            </div>}
         </div>
     );
 }
