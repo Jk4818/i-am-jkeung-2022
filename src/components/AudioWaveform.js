@@ -3,8 +3,6 @@ import { WaveForm, WaveSurfer } from 'wavesurfer-react';
 
 import { BsPlayCircle, BsPauseCircle } from 'react-icons/bs';
 
-import tempTrack from "../assets/audio/georg.mp3";
-
 function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
     
     const [isPlaying, setIsPlaying] = useState(false);
@@ -56,11 +54,7 @@ function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
         console.log("Checking for audio track:");
         if (audioTrack) {
             wavesurferRef.current.load(audioTrack);
-            console.log("LOADING ACTUAL TRACK");
-        }
-        else {
-            wavesurferRef.current.load(tempTrack);
-            console.log("LOADING TEMP TRACK");
+            console.log("LOADING TRACK");
         }
     }, [audioTrack, handleWSMount]);
 

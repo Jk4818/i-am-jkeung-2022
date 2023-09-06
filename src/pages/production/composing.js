@@ -7,8 +7,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
-import audioTrack1 from "../../assets/audio/georg.mp3";
-import audioTrack2 from "../../assets/audio/seven.mp3";
+import audioTrack1 from "../../assets/audio/ApertureShort.mp3";
+import audioTrack2 from "../../assets/audio/WaterOfLifeShort.mp3";
+import audioTrack3 from "../../assets/audio/LunchInFiveShort.wav";
 import RevealAnimation from '../../components/RevealAnimation';
 
 
@@ -96,12 +97,17 @@ function Composing({ data }) {
                 {typeof window !== 'undefined' && <div className=''>
                     <RevealAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" audioTrack={audioTrack1} progressColor="#CDB4DB" />
+                            <AudioWaveform id="aperture_demo" title="Over The Mile" composer="Road Not Taken" audioTrack={audioTrack1} progressColor="#CDB4DB" />
                         </div>
                     </RevealAnimation>
                     <RevealAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="water_of_life" title="Water Of Life" composer="Jason Keung" audioTrack={audioTrack2}  progressColor="#BDE0FE" />
+                            <AudioWaveform id="wol_demo" title="Water Of Life" composer="Road Not Taken" audioTrack={audioTrack2}  progressColor="#BDE0FE" />
+                        </div>
+                    </RevealAnimation>
+                    <RevealAnimation width="w-full">
+                        <div className=''>
+                            <AudioWaveform id="lif_demo" title="Death Theme" composer="Lunch In Five OST" audioTrack={audioTrack3}  progressColor="#f2d8b8" />
                         </div>
                     </RevealAnimation>
                 </div>
