@@ -80,7 +80,7 @@ function Production(props) {
                                         className={`absolute top-0 bottom-60 sm:bottom-[28rem] m-auto left-0 xl:left-[29rem] right-0 w-max h-max`}>
                                         <Link to='/production/composing'>
                                             <RevealAnimation>
-                                                <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Film <br />Composer</h1>
+                                                <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Media <br />Composer</h1>
                                             </RevealAnimation>
                                         </Link>
                                     </motion.div>

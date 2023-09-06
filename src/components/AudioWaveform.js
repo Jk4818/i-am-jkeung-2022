@@ -39,9 +39,9 @@ function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
                     console.log("WaveSurfer is paused");
                 });
 
-                // wavesurferRef.current.on("loading", (data) => {
-                //     console.log("loading --> ", data);
-                // });
+                wavesurferRef.current.on("loading", (data) => {
+                    console.log("loading --> ", data);
+                });
 
                 if (window) {
                     window.surferidze = wavesurferRef.current;
