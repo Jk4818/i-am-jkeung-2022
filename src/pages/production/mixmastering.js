@@ -92,17 +92,17 @@ function MixMastering({ data }) {
                             <motion.div
                                 variants={mixVariant2}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/run_to_you_cover.jpg" alt="run_to_you_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/run_to_you_cover.jpg" alt="Run To You Cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant1}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/over_the_mile_cover.jpg" alt="Vision Cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/aperture_cover.jpg" alt="Aperture Cover" />
                             </motion.div>
                             <motion.div
                                 variants={mixVariant}
                                 className='-right-10 -bottom-0 xl:-right-0 xl:-bottom-0  absolute w-3/4 lg:w-10/12 max-w-xl aspect-square'>
-                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/acatalepsy.jpg" alt="acatalepsy_cover" />
+                                <StaticImage className='h-full w-full aspect-square rounded-2xl' placeholder='none' layout='constrained' src="../../assets/images/tracks/acatalepsy.jpg" alt="Acatalepsy Cover" />
                             </motion.div>
                         </motion.div>
                     </div>

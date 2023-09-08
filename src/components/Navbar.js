@@ -54,7 +54,7 @@ function Navbar(props) {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className={`bg-white/70 hidden md:flex flex-row  hover:bg-white backdrop-blur-sm p-2 px-6 rounded-lg shadow-main gap-10 text-main-gray-dark font-archivo font-semibold `}>
+              className={`bg-white/70 hidden md:flex flex-row  hover:bg-white backdrop-blur-sm p-2 px-6 rounded-lg shadow-main gap-10 text-main-gray-dark font-archivo font-semibold transition-colors`}>
               <li className='hover:text-main-gray-darker transition-all'>
                 <Link
                   to="/prints/"

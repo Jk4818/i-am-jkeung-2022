@@ -26,7 +26,7 @@ function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
                 wavesurferRef.current.on("ready", () => {
                     console.log("WaveSurfer is ready");
                 });
-                wavesurferRef.current.setVolume(0.1);
+                wavesurferRef.current.setVolume(0.3);
 
                 wavesurferRef.current.on("play", () => {
                     setIsPlaying(true);
