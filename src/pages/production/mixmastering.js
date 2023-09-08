@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ThreeWayToggle from '../../components/ThreeWayToggle';
 import RevealAnimation from '../../components/RevealAnimation';
 
+import audioTrack from "../../assets/audio/DIROShort.mp3";
 
 function MixMastering({ data }) {
 
@@ -111,7 +112,7 @@ function MixMastering({ data }) {
 
                 {typeof window !== 'undefined' &&  <RevealAnimation width="w-full">
                     <div className=''>
-                        <AudioWaveform id="over_the_mile" title="Over The Mile" composer="Jason Keung" progressColor="#f7edf0" />
+                        <AudioWaveform id="darling_its_raining_outside" title="Darling It's Raining Outside" composer="Jason Keung" progressColor="#f7edf0" audioTrack={audioTrack}/>
                     </div>
                 </RevealAnimation>}
 
