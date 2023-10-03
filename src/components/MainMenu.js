@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import UseComponentVisible from './helpers/UseComponentVisible';
 
 import MenuButton from './MenuButton';
@@ -69,7 +69,8 @@ function MainMenu(props) {
         <MenuButton menuState={isComponentVisible} setMenuState={setIsComponentVisible} />
       </div>
 
-      <motion.div variants={sidebar}  className={`fixed top-0 right-0 md:top-6 md:right-8 w-60 h-80 z-10 p-4 flex flex-col gap-4 justify-center bg-main-gray-darker rounded-bl-xl md:rounded-xl font-archivo text-left text-text-light font-semibold overflow-hidden`}>
+      <AnimatePresence>
+      <motion.div variants={sidebar} className={`fixed top-0 right-0 md:top-6 md:right-8 w-60 h-80 z-10 p-4 flex flex-col gap-4 justify-center bg-main-gray-darker rounded-bl-xl md:rounded-xl font-archivo text-left text-text-light font-semibold overflow-hidden`}>
 
         <motion.ul variants={menuItemVariants} className=' text-xl leading-loose tracking-wider '>
           <MenuItem>Collection</MenuItem>
@@ -95,6 +96,7 @@ function MainMenu(props) {
         </motion.ul>
 
       </motion.div>
+      </AnimatePresence>
 
     </motion.div>
   );

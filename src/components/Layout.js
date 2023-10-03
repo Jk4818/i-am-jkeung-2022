@@ -7,19 +7,19 @@ import Navbar from './Navbar';
 
 function Layout({ children }) {
     return (
+        <motion.div
+            initial={{ opacity: 0, }}
+            animate={{ opacity: 1,}}
+            exit={{ opacity: 0, }}
+            transition={{
+                duration: 0.3
+            }}
+        >
         <div className='z-[100]'>
             <Navbar />
-            <motion.div
-                initial={{ opacity: 0, x: -200 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 200 }}
-                transition={{
-                    duration: 0.3
-                }}
-            >
                 {children}
-            </motion.div>
         </div>
+            </motion.div>
     );
 }
 
