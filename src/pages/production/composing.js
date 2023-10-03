@@ -57,7 +57,7 @@ function Composing({ data }) {
                             <h1 className='text-4xl'>Composing & Soundtracks</h1>
                         </RevealAnimation>
                         <RevealAnimation width="w-fit xl:pr-10">
-                            <p className='mt-10 mb-32 text-xl 2xl:text-2xl'>With years of experience on the composing chair, I can help score the best tracks required for your projects. From emotive soundscapes to orchestral grandeur, I possess the versatility to score for film, TV, games, and adverts. Whether it's capturing the essence of a heartfelt drama or creating an adrenaline-fuelled adventure, I am able to score for any style, ensuring your project receives the perfect musical accompaniment.
+                            <p className='mt-10 mb-32 text-xl 2xl:text-2xl'>With years of experience on the composing chair, I can help score the best tracks required for your projects. From emotive soundscapes to orchestral grandeur, I possess the versatility to score for film, TV, games, and adverts. Whether it's capturing the essence of a heartfelt drama or creating an adrenaline-fuelled adventure, each project is ensured to receive the perfect musical accompaniment.
                             </p>
                         </RevealAnimation>
 
@@ -142,6 +142,13 @@ function Composing({ data }) {
                         </AnimatePresence>
                     </div>
                 </div>
+
+                
+                <RevealAnimation>
+                        <div className='w-full pb-10 flex items-center justify-between'>
+                            <h3>For projects that are beyond the scope of any provided packages, please get in contact for a personalised quote on your requirements.</h3>
+                        </div>
+                </RevealAnimation>
             </div>
         </Layout>
     );

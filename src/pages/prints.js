@@ -2,12 +2,13 @@ import React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from 'gatsby';
 import { motion } from "framer-motion";
+import ComingSoon from '../components/ComingSoon.js';
 
 import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
 import BuyButton from '../components/BuyButton';
 
-function prints(props) {
+const Prints = (props) => {
 
   const variant = {
     hidden: { opacity: 0, y: "20%" },
@@ -20,9 +21,12 @@ function prints(props) {
     }
   };
 
+	const comingSoon = true;
+
 
   return (
     <Layout>
+    {!comingSoon ?
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -93,11 +97,14 @@ function prints(props) {
         </section>
 
       </motion.div>
+				:
+				<ComingSoon />
+			}
     </Layout>
   );
 }
 
-export default prints;
+export default Prints;
 
 //gatbsy query for all images in prints folder
 export const printQuery = graphql`

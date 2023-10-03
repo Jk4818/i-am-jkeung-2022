@@ -73,7 +73,7 @@ function MixMastering({ data }) {
                             <h1 className='text-4xl'>Mixing & Mastering</h1>
                         </RevealAnimation>
                         <RevealAnimation width="w-fit">
-                            <p className='mt-10 mb-32 text-2xl'>Specialising in a cappella, orchestral, and rock, my expertise extends across a wide range of styles. I am committed to delivering top-notch results by providing meticulous attention to detail, ensuring your artistic vision is achieved without compromising any technical requirements.
+                            <p className='mt-10 mb-32 text-2xl'>Specialising in a cappella, orchestral, and pop, my expertise extends across a wide range of styles. I am committed to delivering top-notch results by providing meticulous attention to detail, ensuring your artistic vision is achieved without compromising any technical requirements.
                             </p>
                         </RevealAnimation>
 
@@ -110,9 +110,9 @@ function MixMastering({ data }) {
 
                 </div>
 
-                {typeof window !== 'undefined' &&  <RevealAnimation width="w-full">
+                {typeof window !== 'undefined' && <RevealAnimation width="w-full">
                     <div className=''>
-                        <AudioWaveform id="darling_its_raining_outside" title="Darling It's Raining Outside" composer="Jason Keung" progressColor="#f7edf0" audioTrack={audioTrack}/>
+                        <AudioWaveform id="darling_its_raining_outside" title="Darling It's Raining Outside" composer="Jason Keung" progressColor="#f7edf0" audioTrack={audioTrack} />
                     </div>
                 </RevealAnimation>}
 
@@ -154,6 +154,14 @@ function MixMastering({ data }) {
                     </div>
 
                 </div>
+
+
+
+                <RevealAnimation>
+                    <div className='w-full pb-10 flex items-center justify-between'>
+                        <h3>For projects that are beyond the scope of any provided packages, please get in contact for a personalised quote on your requirements.</h3>
+                    </div>
+                </RevealAnimation>
             </div>
         </Layout>
     );
