@@ -85,13 +85,13 @@ function MainMenu(props) {
             <Link to='/'> Tech Portfolio </Link>
           </motion.li>
           <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
-            <Link to='/'> Github </Link>
+            <a href='https://github.com/Jk4818'  target="_blank"> Github </a>
           </motion.li>
           <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
-            <Link to='/'> Youtube </Link>
+            <a href='https://www.youtube.com/@jkeung'  target="_blank"> Youtube </a>
           </motion.li>
           <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
-            <Link to='/'> LinkedIn </Link>
+            <a href='https://www.linkedin.com/in/jkeung/'  target="_blank"> LinkedIn </a>
           </motion.li>
         </motion.ul>
 

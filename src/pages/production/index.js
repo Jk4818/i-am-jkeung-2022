@@ -66,7 +66,7 @@ function Production(props) {
                             <div className='relative w-full h-full flex items-center justify-center z-10'>
 
 
-                                <div className='w-max h-max py-10 flex m-auto scale-50 sm:scale-100 active:scale-95 transition-transform'>
+                                <div className='w-max h-max py-10 flex m-auto scale-50 sm:scale-100 active:scale-[0.4] sm:active:scale-95 transition-transform'>
                                     <input type="checkbox" name="checkbox" id="toggle" checked={isChecked} onChange={checkHandler} />
                                     <label htmlFor="toggle" className={`cursor-pointer switch border-4 border-white after:bg-white hover:border-gray-200 hover:after:bg-gray-200`}><div className='hidden'>toggle</div></label>
                                 </div>
@@ -80,7 +80,7 @@ function Production(props) {
                                         className={`absolute top-0 bottom-60 sm:bottom-[28rem] m-auto left-0 xl:left-[29rem] right-0 w-max h-max`}>
                                         <Link to='/production/composing'>
                                             <RevealAnimation>
-                                                <h1 className='text-center xl:text-left text-3xl sm:text-9xl md:text-9xl font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Media <br />Composer</h1>
+                                                <h1 className='text-center xl:text-left text-5xl sm:text-9xl md:text-9xl font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Media <br />Composer</h1>
                                             </RevealAnimation>
                                         </Link>
                                     </motion.div>
@@ -94,7 +94,7 @@ function Production(props) {
                                         className={`absolute top-60 sm:top-96 bottom-0 m-auto left-0 right-0 xl:right-[35rem] w-max h-max`}>
                                         <Link to='/production/mixmastering'>
                                             <RevealAnimation>
-                                                <h1 className=' text-center xl:text-right text-3xl sm:text-8xl md:text-[7rem] font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Mix Mastering<br />Engineer</h1>
+                                                <h1 className=' text-center xl:text-right text-5xl sm:text-8xl md:text-[7rem] font-archivo font-bold hover:text-gray-300 active:scale-95 transition-all'>Mix Mastering<br />Engineer</h1>
                                             </RevealAnimation>
                                         </Link>
                                     </motion.div>

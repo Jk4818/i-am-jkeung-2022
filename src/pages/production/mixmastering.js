@@ -13,6 +13,7 @@ import RevealAnimation from '../../components/RevealAnimation';
 import audioTrack from "../../assets/audio/DIROShort.mp3";
 import audioTrack1 from "../../assets/audio/SevenShort.wav";
 import audioTrack2 from "../../assets/audio/HardestPartCover.wav";
+import audioTrack3 from "../../assets/audio/EOMShort.wav";
 
 function MixMastering({ data }) {
 
@@ -127,6 +128,11 @@ function MixMastering({ data }) {
                     <RevealAnimation width="w-full">
                         <div className=''>
                             <AudioWaveform id="hardest_part" title="The Hardest Part" composer="Layla Mehmet" progressColor="#CDB4DB" audioTrack={audioTrack2} />
+                        </div>
+                    </RevealAnimation>
+                    <RevealAnimation width="w-full">
+                        <div className=''>
+                            <AudioWaveform id="easy_on_me" title="Easy On Me" composer="The Scopes" progressColor="#CDA4AB" audioTrack={audioTrack3} />
                         </div>
                     </RevealAnimation>
                     
