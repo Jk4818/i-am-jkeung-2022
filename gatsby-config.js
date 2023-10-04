@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `I Am JKeung 2023`,
+    title: `I Am JKeung 2024`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [`gatsby-plugin-smoothscroll`,"gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", `gatsby-plugin-preload-fonts`, {

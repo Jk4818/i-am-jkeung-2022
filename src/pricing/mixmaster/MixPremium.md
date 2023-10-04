@@ -1,6 +1,6 @@
 ---
 title: "Deluxe"
-price: "1150"
+price: 1150
 features: [
   'Mixing of up to 10 tracks',
 'Vocal tuning included', 

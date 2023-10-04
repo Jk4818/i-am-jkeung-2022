@@ -14,6 +14,11 @@ function PricingCard({ color, title, description, price, features, btnText }) {
             </RevealAnimation>
 
             <RevealAnimation>
+                <div className='flex items-end text-sm font-semibold'>
+                    From.
+                </div>
+            </RevealAnimation>
+            <RevealAnimation>
                 <div className='mb-5 flex items-end text-6xl font-bold'>
                     {price ? (
                         <>

@@ -1,6 +1,6 @@
 ---
 title: "Premium"
-price: "750"
+price: 750
 features: [
   'Original score up to 10 minutes in length', 
   'Delivery in uncompressed formats', 

@@ -174,7 +174,7 @@ export const pageQuery = graphql`
 query {
     mixingPrices: allMarkdownRemark(
         sort: { fields: [frontmatter___price], order: ASC}
-      filter: {frontmatter: {pricing: {eq: true}, category: {eq: "mixing"}}}
+        filter: {frontmatter: {pricing: {eq: true}, category: {eq: "mixing"}}}
     ) {
       priceList: nodes {
         id

@@ -1,6 +1,6 @@
 ---
 title: "Premium"
-price: "850"
+price: 850
 features: [
   'Mixing of up to 10 tracks', 
   'Full hybrid mastering chain', 

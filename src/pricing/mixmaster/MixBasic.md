@@ -1,6 +1,6 @@
 ---
 title: "Essential"
-price: "450"
+price: 450
 features: [
   'Mixing of up to 3 tracks', 
   'Vocal tuning included', 

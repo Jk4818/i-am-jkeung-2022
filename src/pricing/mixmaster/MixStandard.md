@@ -1,10 +1,10 @@
 ---
 title: "Enhanced"
-price: "600"
+price: 600
 features: [
   'Mixing of up to 5 tracks', 
   'Vocal tuning included', 
-  'Advanced balancing, EQ, dynamics, and effects', 
+  'Full processing chain', 
   'Limited to 10 layers per track', 
  '2 rounds of revisions for fine-tuning'
  ]

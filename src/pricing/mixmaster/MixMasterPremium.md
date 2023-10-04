@@ -1,6 +1,6 @@
 ---
 title: "Ultimate Sound"
-price: "1550"
+price: 1550
 features: [
   'Complete mixing and mastering of up to 10 tracks', 
   '2 round of revisions for adjustments',

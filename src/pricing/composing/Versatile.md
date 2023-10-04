@@ -1,6 +1,6 @@
 ---
 title: "Versatile"
-price: "350"
+price: 350
 features: [
   'Original score up to 5 minutes in length', 
   'Delivery in uncompressed formats',

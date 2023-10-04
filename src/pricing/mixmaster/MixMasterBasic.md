@@ -1,6 +1,6 @@
 ---
 title: "Essential"
-price: "575"
+price: 575
 features: [
   'Essential mixing and mastering of up to 3 tracks', 
   '1 round of revisions for adjustments',

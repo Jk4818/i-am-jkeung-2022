@@ -1,6 +1,6 @@
 ---
 title: "Supreme"
-price: "950"
+price: 950
 features: [
   'Complete mixing and mastering of up to 5 tracks', 
   '1 round of revisions for adjustments',
