@@ -87,7 +87,7 @@ function PhotoLoader({ active, setActive }) {
               exit={{ y: "200%", opacity: 0 }}
               transition={{ duration: 1.5 }}
               className='mt-auto'>
-              Cinematographer & Mixing Engineer
+              Film Fanatic & Audio Engineer
             </motion.h1>
           </div>
         </motion.div>

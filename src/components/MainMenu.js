@@ -70,13 +70,13 @@ function MainMenu(props) {
       </div>
 
       <AnimatePresence>
-      <motion.div variants={sidebar} className={`fixed top-0 right-0 md:top-6 md:right-8 w-60 h-80 z-10 p-4 flex flex-col gap-4 justify-center bg-main-gray-darker rounded-bl-xl md:rounded-xl font-archivo text-left text-text-light font-semibold overflow-hidden`}>
+      <motion.div variants={sidebar} className={`fixed top-0 right-0 md:top-6 md:right-8 w-60 h-72 z-10 p-4 flex flex-col gap-4 justify-center bg-main-gray-darker rounded-bl-xl md:rounded-xl font-archivo text-left text-text-light font-semibold overflow-hidden`}>
 
         <motion.ul variants={menuItemVariants} className=' text-xl leading-loose tracking-wider '>
           <MenuItem>Collection</MenuItem>
           <MenuItem>Prints</MenuItem>
           <MenuItem>Production</MenuItem>
-          <MenuItem>About</MenuItem>
+          {/* <MenuItem>About</MenuItem> */}
           <MenuItem>Contact</MenuItem>
         </motion.ul>
 
