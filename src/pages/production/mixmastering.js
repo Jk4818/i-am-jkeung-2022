@@ -11,6 +11,8 @@ import ThreeWayToggle from '../../components/ThreeWayToggle';
 import RevealAnimation from '../../components/RevealAnimation';
 
 import audioTrack from "../../assets/audio/DIROShort.mp3";
+import audioTrack1 from "../../assets/audio/SevenShort.wav";
+import audioTrack2 from "../../assets/audio/HardestPartCover.wav";
 
 function MixMastering({ data }) {
 
@@ -110,11 +112,26 @@ function MixMastering({ data }) {
 
                 </div>
 
-                {typeof window !== 'undefined' && <RevealAnimation width="w-full">
-                    <div className=''>
-                        <AudioWaveform id="darling_its_raining_outside" title="Darling It's Raining Outside" composer="Jason Keung" progressColor="#f7edf0" audioTrack={audioTrack} />
-                    </div>
-                </RevealAnimation>}
+                {typeof window !== 'undefined' && 
+                <div className=''>
+                    <RevealAnimation width="w-full">
+                        <div className=''>
+                            <AudioWaveform id="darling_its_raining_outside" title="Darling It's Raining Outside" composer="Jason Keung" progressColor="#f7edf0" audioTrack={audioTrack} />
+                        </div>
+                    </RevealAnimation>
+                    <RevealAnimation width="w-full">
+                        <div className=''>
+                            <AudioWaveform id="seven" title="Seven - Feat. GC Vocals" composer="Amatta Mirandari" progressColor="#f2d8b8" audioTrack={audioTrack1} />
+                        </div>
+                    </RevealAnimation>
+                    <RevealAnimation width="w-full">
+                        <div className=''>
+                            <AudioWaveform id="hardest_part" title="The Hardest Part" composer="Layla Mehmet" progressColor="#CDB4DB" audioTrack={audioTrack2} />
+                        </div>
+                    </RevealAnimation>
+                    
+                </div>
+                }
 
                 <div className='w-full py-20'>
 
