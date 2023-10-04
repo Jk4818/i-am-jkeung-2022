@@ -1,10 +1,11 @@
 ---
 title: "Premium"
-price: "50"
+price: "850"
 features: [
-  'Mixing of up to 5 tracks', 
-  'Balancing levels, EQ, and basic processing', 
-  '1 round of revisions for adjustments'
+  'Mixing of up to 10 tracks', 
+  'Full hybrid mastering chain', 
+  'Stem mastering option', 
+  '2 round of revisions for adjustments',
   ]
 btnText: ""
 color: "#fbc4ab"
@@ -12,4 +13,4 @@ pricing: true
 category: "master"
 ---
 
-For short films, student projects, or small-scale productions.
+Perfect for full-length albums or professional releases.

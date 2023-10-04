@@ -1,10 +1,10 @@
 ---
-title: "Complete Sound"
-price: "50"
+title: "Essential"
+price: "575"
 features: [
-  'Mixing of up to 5 tracks', 
-  'Balancing levels, EQ, and basic processing', 
-  '1 round of revisions for adjustments'
+  'Essential mixing and mastering of up to 3 tracks', 
+  '1 round of revisions for adjustments',
+  'Refer to the cheapest corresponding packages for details', 
   ]
 btnText: ""
 color: "#eaf2d7"
@@ -12,4 +12,4 @@ pricing: true
 category: "mixmaster"
 ---
 
-For short films, student projects, or small-scale productions.
+Suitable for demos, small projects, or single releases.

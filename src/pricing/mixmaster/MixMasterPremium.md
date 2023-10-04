@@ -1,10 +1,10 @@
 ---
 title: "Ultimate Sound"
-price: "50"
+price: "1550"
 features: [
-  'Mixing of up to 5 tracks', 
-  'Balancing levels, EQ, and basic processing', 
-  '1 round of revisions for adjustments'
+  'Complete mixing and mastering of up to 10 tracks', 
+  '2 round of revisions for adjustments',
+  'Refer to the top tier packages for details', 
   ]
 btnText: ""
 color: "#f191ac"
@@ -12,4 +12,4 @@ pricing: true
 category: "mixmaster"
 ---
 
-For short films, student projects, or small-scale productions.
+Perfect for full-length albums or professional releases.

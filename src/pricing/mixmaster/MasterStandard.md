@@ -1,9 +1,10 @@
 ---
 title: "Polished"
-price: "50"
+price: "175"
 features: [
-  'Mixing of up to 5 tracks', 
-  'Balancing levels, EQ, and basic processing', 
+  'Mastering of up to 5 tracks', 
+  'Detailed mastering chain with EQ, multi-band compression, and peak limiting', 
+  'Stereo track mastering only', 
   '1 round of revisions for adjustments'
   ]
 btnText: ""
@@ -12,4 +13,4 @@ pricing: true
 category: "master"
 ---
 
-For short films, student projects, or small-scale productions.
+Ideal for EPs, small albums, or independent artists.

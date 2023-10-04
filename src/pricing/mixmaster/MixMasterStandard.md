@@ -1,10 +1,10 @@
 ---
 title: "Supreme"
-price: "50"
+price: "950"
 features: [
-  'Mixing of up to 5 tracks', 
-  'Balancing levels, EQ, and basic processing', 
-  '1 round of revisions for adjustments'
+  'Complete mixing and mastering of up to 5 tracks', 
+  '1 round of revisions for adjustments',
+  'Refer to the mid tier packages for details', 
   ]
 btnText: ""
 color: "#f7edf0"
@@ -12,4 +12,4 @@ pricing: true
 category: "mixmaster"
 ---
 
-For short films, student projects, or small-scale productions.
+Ideal for EPs, small albums, or independent artists.

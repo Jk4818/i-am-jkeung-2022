@@ -1,9 +1,11 @@
 ---
 title: "Deluxe"
-price: "650"
-features: ['Mixing of up to 10 tracks',
+price: "1150"
+features: [
+  'Mixing of up to 10 tracks',
 'Vocal tuning included', 
 'Full processing chain', 
+'Unlimited layers per track',
 '2 rounds of revisions for fine-tuning'
 ]
 btnText: ""

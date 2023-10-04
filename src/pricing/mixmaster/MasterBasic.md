@@ -1,9 +1,10 @@
 ---
 title: "Balanced"
-price: "50"
+price: "75"
 features: [
-  'Mixing of up to 5 tracks', 
-  'Balancing levels, EQ, and basic processing', 
+  'Single track mastering',
+  'Essential chain for loudness and tonal balance', 
+  'Stereo track mastering only', 
   '1 round of revisions for adjustments'
   ]
 btnText: ""
@@ -12,4 +13,4 @@ pricing: true
 category: "master"
 ---
 
-For short films, student projects, or small-scale productions.
+Suitable single releases.

@@ -12,9 +12,16 @@ const IndexPage = () => {
 	const [active, setActive] = useState(true);
 
 	return (
-		<main>
+		<motion.main
+		initial={{ opacity: 0, }}
+		animate={{ opacity: 1,}}
+		exit={{ opacity: 0, }}
+		transition={{
+				duration: 0.7
+		}}>
 			<title>Home Page</title>
       	<PhotoLoader active={active} setActive={setActive} />
+
 				<div className="w-screen h-screen flex flex-col gap-6 justify-center items-center uppercase bg-bg-light">
 
 					<motion.div
@@ -50,7 +57,7 @@ const IndexPage = () => {
 					</motion.div>
 				</div>
 
-		</main>
+		</motion.main>
 
 	)
 }

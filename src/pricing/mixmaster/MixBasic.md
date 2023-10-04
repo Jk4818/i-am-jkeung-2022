@@ -1,10 +1,11 @@
 ---
 title: "Essential"
-price: "150"
+price: "450"
 features: [
-  'Mixing of up to 5 tracks', 
+  'Mixing of up to 3 tracks', 
   'Vocal tuning included', 
-  'Balancing levels, EQ, and basic processing', 
+  'Balancing levels, EQ, and basic processing',
+  'Limited to 10 layers per track', 
   '1 round of revisions for adjustments'
   ]
 btnText: ""
