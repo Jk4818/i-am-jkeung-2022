@@ -42,7 +42,7 @@ function contact(props) {
         /></motion.h1>
         <ul className='min-w-[10rem] w-1/3 h-3/5 md:w-1/2 md:h-1/5 flex flex-col md:flex-row justify-between text-xl font-bold'>
 
-          <Mailto email="foo@bar.baz" subject="Audio Query - IAMJKEUNG" body="---- Audio Subject ----">
+          <Mailto email="work.jk4818@gmail.com" subject="Audio Query - IAMJKEUNG" body="---- Audio Subject ----">
             <motion.li
               initial={{
                 opacity: 0, y: "50%", borderRadius: "20%", transition: { duration: 0.5 }
@@ -58,7 +58,7 @@ function contact(props) {
               className='flex w-full h-full items-center justify-center text-center nm-flat-main-black hover:nm-inset-main-black transition-all'>Audio</motion.li>
           </Mailto>
 
-          <Mailto email="foo@bar.baz" subject="Video Query - IAMJKEUNG" body="---- Video Subject ----">
+          <Mailto email="work.jk4818@gmail.com" subject="Video Query - IAMJKEUNG" body="---- Video Subject ----">
             <motion.li
               initial={{
                 opacity: 0, y: "100%", borderRadius: "100%", transition: { duration: 0.5 }

@@ -12,7 +12,7 @@ import RevealAnimation from '../../components/RevealAnimation';
 
 import audioTrack from "../../assets/audio/DIROShort.mp3";
 import audioTrack1 from "../../assets/audio/SevenShort.wav";
-import audioTrack2 from "../../assets/audio/HardestPartCover.wav";
+// import audioTrack2 from "../../assets/audio/HardestPartCover.wav";
 import audioTrack3 from "../../assets/audio/EOMShort.wav";
 
 function MixMastering({ data }) {
@@ -81,7 +81,7 @@ function MixMastering({ data }) {
                         </RevealAnimation>
 
                         <RevealAnimation>
-                            <h3 className='font-semibold logo-animate'>Let's create impeccable soundscapes, where every note finds its perfect place.
+                            <h3 className='font-semibold logo-animate'>Let's find your sound together, where every note has its perfect place.
                             </h3>
                         </RevealAnimation>
                     </div>
@@ -122,14 +122,14 @@ function MixMastering({ data }) {
                     </RevealAnimation>
                     <RevealAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="seven" title="Seven - Feat. GC Vocals" composer="Amatta Mirandari" progressColor="#f2d8b8" audioTrack={audioTrack1} />
+                            <AudioWaveform id="seven" title="Seven (Feat. GC Vocals)" composer="Amatta Mirandari" progressColor="#f2d8b8" audioTrack={audioTrack1} />
                         </div>
                     </RevealAnimation>
-                    <RevealAnimation width="w-full">
+                    {/* <RevealAnimation width="w-full">
                         <div className=''>
                             <AudioWaveform id="hardest_part" title="The Hardest Part" composer="Layla Mehmet" progressColor="#CDB4DB" audioTrack={audioTrack2} />
                         </div>
-                    </RevealAnimation>
+                    </RevealAnimation> */}
                     <RevealAnimation width="w-full">
                         <div className=''>
                             <AudioWaveform id="easy_on_me" title="Easy On Me" composer="The Scopes" progressColor="#CDA4AB" audioTrack={audioTrack3} />

@@ -7,6 +7,7 @@ import "@fontsource/atkinson-hyperlegible";
 import "@fontsource/rock-salt";
 import "@fontsource/rubik";
 import "@fontsource/tinos";
+import "@fontsource/roboto-mono";
 import React from 'react';
 import {AnimatePresence} from 'framer-motion';
 

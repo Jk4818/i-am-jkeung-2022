@@ -24,17 +24,17 @@ function AudioWaveform({id, title, composer, audioTrack, progressColor}) {
             if (wavesurferRef.current) {
 
                 wavesurferRef.current.on("ready", () => {
-                    console.log("WaveSurfer is ready");
+                    console.log("Player is ready");
                 });
                 wavesurferRef.current.setVolume(0.3);
 
                 wavesurferRef.current.on("play", () => {
                     setIsPlaying(true);
-                    console.log("WaveSurfer is playing");
+                    console.log("Player is playing");
                 });
                 wavesurferRef.current.on("pause", () => {
                     setIsPlaying(false);
-                    console.log("WaveSurfer is paused");
+                    console.log("Player is paused");
                 });
 
                 wavesurferRef.current.on("loading", (data) => {

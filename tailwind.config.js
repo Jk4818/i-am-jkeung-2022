@@ -17,6 +17,7 @@ module.exports = {
         archivo: ["archivo", "sans-serif"],
         anton: ["anton", "sans-serif"],
         limelight: ["limelight", "sans-serif"],
+        'roboto-mono': ["roboto-mono", "monospace"],
         'atkinson-hyperlegible': ["Atkinson Hyperlegible", "sans-serif"],
         'rock-salt': ["Rock Salt", "cursive"],
         'rubik': ["rubik", "sans-serif"],

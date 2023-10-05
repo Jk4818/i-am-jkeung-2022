@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `I Am JKeung 2024`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://jkeung.studio`
   },
   plugins: [`gatsby-plugin-smoothscroll`,"gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", `gatsby-plugin-preload-fonts`, {
     resolve: 'gatsby-plugin-manifest',

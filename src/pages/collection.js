@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 
 import Layout from '../components/Layout.js';
@@ -13,25 +13,31 @@ function Collection(props) {
 		<Layout>
 			<main
 				className='overflow-x-hidden'>
-					<div className="w-screen h-full flex flex-col justify-center items-center uppercase bg-bg-light ">
+				<div className="w-screen h-full flex flex-col justify-center items-center uppercase ">
 
-						<div id="hero-container" className="snarp-start w-full h-screen">
-							<div className='relative w-full h-full pointer-events-none'>
-								<Video
-									videoSrc={ShowReelVideo}
-									videoTitle="Reel-24"
-								/>
-							</div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snarp-start w-full h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
+							<Video
+								videoSrc={ShowReelVideo}
+								videoTitle="Reel-24"
+							/>
 						</div>
-						<div id="hero-container" className="snap-start w-full h h-screen">
-							<div className='relative w-full h-full pointer-events-none'>
-								<Video
-									videoSrc={PurpleVideo}
-									videoTitle="IJFLSPT"
-								/>
-							</div>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
+							<Video
+								videoSrc={PurpleVideo}
+								videoTitle="IJFLSPT"
+							/>
 						</div>
-					</div>
+					</motion.div>
+				</div>
 			</main>
 		</Layout>
 	);
