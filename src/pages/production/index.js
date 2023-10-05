@@ -19,7 +19,7 @@ function Production(props) {
             <div className='bg-prod-dark w-full h-full'>
                 <section className='relative w-full h-screen'>
                     <div className=' flex items-center justify-center text-center w-full h-full'>
-                        <ul className='z-20'>
+                        <ul className='z-20 w-11/12'>
                             <motion.li
                                 initial={{ y: "100%", opacity: 0 }}
                                 animate={{ y: "0%", opacity: 1 }}>

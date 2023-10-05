@@ -1,6 +1,6 @@
 ---
 title: "Polished"
-price: 175
+price: 575
 features: [
   'Mastering of up to 5 tracks', 
   'Detailed mastering chain with EQ, multi-band compression, and peak limiting', 
