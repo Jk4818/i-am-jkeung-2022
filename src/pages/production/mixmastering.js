@@ -122,7 +122,7 @@ function MixMastering({ data }) {
                     </RevealAnimation>
                     <RevealAnimation width="w-full">
                         <div className=''>
-                            <AudioWaveform id="seven" title="Seven (Feat. GC Vocals)" composer="Amatta Mirandari" progressColor="#f2d8b8" audioTrack={audioTrack1} />
+                            <AudioWaveform id="seven" title="Seven (Feat. George Chen)" composer="Amatta Mirandari" progressColor="#f2d8b8" audioTrack={audioTrack1} />
                         </div>
                     </RevealAnimation>
                     {/* <RevealAnimation width="w-full">
