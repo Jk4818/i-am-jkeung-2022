@@ -77,6 +77,7 @@ function MainMenu(props) {
           <MenuItem>Prints</MenuItem>
           <MenuItem>Production</MenuItem>
           {/* <MenuItem>About</MenuItem> */}
+          <MenuItem>Latest</MenuItem>
           <MenuItem>Contact</MenuItem>
         </motion.ul>
 
