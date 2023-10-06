@@ -6,6 +6,7 @@ import Layout from '../components/Layout.js';
 import Video from "../components/Video.js";
 import ShowReelVideo from "../assets/videos/showreel-2022.mp4";
 import PurpleVideo from "../assets/videos/purple.mp4";
+import IrelandVideo from "../assets/videos/coow-ireland.mp4";
 
 
 function Collection(props) {
@@ -32,8 +33,21 @@ function Collection(props) {
 						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
 						<div className='relative w-full h-full pointer-events-none'>
 							<Video
+								videoSrc={IrelandVideo}
+								videoTitle="Colours Of The World"
+								videoSubs = "Ireland"
+							/>
+						</div>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
+							<Video
 								videoSrc={PurpleVideo}
 								videoTitle="IJFLSPT"
+								videoSubs = "I Just Felt Like Seeing Purple Today"
 							/>
 						</div>
 					</motion.div>

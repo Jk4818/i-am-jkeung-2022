@@ -6,7 +6,7 @@ module.exports = {
   plugins: [`gatsby-plugin-smoothscroll`,"gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", `gatsby-plugin-preload-fonts`, {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/assets/images/logo_thicker.png"
+      "icon": "src/assets/images/favicon.png"
     }
   }, "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',

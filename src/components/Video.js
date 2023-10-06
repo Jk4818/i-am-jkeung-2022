@@ -7,8 +7,9 @@ const Video = ({ videoSrc, videoTitle, ...props }) => (
             <source src={videoSrc} type="video/mp4" />
         </video>
 
-        <div id='heading' className='absolute top-0 left-0 w-full h-full flex justify-center items-center font-archivo text-7xl font-black text-white'>
+        <div id='heading' className='absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center font-archivo text-7xl font-black text-white'>
             <h1 className=''>{videoTitle}</h1>
+            <h2 className='text-4xl'>{props.videoSubs}</h2>
         </div>
     </div>
 )
