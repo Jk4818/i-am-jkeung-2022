@@ -7,6 +7,7 @@ import Video from "../components/Video.js";
 import ShowReelVideo from "../assets/videos/showreel-2022.mp4";
 import PurpleVideo from "../assets/videos/purple.mp4";
 import IrelandVideo from "../assets/videos/coow-ireland.mp4";
+import TakenVideo from "../assets/videos/road-not-taken.mp4";
 
 
 function Collection(props) {
@@ -24,6 +25,18 @@ function Collection(props) {
 							<Video
 								videoSrc={ShowReelVideo}
 								videoTitle="Reel-24"
+							/>
+						</div>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
+							<Video
+								videoSrc={TakenVideo}
+								videoTitle="The Road Not Taken"
+								videoSubs = "Trailer"
 							/>
 						</div>
 					</motion.div>
