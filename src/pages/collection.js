@@ -5,9 +5,13 @@ import Layout from '../components/Layout.js';
 
 import Video from "../components/Video.js";
 import ShowReelVideo from "../assets/videos/showreel-2022.mp4";
+import ShowReelPoster from "../assets/videos/showreel-2022-thumb.jpg";
 import PurpleVideo from "../assets/videos/purple.mp4";
+import PurplePoster from "../assets/videos/purple-thumb.jpg";
 import IrelandVideo from "../assets/videos/coow-ireland.mp4";
+import IrelandPoster from "../assets/videos/coow-ireland-thumb.jpg";
 import TakenVideo from "../assets/videos/road-not-taken.mp4";
+import TakenPoster from "../assets/videos/road-not-taken-thumb.jpg"
 
 
 function Collection(props) {
@@ -20,23 +24,25 @@ function Collection(props) {
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
+						exit={{ opacity: 0 }} id="hero-container" className="snarp-start w-full h-screen">
 						<div className='relative w-full h-full pointer-events-none'>
 							<Video
-								videoSrc={TakenVideo}
-								videoTitle="The Road Not Taken"
-								videoSubs="Trailer"
+								videoSrc={ShowReelVideo}
+								videoThumb={ShowReelPoster}
+								videoTitle="Reel-24"
 							/>
 						</div>
 					</motion.div>
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }} id="hero-container" className="snarp-start w-full h-screen">
-						<div className='relative w-full h-full pointer-events-none'>
+						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h-screen">
+						<div className='relative w-full h-full '>
 							<Video
-								videoSrc={ShowReelVideo}
-								videoTitle="Reel-24"
+								videoSrc={TakenVideo}
+								videoThumb={TakenPoster}
+								videoTitle="The Road Not Taken"
+								videoSubs="Trailer"
 							/>
 						</div>
 					</motion.div>
@@ -47,6 +53,7 @@ function Collection(props) {
 						<div className='relative w-full h-full pointer-events-none'>
 							<Video
 								videoSrc={IrelandVideo}
+								videoThumb={IrelandPoster}
 								videoTitle="Colours Of The World"
 								videoSubs="Ireland"
 							/>
@@ -59,8 +66,9 @@ function Collection(props) {
 						<div className='relative w-full h-full pointer-events-none'>
 							<Video
 								videoSrc={PurpleVideo}
-								videoTitle="IJFLSPT"
-								videoSubs="I Just Felt Like Seeing Purple Today"
+								videoThumb={PurplePoster}
+								videoTitle="IJWTSPT"
+								videoSubs="I Just Wanted To See Purple Today"
 							/>
 						</div>
 					</motion.div>

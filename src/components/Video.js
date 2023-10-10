@@ -1,9 +1,10 @@
 import React from 'react';
 import "../styles/video.css";
 
-const Video = ({ videoSrc, videoTitle, ...props }) => (
+
+const Video = ({ videoSrc, videoTitle, videoThumb, ...props }) => (
     <div className="relative w-full h-full flex justify-center items-center ">
-        <video loop autoPlay muted>
+        <video loop autoPlay muted poster={videoThumb}>
             <source src={videoSrc} type="video/mp4" />
         </video>
 
