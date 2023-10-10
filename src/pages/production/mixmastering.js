@@ -143,7 +143,7 @@ function MixMastering({ data }) {
 
                     <RevealAnimation>
                         <div className='w-full flex items-center justify-between'>
-                            <h3>Independant Packages</h3>
+                            <h3>Independant Packages - Pay per product, not per hour</h3>
                         </div>
                     </RevealAnimation>
 

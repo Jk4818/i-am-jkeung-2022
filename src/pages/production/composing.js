@@ -116,7 +116,7 @@ function Composing({ data }) {
                 <div className='w-full py-20'>
                     <RevealAnimation>
                         <div className='w-full flex items-center justify-between'>
-                            <h3>Independant Packages</h3>
+                            <h3>Independant Packages - Pay per product, not per hour</h3>
                         </div>
                     </RevealAnimation>
                     <div className='mt-20 w-full h-full flex flex-wrap gap-6 justify-around'>
