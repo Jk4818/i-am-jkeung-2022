@@ -20,6 +20,18 @@ function Collection(props) {
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
+							<Video
+								videoSrc={TakenVideo}
+								videoTitle="The Road Not Taken"
+								videoSubs="Trailer"
+							/>
+						</div>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }} id="hero-container" className="snarp-start w-full h-screen">
 						<div className='relative w-full h-full pointer-events-none'>
 							<Video
@@ -34,21 +46,9 @@ function Collection(props) {
 						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
 						<div className='relative w-full h-full pointer-events-none'>
 							<Video
-								videoSrc={TakenVideo}
-								videoTitle="The Road Not Taken"
-								videoSubs = "Trailer"
-							/>
-						</div>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
-						<div className='relative w-full h-full pointer-events-none'>
-							<Video
 								videoSrc={IrelandVideo}
 								videoTitle="Colours Of The World"
-								videoSubs = "Ireland"
+								videoSubs="Ireland"
 							/>
 						</div>
 					</motion.div>
@@ -60,7 +60,7 @@ function Collection(props) {
 							<Video
 								videoSrc={PurpleVideo}
 								videoTitle="IJFLSPT"
-								videoSubs = "I Just Felt Like Seeing Purple Today"
+								videoSubs="I Just Felt Like Seeing Purple Today"
 							/>
 						</div>
 					</motion.div>
