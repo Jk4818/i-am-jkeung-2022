@@ -83,7 +83,7 @@ function MainMenu(props) {
 
         <motion.ul variants={menuItemVariants}  className='grid grid-rows-2 grid-cols-2 gap-2 text-left text-xs tracking-wider'>
           <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors">
-            <Link to='/'> Tech Portfolio </Link>
+            <Link to='https://www.instagram.com/jkeung.studio/'> Instagram </Link>
           </motion.li>
           <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
             <a href='https://github.com/Jk4818'  target="_blank"> Github </a>
