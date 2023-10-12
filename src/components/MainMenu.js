@@ -91,9 +91,9 @@ function MainMenu(props) {
           <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
             <a href='https://www.youtube.com/@jkeung'  target="_blank"> Youtube </a>
           </motion.li>
-          <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
+          {/* <motion.li variants={itemVariants} className="hover:text-gray-300 transition-colors" >
             <a href='https://www.linkedin.com/in/jkeung/'  target="_blank"> LinkedIn </a>
-          </motion.li>
+          </motion.li> */}
         </motion.ul>
 
       </motion.div>
