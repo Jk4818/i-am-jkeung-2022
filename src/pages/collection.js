@@ -12,6 +12,8 @@ import IrelandVideo from "../assets/videos/coow-ireland.mp4";
 import IrelandPoster from "../assets/videos/coow-ireland-thumb.jpg";
 import TakenVideo from "../assets/videos/road-not-taken.mp4";
 import TakenPoster from "../assets/videos/road-not-taken-thumb.jpg"
+import SicilyVideo from "../assets/videos/coow-sicily.mp4";
+import SicilyPoster from "../assets/videos/coow-sicily-thumb.jpg"
 
 
 function Collection(props) {
@@ -36,13 +38,13 @@ function Collection(props) {
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h-screen">
-						<div className='relative w-full h-full '>
+						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
 							<Video
-								videoSrc={TakenVideo}
-								videoThumb={TakenPoster}
-								videoTitle="The Road Not Taken"
-								videoSubs="Trailer"
+								videoSrc={SicilyVideo}
+								videoThumb={SicilyPoster}
+								videoTitle="Colours Of The World"
+								videoSubs="Sicily"
 							/>
 						</div>
 					</motion.div>
@@ -56,6 +58,19 @@ function Collection(props) {
 								videoThumb={IrelandPoster}
 								videoTitle="Colours Of The World"
 								videoSubs="Ireland"
+							/>
+						</div>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h-screen">
+						<div className='relative w-full h-full '>
+							<Video
+								videoSrc={TakenVideo}
+								videoThumb={TakenPoster}
+								videoTitle="The Road Not Taken"
+								videoSubs="Trailer"
 							/>
 						</div>
 					</motion.div>
