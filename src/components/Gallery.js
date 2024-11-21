@@ -28,20 +28,28 @@ function Gallery({ gallaryData }) {
 
   const columnSpan = [
     [
-      'sm:col-span-9',
-      'sm:col-span-6',
-      'sm:col-span-9',
-      'sm:col-span-9',
-      'sm:col-span-6',
-      'sm:col-span-9',
+      'lg:col-span-9',
+      'lg:col-span-6',
+      'lg:col-span-9',
+      'lg:col-span-9',
+      'lg:col-span-6',
+      'lg:col-span-9',
     ],
     [
-      'sm:col-span-8',
-      'sm:col-span-7',
-      'sm:col-span-9',
-      'sm:col-span-9',
-      'sm:col-span-9',
-      'sm:col-span-6',
+      'lg:col-span-8',
+      'lg:col-span-7',
+      'lg:col-span-9',
+      'lg:col-span-9',
+      'lg:col-span-9',
+      'lg:col-span-6',
+    ],
+    [
+      'lg:col-span-8',
+      'lg:col-span-7',
+      'lg:col-span-9',
+      'lg:col-span-9',
+      'lg:col-span-9',
+      'lg:col-span-6',
     ],
   ]
 
@@ -65,7 +73,7 @@ function Gallery({ gallaryData }) {
     <div className='w-screen h-max'>
       {galleryData && galleryData.map((gallery, galleryIndex) => {
         return (
-          <div key={galleryIndex} className='w-full h-max md:mt-10 grid grid-cols-1 sm:grid-cols-24  sm:grid-rows-2  gap-6 lg:gap-4 text-xs font-tinos'>
+          <div key={galleryIndex} className='w-full px-16 lg:px-0 h-max md:mt-10 grid grid-cols-1 lg:grid-cols-24  lg:grid-rows-2  gap-6 lg:gap-4 text-xs font-tinos'>
 
             {gallery.map((image, index) => {
               console.log(image);
@@ -76,7 +84,8 @@ function Gallery({ gallaryData }) {
                   viewport={{ once: true, amount: 0.6 }}
                   variants={variant}
                   key={index}
-                  className={`${columnSpan[galleryIndex][index]} ${index % 6 < 3 && "sm:self-end flex flex-col-reverse"}`}>
+                  className={`${columnSpan[galleryIndex][index]} ${index % 6 < 3 && "sm:self-end flex flex-col-reverse"}`}
+                  >
                   <GalleryImage src={image} heading={HumaniseText(image.base)} subheading={image.base} alt={image.base} reverse={index % 6 < 3 ? true : false} />
                 </motion.div>
               )

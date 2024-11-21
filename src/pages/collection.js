@@ -14,6 +14,8 @@ import TakenVideo from "../assets/videos/road-not-taken.mp4";
 import TakenPoster from "../assets/videos/road-not-taken-thumb.jpg"
 import SicilyVideo from "../assets/videos/coow-sicily.mp4";
 import SicilyPoster from "../assets/videos/coow-sicily-thumb.jpg"
+import niceVideo from "../assets/videos/coow-nice.mp4";
+import nicePoster from "../assets/videos/coow-nice-thumb.png"
 
 
 function Collection(props) {
@@ -23,6 +25,19 @@ function Collection(props) {
 				className='overflow-x-hidden'>
 				<div className="w-screen h-full flex flex-col justify-center items-center uppercase ">
 
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snarp-start w-full h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
+							<Video
+								videoSrc={niceVideo}
+								videoThumb={nicePoster}
+								videoTitle="Colours Of The World"
+								videoSubs="Nice"
+							/>
+						</div>
+					</motion.div>
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
