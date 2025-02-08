@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import NoiseBackgroundSVG from '../../components/NoiseBackgroundSVG';
 import Layout from '../../components/Layout';
 import PricingCard from '../../components/PricingCard';
 import { graphql } from 'gatsby';
@@ -14,6 +15,7 @@ import audioTrack from "../../assets/audio/DIROShort.mp3";
 import audioTrack1 from "../../assets/audio/SevenShort.wav";
 // import audioTrack2 from "../../assets/audio/HardestPartCover.wav";
 import audioTrack3 from "../../assets/audio/JuliaShort.mp3";
+import NoiseBackground from '../../components/NoiseBackground';
 
 function MixMastering({ data }) {
 
@@ -72,6 +74,8 @@ function MixMastering({ data }) {
 
                 <div className='flex flex-wrap text-white items-center xl:h-screen'>
                     <div className='w-full lg:w-1/2 font-archivo font-semibold'>
+                    <NoiseBackgroundSVG/>
+                    
                         <RevealAnimation width="w-fit">
                             <h1 className='text-4xl'>Mixing & Mastering</h1>
                         </RevealAnimation>
@@ -114,7 +118,7 @@ function MixMastering({ data }) {
                 </div>
 
                 {typeof window !== 'undefined' && 
-                <div className=''>
+                <div className='z-50'>
                     <RevealAnimation width="w-full">
                         <div className=''>
                             <AudioWaveform id="darling_its_raining_outside" title="Darling It's Raining Outside" composer="Jason Keung" progressColor="#f7edf0" audioTrack={audioTrack} />

@@ -2,7 +2,7 @@ import React from 'react';
 
 function NoiseBackground({ children }) {
     return (
-        <div className='absolute top-0 left-0 w-full h-screen'>
+        <div className='absolute top-0 left-0 w-full h-screen z-0'>
             <div className='absolute top-0 left-0 z-10 w-full h-full bg-gradient-to-t from-prod-dark ' />
             <div className='absolute top-0 left-0 z-0 background-noise w-full h-full flex justify-center items-center'>
                 {children}
