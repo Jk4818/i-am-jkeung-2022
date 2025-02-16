@@ -1,8 +1,8 @@
 ---
 title: "Deluxe"
-price: 1150
+price: 775
 features: [
-  'Mixing of up to 10 tracks',
+  'Mixing of 6+ tracks',
 'Vocal tuning included', 
 'Full processing chain', 
 'Unlimited layers per track',

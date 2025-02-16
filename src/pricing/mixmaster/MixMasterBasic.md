@@ -1,8 +1,8 @@
 ---
 title: "Essential"
-price: 575
+price: 225
 features: [
-  'Essential mixing and mastering of up to 3 tracks', 
+  'Essential mixing and mastering of 1 to 3 tracks', 
   '1 round of revisions for adjustments',
   'Refer to the cheapest corresponding packages for details', 
   ]

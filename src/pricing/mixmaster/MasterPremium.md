@@ -1,8 +1,8 @@
 ---
 title: "Premium"
-price: 850
+price: 400
 features: [
-  'Mixing of up to 10 tracks', 
+  'Mixing of 6+ tracks', 
   'Full hybrid mastering chain', 
   'Stem mastering option', 
   '2 round of revisions for adjustments',

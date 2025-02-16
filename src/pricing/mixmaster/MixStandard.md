@@ -1,6 +1,6 @@
 ---
 title: "Enhanced"
-price: 600
+price: 475
 features: [
   'Mixing of up to 5 tracks', 
   'Vocal tuning included', 

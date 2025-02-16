@@ -1,11 +1,11 @@
 ---
 title: "Polished"
-price: 575
+price: 140
 features: [
-  'Mastering of up to 5 tracks', 
-  'Detailed mastering chain with EQ, multi-band compression, and peak limiting', 
+  'Mastering of 2 up to 5 tracks', 
+  'Detailed in the box mastering chain', 
   'Stereo track mastering only', 
-  '1 round of revisions for adjustments'
+  '2 rounds of revisions for adjustments'
   ]
 btnText: ""
 color: "#d7e3fc"

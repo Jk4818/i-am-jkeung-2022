@@ -1,10 +1,10 @@
 ---
 title: "Supreme"
-price: 950
+price: 600
 features: [
-  'Complete mixing and mastering of up to 5 tracks', 
+  'Complete mixing and mastering of 4 to 5 tracks', 
   '1 round of revisions for adjustments',
-  'Refer to the mid tier packages for details', 
+  'Refer to the individual mid tier packages for details', 
   ]
 btnText: ""
 color: "#f7edf0"

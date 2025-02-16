@@ -1,6 +1,6 @@
 ---
 title: "Balanced"
-price: 150
+price: 75
 features: [
   'Single track mastering',
   'Essential chain for loudness and tonal balance', 
