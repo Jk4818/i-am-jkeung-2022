@@ -2,7 +2,7 @@
 title: "Enhanced"
 price: 475
 features: [
-  'Mixing of up to 5 tracks', 
+  'Mixing of 4 to 5 tracks', 
   'Vocal tuning included', 
   'Full processing chain', 
   'Limited to 10 layers per track', 

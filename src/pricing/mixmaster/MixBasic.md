@@ -2,7 +2,7 @@
 title: "Essential"
 price: 175
 features: [
-  'Mixing of up to 3 tracks', 
+  'Mixing of 1 to 3 tracks', 
   'Vocal tuning included', 
   'Balancing levels, EQ, and basic processing',
   'Limited to 10 layers per track', 
