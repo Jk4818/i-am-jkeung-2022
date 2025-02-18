@@ -7,6 +7,9 @@ import Layout from '../../components/Layout';
 import { Link } from 'gatsby';
 import RevealAnimation from '../../components/RevealAnimation';
 import YoutubeVideo from '../../components/YoutubeVideo';
+import StudioBRoll from '../../assets/videos/studio-b-roll.mp4';
+import StudioBRollPoster from '../../assets/videos/studio-b-roll-thumb.jpg';
+import Video from '../../components/Video';
 
 function Production(props) {
 
@@ -19,22 +22,14 @@ function Production(props) {
         <Layout>
             <div className='bg-prod-dark w-full h-full'>
                 <section className='relative w-full h-screen'>
-                <YoutubeVideo videoUrl="https://www.youtube.com/watch?v=LMjLqbfpaq4" />
-                    {/* <div className=' flex items-center justify-center text-center w-full h-full'>
-                        <ul className='z-20 w-11/12'>
-                            <motion.li
-                                initial={{ y: "100%", opacity: 0 }}
-                                animate={{ y: "0%", opacity: 1 }}>
-                                <ProductionHeroTitle />
-                            </motion.li>
-                            <li className='mt-4'>
-                                <RevealAnimation>
-                                    <h2 className='text-white  text-md font-archivo font-semibold uppercase tracking-widest'>born through Classical, learnt through cinema</h2>
-                                </RevealAnimation>
-                            </li>
-                        </ul>
-                    </div> */}
-                    
+                    {/* <YoutubeVideo videoUrl="https://www.youtube.com/watch?v=LMjLqbfpaq4" /> */}
+                    <div className='relative w-full h-full pointer-events-none'>
+                        <Video
+                            videoSrc={StudioBRoll}
+                            videoThumb={StudioBRollPoster}
+                            videoTitle="Studio"
+                        />
+                    </div>
                 </section>
 
                 <AnimatePresence>
@@ -102,7 +97,7 @@ function Production(props) {
                                 className='w-11/12 h-full  absolute top-40 bottom-0 left-0 right-0 m-auto mixing-background bg-top xl:bg-center  bg-prod-dark transition-[translate]' />
                         }
 
-                        
+
 
                     </section>
                 </AnimatePresence>
