@@ -47,6 +47,8 @@ function Latest(props) {
             {/* <a className='w-full' href="https://youtu.be/Q1i13wkOEnw?si=5eDvurOvQf9FbqBH" rel="noreferrer" target="_blank">
               <motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Youtube</motion.li>
             </a> */}
+            <a className='w-full' href="https://open.spotify.com/track/6r2yo00obKEDVwrW8M3Pd5?si=0185b7ad06b44371" rel="noreferrer" target="_blank"><motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Spotify</motion.li>
+            </a>
             <a className='w-full' href="https://music.apple.com/gb/song/4-30-in-toronto/1816235253" rel="noreferrer" target="_blank"><motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Apple Music</motion.li>
             </a>
           </motion.ul>
