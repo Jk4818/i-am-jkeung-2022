@@ -14,6 +14,8 @@ import TakenVideo from "../assets/videos/road-not-taken.mp4";
 import TakenPoster from "../assets/videos/road-not-taken-thumb.jpg"
 import SicilyVideo from "../assets/videos/coow-sicily.mp4";
 import SicilyPoster from "../assets/videos/coow-sicily-thumb.jpg"
+import ISRLVideo from "../assets/videos/ISRL-short.mp4";
+import ISRLPoster from "../assets/videos/ISRL-thumb.jpg"
 // import niceVideo from "../assets/videos/coow-nice.mp4";
 // import nicePoster from "../assets/videos/coow-nice-thumb.png"
 
@@ -38,6 +40,19 @@ function Collection(props) {
 							/>
 						</div>
 					</motion.div> */}
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snarp-start w-full h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
+							<Video
+								videoSrc={ISRLVideo}
+								videoThumb={ISRLPoster}
+								videoTitle="Is Your Room Listening"
+								videoSubs="Coming Soon"
+							/>
+						</div>
+					</motion.div>
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
