@@ -16,8 +16,8 @@ import SicilyVideo from "../assets/videos/coow-sicily.mp4";
 import SicilyPoster from "../assets/videos/coow-sicily-thumb.jpg"
 import ISRLVideo from "../assets/videos/ISRL-short.mp4";
 import ISRLPoster from "../assets/videos/ISRL-thumb.jpg"
-// import niceVideo from "../assets/videos/coow-nice.mp4";
-// import nicePoster from "../assets/videos/coow-nice-thumb.png"
+import THPVideo from "../assets/videos/thp-short.mp4";
+import THPPoster from "../assets/videos/thp-thumb.png"
 
 
 function Collection(props) {
@@ -75,6 +75,18 @@ function Collection(props) {
 								videoThumb={SicilyPoster}
 								videoTitle="Colours Of The World"
 								videoSubs="Sicily"
+							/>
+						</div>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }} id="hero-container" className="snap-start w-full h h-screen">
+						<div className='relative w-full h-full pointer-events-none'>
+							<Video
+								videoSrc={THPVideo}
+								videoThumb={THPVPoster}
+								videoTitle="The Hardest Part"
 							/>
 						</div>
 					</motion.div>
