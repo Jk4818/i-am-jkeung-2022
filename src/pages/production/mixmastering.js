@@ -13,9 +13,7 @@ import RevealAnimation from '../../components/RevealAnimation';
 
 import audioTrack from "../../assets/audio/DIROShort.mp3";
 import audioTrack1 from "../../assets/audio/SevenShort.wav";
-// import audioTrack2 from "../../assets/audio/HardestPartCover.wav";
 import audioTrack3 from "../../assets/audio/JuliaShort.mp3";
-import NoiseBackground from '../../components/NoiseBackground';
 
 function MixMastering({ data }) {
 

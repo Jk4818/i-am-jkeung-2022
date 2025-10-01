@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
-import NoiseBackground from '../../components/NoiseBackground';
-import ProductionHeroTitle from '../../components/ProductionHeroTitle';
 import Layout from '../../components/Layout';
 import { Link } from 'gatsby';
 import RevealAnimation from '../../components/RevealAnimation';
-import YoutubeVideo from '../../components/YoutubeVideo';
 import StudioBRoll from '../../assets/videos/studio-b-roll.mp4';
 import StudioBRollPoster from '../../assets/videos/studio-b-roll-thumb.jpg';
 import Video from '../../components/Video';
