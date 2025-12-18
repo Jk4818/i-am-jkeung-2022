@@ -43,8 +43,11 @@ function Latest(props) {
           <h1 className='text-sm mt-1 text-center'>Jason Keung</h1>
           <motion.ul initial="closed" animate="open" variants={menuItemVariants} className='w-3/4 h-max mt-10 text-center flex flex-col justify-center items-center gap-4'>
 
+            <a className='w-full' href="https://youtu.be/UciK3H-R4C0?si=MUWfwkQp7zWXRhaA" rel="noreferrer" target="_blank">
+              <motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Album Film</motion.li>
+            </a>
             <a className='w-full' href="https://www.youtube.com/playlist?list=OLAK5uy_lv9SiJgvf4y0V78azikJLAN04KN8AOVjw" rel="noreferrer" target="_blank">
-              <motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Youtube</motion.li>
+              <motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Youtube Album</motion.li>
             </a>
             <a className='w-full' href="https://open.spotify.com/album/32LPFQlp2bMRSLbns1sRGq?si=UMziUJLEQVOlfoRDpkjxPQ" rel="noreferrer" target="_blank"><motion.li initial="closed" animate="open" variants={itemVariants} className='w-full h-max p-2 rounded-lg bg-gray-400 hover:bg-gray-500 transition-all'>Spotify</motion.li>
             </a>
